@@ -4,7 +4,7 @@
    <title>Vincent</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2013-12-30T19:38:18+08:00</updated>
+   <updated>2013-12-30T19:44:43+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -14,9 +14,9 @@
    
    <entry>
      <title>Hello world</title>
-     <link href="/javascript/html/css/jekyll/2011/09/20/hello-world.html"/>
+     <link href="/javascript/html&css/jekyll/2011/09/20/hello-world.html"/>
      <updated>2011-09-20T00:00:00+08:00</updated>
-     <id>/javascript/html/css/jekyll/2011/09/20/hello-world</id>
+     <id>/javascript/html&css/jekyll/2011/09/20/hello-world</id>
      <content type="html">&lt;p&gt;Hello world!
 asdasd&lt;/p&gt;
 </content>
