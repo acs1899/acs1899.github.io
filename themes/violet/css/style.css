@@ -510,6 +510,7 @@ a:hover {
     padding: 10px 20px;
     list-style-type: none;
     background: #f6f6f6;
+    overflow:hidden;
 }
 .main-article .article-year li span {
     display: block;
@@ -562,4 +563,4 @@ a.toTop:hover {
 .category_box ul li{float:left;margin-right:16px;}
 .category_box ul li a{font-size:1.2em;-webkit-transition: all .4s ease-in-out;color:#fff}
 .category_box ul li a:hover{color:#0088cc;text-decoration:none;}
-
+.main-article-contant .description{color:#6D6D6D;margin-top:10px;}

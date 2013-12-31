@@ -169,9 +169,14 @@
     <script type="text/javascript" src="/themes/violet/js/common.js"></script>
     <script type="text/javascript">
 	$(function(){
-	    var cate=$('.category'),cb=$('.category_box');
+	    var cate=$('.category'),cb=$('.category_box'),p=$('.main-article-contant .description');
 	    cate.bind('click',function(){
 		cb.slideToggle();
+	    });
+	    p.each(function(){
+		if(this.innerHTML.length>40){
+		    this.innerHTML=this.innerHTML.slice(0,40)+'...';
+		}
 	    });
 	});
     </script>
