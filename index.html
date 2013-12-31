@@ -42,6 +42,7 @@
                     
                       
                     
+		    
                     <li class="nav-item nav-item-active ">
                         <a href="/index.html">
                             首页
@@ -51,7 +52,10 @@
                     
                     
                     
-                    <li class="nav-item  ">
+		    
+                      
+                    
+                    <li class="nav-item  category">
                         <a href="javascript:void(0);">
                             文章分类
                         </a>
@@ -60,7 +64,8 @@
                     
                     
                     
-                    <li class="nav-item  ">
+		    
+                    <li class="nav-item  category">
                         <a href="/archives.html">
                             文章归档
                         </a>
@@ -69,7 +74,8 @@
                     
                     
                     
-                    <li class="nav-item  ">
+		    
+                    <li class="nav-item  category">
                         <a href="/works.html">
                             作品
                         </a>
@@ -78,7 +84,8 @@
                     
                     
                     
-                    <li class="nav-item  ">
+		    
+                    <li class="nav-item  category">
                         <a href="/contact.html">
                             about
                         </a>
@@ -91,11 +98,11 @@
 	<div class="category_box">
             <ul>
             
-            <li class="cagory-li "><a href="/categories/html&css">html&css (2)</a></li>
-            
             <li class="cagory-li "><a href="/categories/javascript">javascript (2)</a></li>
             
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/html&css">html&css (2)</a></li>
             
             </ul>
     	</div>
@@ -157,7 +164,10 @@
     <script type="text/javascript" src="/themes/violet/js/common.js"></script>
     <script type="text/javascript">
 	$(function(){
-	    var cate=$('.category')
+	    var cate=$('.category'),cb=$('.category_box');
+	    cate.bind('click',function(){
+		cb.slideToggle();
+	    });
 	});
     </script>
     <script type="text/javascript">
