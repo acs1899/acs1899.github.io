@@ -2,6 +2,12 @@
 <articles xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <article>
+	<title>Happy new Year</title>
+	<url>/html&css/2013/12/31/Happy-new-Year.html</url>
+	<date>2013-12-31</date>
+</article>
+
+<article>
 	<title>Hello world</title>
 	<url>/javascript/html&css/jekyll/2011/09/20/hello-world.html</url>
 	<date>2011-09-20</date>
