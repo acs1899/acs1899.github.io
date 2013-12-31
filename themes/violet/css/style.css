@@ -557,7 +557,7 @@ a.toTop:hover {
     line-height: 40px;
     vertical-align: top;
 }
-.category_box{background: #22272a;}
+.category_box{background: #22272a;display:none}
 .category_box ul{width:720px;margin:0 auto;overflow:hidden;padding:8px 0}
 .category_box ul li{float:left;margin-right:16px;}
 .category_box ul li a{font-size:1.2em;-webkit-transition: all .4s ease-in-out;color:#fff}
