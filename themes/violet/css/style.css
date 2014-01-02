@@ -193,7 +193,9 @@ a:hover {
     line-height: 32px;
     padding: 0 20px;
     border-radius: 3px 3px;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgb(0, 0, 0);
+    filter:alpha(opacity=80);
+    opacity:0.8;
     color: #fff;
     font-size: 14px;
     -webkit-transition: background .4s ease-in-out;
@@ -204,7 +206,8 @@ a:hover {
 }
 .nav-item a:hover,
 .nav-item-active a {
-    background: rgba(0,0,0,0.8);
+    filter:alpha(opacity=100);
+    opacity:1;
     text-decoration: none;
 }
 
