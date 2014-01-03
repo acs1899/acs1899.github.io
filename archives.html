@@ -103,16 +103,17 @@
 	<div class="category_box">
             <ul>
             
-            <li class="cagory-li "><a href="/categories/javascript">javascript (2)</a></li>
-            
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/javascript">javascript (2)</a></li>
             
             <li class="cagory-li "><a href="/categories/html&css">html&css (2)</a></li>
             
             </ul>
     	</div>
         <div class="main" id="violet-main">
-            <div class="main-article main-article-page">
+            <script type="text/javascript" src="js/storyjs-embed.js"></script>
+<!--<div class="main-article main-article-page">
     <div class="violet-title">
         <h3 class="violet-title-item">All posts is here.<span>(2 posts.)</span></h3>
     </div>
@@ -148,7 +149,43 @@
 	    
         </div>
     </div>
-</div>
+</div>-->
+<div class="timeline" style="height:600px"></div>
+<script type="text/javascript">
+      	var jsons={
+		    "timeline":
+		    {
+		        "headline":"The Main Timeline Headline Goes here",
+		        "type":"default",
+		        "text":"<p>Intro body text goes here, some HTML is ok</p>",
+		        "asset": {
+		            "credit":"Credit Name Goes Here",
+		            "caption":"Caption text goes here"
+		        },
+		        "date": [
+		            {
+		                "startDate":"2011",
+		                "headline":"Headline Goes Here",
+		                "text":"<p>Body text goes here, some HTML is OK</p>",
+		                "tag":"This is Optional",
+		                "classname":"optionaluniqueclassnamecanbeaddedhere",
+		                "asset": {
+		                    "media":"https://2.gravatar.com/avatar/3771deb8557855d7034cfe3a6a322fc7?d=https%3A%2F%2Fidenticons.github.com%2F800c27a7703bb6a12bde1a67d92a735c.png&r=x&s=440",
+		                    "thumbnail":"optional-32x32px.jpg",
+		                    "credit":"Credit Name Goes Here",
+		                    "caption":"Caption text goes here"
+		                }
+		            }
+		        ]
+		        
+		    }
+		}
+        var timeline_config = {
+         width: "100%",
+         height: "100%",
+         source: jsons
+        }
+</script>
 
         </div>
         <div class="foot" id="violet-foot">
