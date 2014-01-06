@@ -4,7 +4,7 @@
    <title>Vincent</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2014-01-06T16:01:40+08:00</updated>
+   <updated>2014-01-06T16:24:28+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -22,13 +22,29 @@
    </entry>
    
    <entry>
-     <title>浏览器兼容性问题-JS&DOM(转)</title>
-     <link href="/javascript/html&css/2012/05/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%28JS%26DOM%29%28%E8%BD%AC%29.html"/>
+     <title>IE6、7下 body标签overflow\:hidden失效的问题</title>
+     <link href="/html&css/2012/05/03/IE67%E4%B8%8Bbody%7Boverflow%3Ahidden%7D%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98.html"/>
      <updated>2012-05-03T00:00:00+08:00</updated>
-     <id>/javascript/html&css/2012/05/03/浏览器兼容性(JS&DOM)(转)</id>
-     <content type="html">&lt;p&gt;转&lt;a href=&quot;http://blog.sina.com.cn/s/blog_5f289d580100i07d.html&quot;&gt;http://blog.sina.com.cn/s/blog_5f289d580100i07d.html&lt;/a&gt;&lt;/p&gt;
+     <id>/html&css/2012/05/03/IE67下body{overflow:hidden}失效问题</id>
+     <content type="html">&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;There are no scrollbars on this page in sane browsers&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;foo &lt;span style=&quot;color:#ff0&quot;&gt;hahaha&lt;/span&gt; foo&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;css&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5000px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5000px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)&lt;/span&gt;
+原因：
+明智的浏览器(ex. chrome and firefox)会初始付值给html&lt;span class=&quot;inpo&quot;&gt;{overflow:visible;}&lt;/span&gt;
+IE6 初始付值html&lt;span class=&quot;impo&quot;&gt;{overflow-x:auto;overflow-y:scroll;}&lt;/span&gt;
+IE7 初始付值html&lt;span class=&quot;impo&quot;&gt;{overflow-x:visible;overflow-y:scroll;}&lt;/span&gt;
+只有dom根结点（也就是html根节点）设置html&lt;span class=&quot;impo&quot;&gt;{overflow:visible;}&lt;/span&gt;的时候，浏览器才会将body元素中的overflow值应用到视图区。
+举个例子说：
+设置了body&lt;span class=&quot;impo&quot;&gt;{overflow:hidden}&lt;span&gt;还会出现滚动条，不过这个滚动条不是body的，是html的
+只有你设置html&lt;span class=&quot;impo&quot;&gt;{overflow:visible;}&lt;/span&gt; body&lt;span class=&quot;impo&quot;&gt;{overflow的值}&lt;/span&gt;才能传递到html中去
+这样html的值就变成了&lt;span class=&quot;impo&quot;&gt;{overflow:hidden}&lt;/span&gt;ok没有滚动条了
+这样就很明了啦，并不是bug，而是浏览器初始值不同产生的问题。&lt;/p&gt;
 </content>
    </entry>
    
