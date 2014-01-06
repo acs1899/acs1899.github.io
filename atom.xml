@@ -4,7 +4,7 @@
    <title>Vincent</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2014-01-06T14:06:32+08:00</updated>
+   <updated>2014-01-06T16:01:40+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -22,12 +22,22 @@
    </entry>
    
    <entry>
+     <title>浏览器兼容性问题-JS&DOM(转)</title>
+     <link href="/javascript/html&css/2012/05/03/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%28JS%26DOM%29%28%E8%BD%AC%29.html"/>
+     <updated>2012-05-03T00:00:00+08:00</updated>
+     <id>/javascript/html&css/2012/05/03/浏览器兼容性(JS&DOM)(转)</id>
+     <content type="html">&lt;p&gt;转&lt;a href=&quot;http://blog.sina.com.cn/s/blog_5f289d580100i07d.html&quot;&gt;http://blog.sina.com.cn/s/blog_5f289d580100i07d.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;foo &lt;span style=&quot;color:#ff0&quot;&gt;hahaha&lt;/span&gt; foo&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
      <title>Hello world</title>
      <link href="/javascript/html&css/jekyll/2011/09/20/hello-world.html"/>
      <updated>2011-09-20T00:00:00+08:00</updated>
      <id>/javascript/html&css/jekyll/2011/09/20/hello-world</id>
-     <content type="html">&lt;p&gt;Hello world!
-asdasd&lt;/p&gt;
+     <content type="html">&lt;p&gt;Hello world!&lt;/p&gt;
 </content>
    </entry>
    
