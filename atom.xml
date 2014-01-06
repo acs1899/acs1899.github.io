@@ -4,7 +4,7 @@
    <title>Vincent</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2014-01-06T16:24:28+08:00</updated>
+   <updated>2014-01-06T16:29:09+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -34,17 +34,27 @@
 &lt;span class=&quot;lineno&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5000px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5000px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)&lt;/span&gt;
-原因：
-明智的浏览器(ex. chrome and firefox)会初始付值给html&lt;span class=&quot;inpo&quot;&gt;{overflow:visible;}&lt;/span&gt;
-IE6 初始付值html&lt;span class=&quot;impo&quot;&gt;{overflow-x:auto;overflow-y:scroll;}&lt;/span&gt;
-IE7 初始付值html&lt;span class=&quot;impo&quot;&gt;{overflow-x:visible;overflow-y:scroll;}&lt;/span&gt;
-只有dom根结点（也就是html根节点）设置html&lt;span class=&quot;impo&quot;&gt;{overflow:visible;}&lt;/span&gt;的时候，浏览器才会将body元素中的overflow值应用到视图区。
-举个例子说：
-设置了body&lt;span class=&quot;impo&quot;&gt;{overflow:hidden}&lt;span&gt;还会出现滚动条，不过这个滚动条不是body的，是html的
-只有你设置html&lt;span class=&quot;impo&quot;&gt;{overflow:visible;}&lt;/span&gt; body&lt;span class=&quot;impo&quot;&gt;{overflow的值}&lt;/span&gt;才能传递到html中去
-这样html的值就变成了&lt;span class=&quot;impo&quot;&gt;{overflow:hidden}&lt;/span&gt;ok没有滚动条了
-这样就很明了啦，并不是bug，而是浏览器初始值不同产生的问题。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;原因：&lt;/p&gt;
+
+&lt;p&gt;明智的浏览器(ex. chrome and firefox)会初始付值给html&lt;span class=&quot;inpo&quot;&gt;{overflow:visible;}&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;IE6 初始付值html&lt;span class=&quot;impo&quot;&gt;{overflow-x:auto;overflow-y:scroll;}&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;IE7 初始付值html&lt;span class=&quot;impo&quot;&gt;{overflow-x:visible;overflow-y:scroll;}&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;只有dom根结点（也就是html根节点）设置html&lt;span class=&quot;impo&quot;&gt;{overflow:visible;}&lt;/span&gt;的时候，浏览器才会将body元素中的overflow值应用到视图区。&lt;/p&gt;
+
+&lt;p&gt;举个例子说：&lt;/p&gt;
+
+&lt;p&gt;设置了body&lt;span class=&quot;impo&quot;&gt;{overflow:hidden}&lt;span&gt;还会出现滚动条，不过这个滚动条不是body的，是html的&lt;/p&gt;
+
+&lt;p&gt;只有你设置html&lt;span class=&quot;impo&quot;&gt;{overflow:visible;}&lt;/span&gt; body&lt;span class=&quot;impo&quot;&gt;{overflow的值}&lt;/span&gt;才能传递到html中去&lt;/p&gt;
+
+&lt;p&gt;这样html的值就变成了&lt;span class=&quot;impo&quot;&gt;{overflow:hidden}&lt;/span&gt;ok没有滚动条了&lt;/p&gt;
+
+&lt;p&gt;这样就很明了啦，并不是bug，而是浏览器初始值不同产生的问题。&lt;/p&gt;
 </content>
    </entry>
    
