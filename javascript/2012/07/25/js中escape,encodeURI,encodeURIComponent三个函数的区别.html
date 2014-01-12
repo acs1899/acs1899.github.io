@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <title>
         
-            Category: html&css-acs1899
+            js中escape,encodeURI,encodeURIComponent三个函数的区别-acs1899
                  
     </title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="escape,encodeURI,encodeURComponent三者不同处及使用时需要注意的地方" />
+    <meta name="keywords" content="escape, encodeURI, encodeURIComponent" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
@@ -106,31 +106,61 @@
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">Category:&nbsp;&nbsphtml&css</h3>
+        <h3 class="violet-title-item">js中escape,encodeURI,encodeURIComponent三个函数的区别</h3>
     </div>
     <div class="violet-post">
+        <p class="main-article-meta"><span pubdate="">2012-07-25</span></p>
         <div class="main-article-contant">
-            
-            <h3>2012</h3>
-            <ul class="article-year fn-clear">
-                <li>
-                    <span>2012-05-03</span>
-                    <a href="/html&css/2012/05/03/IE67%E4%B8%8Bbody%7Boverflow%3Ahidden%7D%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98.html">IE6、7下 body标签overflow:hidden失效的问题</a>
-		    <P class="description">IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)</p>
-                </li>
-            </ul>
-	    
-            <h3>2011</h3>
-            <ul class="article-year fn-clear">
-                <li>
-                    <span>2011-09-20</span>
-                    <a href="/javascript/html&css/jekyll/2011/09/20/hello-world.html">Hello world</a>
-		    <P class="description">这是 acs1899 在 GitHub 上面的第一篇文章，您好，世界。</p>
-                </li>
-            </ul>
-	    
+            <p>js对文字进行编码涉及3个函数：escape,encodeURI,encodeURIComponent，相应3个解码函数：unescape,decodeURI,decodeURIComponent</p>
+
+<p>1、 传递参数时需要使用encodeURIComponent，这样组合的url才不会被#等特殊字符截断。                            </p>
+
+<p>例如：</p>
+
+<div class="highlight"><pre><code class="javascript">    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;http://www.cpuele.com?aid=7&amp;u=&#39;</span><span class="o">+</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.cpuele.com/index.htm)+&#39;&quot;&gt;退出&lt;/a&gt;&#39;)</span>
+</code></pre></div>
+
+<p>2、 进行url跳转时可以整体使用encodeURI</p>
+
+<p>例如：</p>
+
+<div class="highlight"><pre><code class="javascript">    <span class="nx">Location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="nb">encodeURI</span><span class="p">(</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.cpuele.com/do/s?word=恒特电器&amp;ct=21);</span>
+</code></pre></div>
+
+<p>3、 js使用数据时可以使用escape</p>
+
+<p>例如：搜藏中history纪录。</p>
+
+<p>4、 escape对0-255以外的unicode值进行编码时输出%u****格式，其它情况下escape，encodeURI，encodeURIComponent编码结果相同。</p>
+
+<p><span class="impo">注意：</span></p>
+
+<p>最多使用的应为encodeURIComponent，它是将中文、韩文等特殊字符转换成utf-8格式的url编码，所以如果给后台传递参数需要使用encodeURIComponent时需要后台解码对utf-8支持（form中的编码方式和当前页面编码方式相同）</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">escape不编码字符有69个：*，+，-，.，/，@，_，0-9，a-z，A-Z
+
+encodeURI不编码字符有82个：!，#，$，&amp;，&#39;，(，)，*，+，,，-，.，/，:，;，=，?，@，_，~，0-9，a-z，A-Z
+
+encodeURIComponent不编码字符有71个：!， &#39;，(，)，*，-，.，_，~，0-9，a-z，A-Z
+</code></pre></div>
         </div>
     </div>
+</div>
+<div class="pagination fn-clear" id="violet-paging">
+    <div class="pagination-list">
+        
+        <a class="prev" href="/bigbang/2012/07/05/wow%E5%AE%8F%E6%95%99%E7%A8%8B.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>wow宏教程</a>
+        
+        
+        <a class="next" href="/javascript/2012/08/22/getElementById%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F.html" rel="bookmark">getElementById方法的作用域<i class="fa fa-chevron-circle-right"></i></a>
+        
+    </div>
+</div>
+<div class="comment">
+    
+        <div class="comment-cnt">
+            <div id="disqus_thread"></div>
+        </div>
+    
 </div>
 
         </div>
@@ -196,6 +226,19 @@
             "background-image": "url(" + headImgArr[item] + ")"
         });
     </script>
+    
+        
+        <script type="text/javascript">
+            //disqus
+            var disqus_shortname = 'acs1899blog';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] ||
+                    document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        
     
 </body>
 </html>
