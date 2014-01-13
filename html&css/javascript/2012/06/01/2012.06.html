@@ -84,11 +84,11 @@
             
             <li class="cagory-li "><a href="/categories/bigbang">bigbang (1)</a></li>
             
-            <li class="cagory-li "><a href="/categories/javascript">javascript (6)</a></li>
-            
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
             <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/javascript">javascript (6)</a></li>
             
             </ul>
     	</div>
@@ -100,22 +100,37 @@
     <div class="violet-post">
         <p class="main-article-meta"><span pubdate="">2012-06-01</span></p>
         <div class="main-article-contant">
-            1.  select在IE6下 始终处于Z-INDEX最高 需要用一个空白iframe将其覆盖
+            1.  <span class="impo">select</span>在IE6下 始终处于Z-INDEX最高 需要用一个空白<span class="impo">iframe</span>将其覆盖
+
 2.  IE的盒模型宽（高）度 = width(height)
+
 3.  w3c标准盒模型宽（高）度 = width(height) + padding
-4.  IE中AJAX 如果用get方式发送请求 URL后跟的值必须经过encodeURIComponent转码 否则在IE下可能导致AJAX无效(理论上只要是通过GET方式传送的数据都应该使用encodeURIComponent)
-5.  要取textarea中的值 若使用innerHTML 只能取到初始值。当textarea中的值改变之后 用innerHTML就取不到现在的值 需要用value
-6.  当文件使用utf-8+BOM 编码时 文件开头会自带一个空白符 这会导致DOCTYPE 申明无法被解析 需要将文件保存为 utf-8无BOM编码
-7.  在IE6下 a标签 设置href="javascript:void(0)" onclick事件将不能触发 有两种解决方法
-    <a style="cursor:pointer" onclick="alert('d')"></a> 直接不设置href
-    <a href="javascript:void(0)" onclick="alert('d');return false"></a>通过return false阻止触发a标签的默认事件
+
+4.  IE中AJAX 如果用get方式发送请求 URL后跟的值必须经过<span class="impo">encodeURIComponent</span>转码 否则在IE下可能导致AJAX无效(理论上只要是通过GET方式传送的数据都应该使用<span class="impo">encodeURIComponent</span>)
+
+5.  要取<span class="impo">textarea</span>中的值 若使用<span class="">innerHTML只能取到初始值。当textarea中的值改变之后 用innerHTML就取不到现在的值 需要用value
+
+6.  当文件使用utf-8+BOM 编码时 文件开头会自带一个空白符 这会导致<span class="impo">DOCTYPE</span>申明无法被解析 需要将文件保存为 utf-8 无BOM编码
+
+7.  在IE6下 a标签 设置href="javascript:void(0)" <span class="impo">onclick</span> 事件将不能触发 有两种解决方法
+    
+    \<a style="cursor:pointer" onclick="alert('d')"\>\<\/a\> 直接不设置href
+    
+    \<a href="javascript:void(0)" onclick="alert('d');return false"\>\<\/a\>通过return false阻止触发a标签的默认事件
+
 8.  IE下操作粘贴板
+    
     获取粘贴板内容 window.clipboardData.getData("Text")
+    
     设置粘贴板内容 window.clipboardData.setData("Text",要复制的内容)
+
 9.  判断IE6最简短的代码
+    
     !-[1,]&&!window.XMLHttpRequest
+    
     !-[1,]利用了IE与标准浏览器在处理数组的toString方法的差异来判断是否为IE浏览器（PS：只能判断IE6，7，8），!window.XMLHttpRequest则排出掉IE7及以上版本
-10. 水平margin不重叠，浮动元素上下margin不重叠，常规折行上下margin重叠
+
+10. 水平<span class="impo">margin</span>不重叠，浮动元素上下<span class="impo">margin</span>不重叠，常规折行上下<span class="impo">margin</span>重叠
 
         </div>
     </div>
