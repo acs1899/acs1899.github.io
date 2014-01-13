@@ -4,7 +4,7 @@
    <title>acs1899</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2014-01-13T12:51:23+08:00</updated>
+   <updated>2014-01-13T22:56:01+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -45,9 +45,9 @@
 &lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ms536423(v=vs.85&quot;&gt;fireEvent的官方文档&lt;/a&gt;.aspx)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ms536423(v=vs.85).aspx&quot;&gt;fireEvent的官方文档&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ie/ms536390(v=vs.85&quot;&gt;createEventObject的官方文档&lt;/a&gt;.aspx)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ie/ms536390(v=vs.85).aspx&quot;&gt;createEventObject的官方文档&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;再看看高级浏览器（chrome,firefox等）：&lt;/p&gt;
 
