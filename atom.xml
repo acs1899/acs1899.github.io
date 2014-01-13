@@ -4,7 +4,7 @@
    <title>acs1899</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2014-01-13T10:20:11+08:00</updated>
+   <updated>2014-01-13T10:22:06+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -385,9 +385,9 @@ encodeURIComponent不编码字符有71个：!， &amp;#39;，(，)，*，-，.�
    
    <entry>
      <title>2012.06.01近期项目总结</title>
-     <link href="/html&css,javascript/2012/06/01/2012.06.html"/>
+     <link href="/html&css/javascript/2012/06/01/2012.06.html"/>
      <updated>2012-06-01T00:00:00+08:00</updated>
-     <id>/html&css,javascript/2012/06/01/2012.06</id>
+     <id>/html&css/javascript/2012/06/01/2012.06</id>
      <content type="html">1.  select在IE6下 始终处于Z-INDEX最高 需要用一个空白iframe将其覆盖
 2.  IE的盒模型宽（高）度 = width(height)
 3.  w3c标准盒模型宽（高）度 = width(height) + padding

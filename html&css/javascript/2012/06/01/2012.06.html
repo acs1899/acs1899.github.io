@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <title>
         
-            Category: html&css,javascript-acs1899
+            2012.06.01近期项目总结-acs1899
                  
     </title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="总结最近项目中所遇到的问题" />
+    <meta name="keywords" content="总结,问题" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
@@ -82,37 +82,60 @@
 	<div class="category_box">
             <ul>
             
-            <li class="cagory-li "><a href="/categories/html&css,javascript">html&css,javascript (1)</a></li>
-            
             <li class="cagory-li "><a href="/categories/bigbang">bigbang (1)</a></li>
             
-            <li class="cagory-li "><a href="/categories/html&css">html&css (2)</a></li>
-            
-            <li class="cagory-li "><a href="/categories/javascript">javascript (5)</a></li>
+            <li class="cagory-li "><a href="/categories/javascript">javascript (6)</a></li>
             
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
             
             </ul>
     	</div>
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">Category:&nbsp;&nbsphtml&css,javascript</h3>
+        <h3 class="violet-title-item">2012.06.01近期项目总结</h3>
     </div>
     <div class="violet-post">
+        <p class="main-article-meta"><span pubdate="">2012-06-01</span></p>
         <div class="main-article-contant">
-            
-            <h3>2012</h3>
-            <ul class="article-year fn-clear">
-                <li>
-                    <span>2012-06-01</span>
-                    <a href="/html&css,javascript/2012/06/01/2012.06.html">2012.06.01近期项目总结</a>
-		    <P class="description">总结最近项目中所遇到的问题</p>
-                </li>
-            </ul>
-	    
+            1.  select在IE6下 始终处于Z-INDEX最高 需要用一个空白iframe将其覆盖
+2.  IE的盒模型宽（高）度 = width(height)
+3.  w3c标准盒模型宽（高）度 = width(height) + padding
+4.  IE中AJAX 如果用get方式发送请求 URL后跟的值必须经过encodeURIComponent转码 否则在IE下可能导致AJAX无效(理论上只要是通过GET方式传送的数据都应该使用encodeURIComponent)
+5.  要取textarea中的值 若使用innerHTML 只能取到初始值。当textarea中的值改变之后 用innerHTML就取不到现在的值 需要用value
+6.  当文件使用utf-8+BOM 编码时 文件开头会自带一个空白符 这会导致DOCTYPE 申明无法被解析 需要将文件保存为 utf-8无BOM编码
+7.  在IE6下 a标签 设置href="javascript:void(0)" onclick事件将不能触发 有两种解决方法
+    <a style="cursor:pointer" onclick="alert('d')"></a> 直接不设置href
+    <a href="javascript:void(0)" onclick="alert('d');return false"></a>通过return false阻止触发a标签的默认事件
+8.  IE下操作粘贴板
+    获取粘贴板内容 window.clipboardData.getData("Text")
+    设置粘贴板内容 window.clipboardData.setData("Text",要复制的内容)
+9.  判断IE6最简短的代码
+    !-[1,]&&!window.XMLHttpRequest
+    !-[1,]利用了IE与标准浏览器在处理数组的toString方法的差异来判断是否为IE浏览器（PS：只能判断IE6，7，8），!window.XMLHttpRequest则排出掉IE7及以上版本
+10. 水平margin不重叠，浮动元素上下margin不重叠，常规折行上下margin重叠
+
         </div>
     </div>
+</div>
+<div class="pagination fn-clear" id="violet-paging">
+    <div class="pagination-list">
+        
+        <a class="prev" href="/html&css/2012/05/03/IE67%E4%B8%8Bbody%7Boverflow%3Ahidden%7D%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>IE6、7下 body标签overflow:hidden失效的问题</a>
+        
+        
+        <a class="next" href="/bigbang/2012/07/05/wow%E5%AE%8F%E6%95%99%E7%A8%8B.html" rel="bookmark">wow宏教程<i class="fa fa-chevron-circle-right"></i></a>
+        
+    </div>
+</div>
+<div class="comment">
+    
+        <div class="comment-cnt">
+            <div id="disqus_thread"></div>
+        </div>
+    
 </div>
 
         </div>
@@ -178,6 +201,19 @@
             "background-image": "url(" + headImgArr[item] + ")"
         });
     </script>
+    
+        
+        <script type="text/javascript">
+            //disqus
+            var disqus_shortname = 'acs1899blog';
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] ||
+                    document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        
     
 </body>
 </html>
