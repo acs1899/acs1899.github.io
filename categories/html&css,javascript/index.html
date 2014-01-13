@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <title>
         
-            IE6、7下 body标签overflow:hidden失效的问题-acs1899
+            Category: html&css,javascript-acs1899
                  
     </title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)" />
-    <meta name="keywords" content="IE6 IE7 overflow" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
@@ -97,60 +97,22 @@
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">IE6、7下 body标签overflow:hidden失效的问题</h3>
+        <h3 class="violet-title-item">Category:&nbsp;&nbsphtml&css,javascript</h3>
     </div>
     <div class="violet-post">
-        <p class="main-article-meta"><span pubdate="">2012-05-03</span></p>
         <div class="main-article-contant">
-            <div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;p&gt;</span>There are no scrollbars on this page in sane browsers<span class="nt">&lt;/p&gt;</span>
-</code></pre></div>
-
-<div class="highlight"><pre><code class="css"><span class="lineno">1</span> <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="nt">p</span> <span class="p">{</span><span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;}</span>
-<span class="lineno">2</span> <span class="nt">body</span> <span class="p">{</span><span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;}</span>
-<span class="lineno">3</span> <span class="nt">p</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">5000px</span><span class="p">;</span> <span class="k">height</span><span class="o">:</span> <span class="m">5000px</span><span class="p">;}</span>
-</code></pre></div>
-
-<p><span class="impo">IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)</span></p>
-
-<p>原因：</p>
-
-<p>明智的浏览器(ex. chrome and firefox)会初始付值给html<span class="inpo">{overflow:visible;}</span></p>
-
-<p>IE6 初始付值html<span class="impo">{overflow-x:auto;overflow-y:scroll;}</span></p>
-
-<p>IE7 初始付值html<span class="impo">{overflow-x:visible;overflow-y:scroll;}</span></p>
-
-<p>只有dom根结点（也就是html根节点）设置html<span class="impo">{overflow:visible;}</span>的时候，浏览器才会将body元素中的overflow值应用到视图区。</p>
-
-<p>举个例子说：</p>
-
-<p>设置了body<span class="impo">{overflow:hidden}<span>还会出现滚动条，不过这个滚动条不是body的，是html的</p>
-
-<p>只有你设置html<span class="impo">{overflow:visible;}</span> body<span class="impo">{overflow的值}</span>才能传递到html中去</p>
-
-<p>这样html的值就变成了<span class="impo">{overflow:hidden}</span>ok没有滚动条了</p>
-
-<p>这样就很明了啦，并不是bug，而是浏览器初始值不同产生的问题。</p>
-
+            
+            <h3>2012</h3>
+            <ul class="article-year fn-clear">
+                <li>
+                    <span>2012-06-01</span>
+                    <a href="/html&css,javascript/2012/06/01/2012.06.html">2012.06.01近期项目总结</a>
+		    <P class="description">总结最近项目中所遇到的问题</p>
+                </li>
+            </ul>
+	    
         </div>
     </div>
-</div>
-<div class="pagination fn-clear" id="violet-paging">
-    <div class="pagination-list">
-        
-        <a class="prev" href="/javascript/html&css/jekyll/2011/09/20/hello-world.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>Hello world</a>
-        
-        
-        <a class="next" href="/html&css,javascript/2012/06/01/2012.06.html" rel="bookmark">2012.06.01近期项目总结<i class="fa fa-chevron-circle-right"></i></a>
-        
-    </div>
-</div>
-<div class="comment">
-    
-        <div class="comment-cnt">
-            <div id="disqus_thread"></div>
-        </div>
-    
 </div>
 
         </div>
@@ -216,19 +178,6 @@
             "background-image": "url(" + headImgArr[item] + ")"
         });
     </script>
-    
-        
-        <script type="text/javascript">
-            //disqus
-            var disqus_shortname = 'acs1899blog';
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] ||
-                    document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        
     
 </body>
 </html>

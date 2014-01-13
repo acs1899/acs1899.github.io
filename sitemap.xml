@@ -47,6 +47,11 @@
     </url>
     
     <url>
+        <loc>/html&css,javascript/2012/06/01/2012.06.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>/html&css/2012/05/03/IE67%E4%B8%8Bbody%7Boverflow%3Ahidden%7D%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98.html</loc>
         <priority>0.8</priority>
     </url>
