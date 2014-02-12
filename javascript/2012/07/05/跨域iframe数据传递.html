@@ -78,13 +78,13 @@
 	<div class="category_box">
             <ul>
             
-            <li class="cagory-li "><a href="/categories/javascript">javascript (7)</a></li>
-            
             <li class="cagory-li "><a href="/categories/bigbang">bigbang (1)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
             
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
-            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
+            <li class="cagory-li "><a href="/categories/javascript">javascript (7)</a></li>
             
             </ul>
     	</div>
@@ -155,57 +155,54 @@
 
 <h3>主页面A的源码</h3>
 
-<p>{ highlight html linenos }
-<script type="text/javascript">
-function init(){
-    document.domain = &#39;bai.sohu.com&#39;;
-    alert(&#39;我是主框架，嵌入了第三方应用IframeB,下面开始加载应用&#39;);
-    var iframeTag = document.getElementById(&#39;frameB&#39;),
-        iframeSrc = &#39;http://test.com/iframePage.html&#39;;
-    iframeTag.src = iframeSrc;
-    iframeTag.style.display = &#39;block&#39;;
-}</p>
-
-<p>function callback(h){
-    var iframeB = document.getElementById(&#39;frameB&#39;);
-    alert(&#39;IframeC调用我（主框架）接口，把IframeB的高度传给我，具体值是：&#39; + h);
-    iframeB.style.height= h + 10 + &#39;px&#39;;
-    iframeB.src += &#39;#&#39;+ h;
-}
-</script>
-<body onload="init();">
-    <p>我是主页框架，我的域是：bai.sohu.com</p>
-    <iframe id="frameB" style="display:none;"></iframe>
-</body>
-{ endhighlight }</p>
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 2</span> <span class="kd">function</span> <span class="nx">init</span><span class="p">(){</span>
+<span class="lineno"> 3</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">domain</span> <span class="o">=</span> <span class="s1">&#39;bai.sohu.com&#39;</span><span class="p">;</span>
+<span class="lineno"> 4</span>     <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;我是主框架，嵌入了第三方应用IframeB,下面开始加载应用&#39;</span><span class="p">);</span>
+<span class="lineno"> 5</span>     <span class="kd">var</span> <span class="nx">iframeTag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;frameB&#39;</span><span class="p">),</span>
+<span class="lineno"> 6</span>         <span class="nx">iframeSrc</span> <span class="o">=</span> <span class="s1">&#39;http://test.com/iframePage.html&#39;</span><span class="p">;</span>
+<span class="lineno"> 7</span>     <span class="nx">iframeTag</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">iframeSrc</span><span class="p">;</span>
+<span class="lineno"> 8</span>     <span class="nx">iframeTag</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;block&#39;</span><span class="p">;</span>
+<span class="lineno"> 9</span> <span class="p">}</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="kd">function</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">h</span><span class="p">){</span>
+<span class="lineno">12</span>     <span class="kd">var</span> <span class="nx">iframeB</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;frameB&#39;</span><span class="p">);</span>
+<span class="lineno">13</span>     <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;IframeC调用我（主框架）接口，把IframeB的高度传给我，具体值是：&#39;</span> <span class="o">+</span> <span class="nx">h</span><span class="p">);</span>
+<span class="lineno">14</span>     <span class="nx">iframeB</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span><span class="o">=</span> <span class="nx">h</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
+<span class="lineno">15</span>     <span class="nx">iframeB</span><span class="p">.</span><span class="nx">src</span> <span class="o">+=</span> <span class="s1">&#39;#&#39;</span><span class="o">+</span> <span class="nx">h</span><span class="p">;</span>
+<span class="lineno">16</span> <span class="p">}</span>
+<span class="lineno">17</span> <span class="nt">&lt;/script&gt;</span>
+<span class="lineno">18</span> <span class="nt">&lt;body</span> <span class="na">onload=</span><span class="s">&quot;init();&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">19</span>     <span class="nt">&lt;p&gt;</span>我是主页框架，我的域是：bai.sohu.com<span class="nt">&lt;/p&gt;</span>
+<span class="lineno">20</span>     <span class="nt">&lt;iframe</span> <span class="na">id=</span><span class="s">&quot;frameB&quot;</span> <span class="na">style=</span><span class="s">&quot;display:none;&quot;</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+<span class="lineno">21</span> <span class="nt">&lt;/body&gt;</span>
+</code></pre></div>
 
 <h3>iframeB的源码</h3>
 
-<p>{ highlight html linenos }
-function init(){
-    alert(&#39;我是第三方App，下面开始创建和主框架同域的通信通道IframeC,并设置它的src，用#号传递高度值&#39;);
-    var iframeTag = document.getElementById(&#39;frameC&#39;),
-    iframeSrc = &#39;http://bai.sohu.com/iframePageC.html#&#39;,
-    pageHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
-    iframeTag.src = iframeSrc + pageHeight;
-    iframeTag.style.display = &#39;block&#39;;</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">window.setTimeout(function(){
-    alert(&#39;主页面设置我（IframeB）的src，通过Hash（#）给我传递它收到的高度：&#39; + location.hash);
-},2000);
+<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> function init(){
+<span class="lineno"> 2</span>     alert(&#39;我是第三方App，下面开始创建和主框架同域的通信通道IframeC,并设置它的src，用#号传递高度值&#39;);
+<span class="lineno"> 3</span>     var iframeTag = document.getElementById(&#39;frameC&#39;),
+<span class="lineno"> 4</span>     iframeSrc = &#39;http://bai.sohu.com/iframePageC.html#&#39;,
+<span class="lineno"> 5</span>     pageHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+<span class="lineno"> 6</span>     iframeTag.src = iframeSrc + pageHeight;
+<span class="lineno"> 7</span>     iframeTag.style.display = &#39;block&#39;;
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span>     window.setTimeout(function(){
+<span class="lineno">10</span>         alert(&#39;主页面设置我（IframeB）的src，通过Hash（#）给我传递它收到的高度：&#39; + location.hash);
+<span class="lineno">11</span>     },2000);
+<span class="lineno">12</span> }
+<span class="lineno">13</span> <span class="nt">&lt;/script&gt;</span>
 </code></pre></div>
-<p>}
-</script>
-{ endhighlight }</p>
 
 <h3>iframeC的源码</h3>
 
-<p>{ highlight html linenos }
-<script type="text/javascript">
-document.domain = &#39;bai.sohu.com&#39;;
-alert(&#39;我（IframeC）收到iframeB通过参数（#）给我传递高度值，我现在调用主页面方法去设置IframeB的高度&#39;);
-top.callback(window.location.href.split(&#39;#&#39;)[1]);
-</script>
-{ endhighlight }</p>
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+<span class="lineno">2</span> <span class="nb">document</span><span class="p">.</span><span class="nx">domain</span> <span class="o">=</span> <span class="s1">&#39;bai.sohu.com&#39;</span><span class="p">;</span>
+<span class="lineno">3</span> <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;我（IframeC）收到iframeB通过参数（#）给我传递高度值，我现在调用主页面方法去设置IframeB的高度&#39;</span><span class="p">);</span>
+<span class="lineno">4</span> <span class="nx">top</span><span class="p">.</span><span class="nx">callback</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="lineno">5</span> <span class="nt">&lt;/script&gt;</span>
+</code></pre></div>
 
         </div>
     </div>
