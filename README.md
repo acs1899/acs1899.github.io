@@ -1,3 +1,3 @@
 ##acs1899.info
 
-This is my blog backups
+This is my blog
