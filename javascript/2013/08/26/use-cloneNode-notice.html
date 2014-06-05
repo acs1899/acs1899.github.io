@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>使用cloneNode时需要注意的问题-acs1899</title>
+    <title>使用cloneNode时需要注意的问题-John_conna</title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
     <meta name="description" content="当被clone的元素包涵script子元素时，script中的脚本是否会被执行多次。当被clone的元素被绑定了事件时，clone后的元素是否还能触发绑定的事件" />
@@ -20,7 +20,7 @@
     <div class="page-wrapper">
         <div class="head" id="violet-head">
             <div class="header" id="violet-header">
-                <h1 class="logo"><a href="">acs1899</a></h1>
+                <h1 class="logo"><a href="">John_conna</a></h1>
                 <h2 class="subtitle">To be or not to be,that is the question...</h2>
             </div>
             <div class="nav" id="violet-nav">
@@ -78,13 +78,13 @@
 	<div class="category_box">
             <ul>
             
+            <li class="cagory-li "><a href="/categories/javascript">javascript (8)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
+            
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
             <li class="cagory-li "><a href="/categories/bigbang">bigbang (1)</a></li>
-            
-            <li class="cagory-li "><a href="/categories/javascript">javascript (7)</a></li>
-            
-            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
             
             </ul>
     	</div>
@@ -107,8 +107,7 @@
 <span class="lineno">3</span> <span class="nt">&lt;/div&gt;</span>  
 <span class="lineno">4</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
 <span class="lineno">5</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
-<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span>
-</code></pre></div>
+<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在所有浏览器中<span class="impo">alert</span>都只执行一次</p>
 
@@ -119,8 +118,7 @@
 <span class="lineno">3</span> <span class="nt">&lt;/div&gt;</span>  
 <span class="lineno">4</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
 <span class="lineno">5</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
-<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span>
-</code></pre></div>
+<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在非IE浏览器中<span class="impo">alert</span>只执行一次</p>
 
@@ -135,8 +133,7 @@
 <div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span> <span class="na">onclick=</span><span class="s">&#39;alert(1)&#39;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
 <span class="lineno">2</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
 <span class="lineno">3</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
-<span class="lineno">4</span> <span class="nt">&lt;/script&gt;</span> 
-</code></pre></div>
+<span class="lineno">4</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在所有浏览器中，click事件均被复制</p>
 
@@ -147,8 +144,7 @@
 <span class="lineno">3</span>     <span class="kd">var</span> <span class="nx">box</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">);</span>
 <span class="lineno">4</span>     <span class="nx">box</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)}</span>  
 <span class="lineno">5</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
-<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span>
-</code></pre></div>
+<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在所有浏览器中，点击第一个div会有<span class="impo">alert</span>，点击第二个div无反应</p>
 
@@ -163,8 +159,7 @@
 <span class="lineno"> 7</span>         <span class="nx">box</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)})</span>  
 <span class="lineno"> 8</span>     <span class="p">}</span>  
 <span class="lineno"> 9</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
-<span class="lineno">10</span> <span class="nt">&lt;/script&gt;</span>
-</code></pre></div>
+<span class="lineno">10</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在非IE浏览器下 点击第二个div不会执行<span class="impo">alert</span></p>
 
@@ -212,8 +207,7 @@
 <span class="lineno">38</span>         <span class="k">this</span><span class="p">.</span><span class="nx">$$handleEvent</span> <span class="o">=</span> <span class="nx">handlers</span><span class="p">;</span>
 <span class="lineno">39</span>         <span class="nx">handlers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,[</span><span class="nx">event</span><span class="p">]);</span>
 <span class="lineno">40</span>     <span class="p">}</span>
-<span class="lineno">41</span> <span class="p">};</span>
-</code></pre></div>
+<span class="lineno">41</span> <span class="p">};</span></code></pre></div>
 
 <p style="color:#00bfff">为了弥补element['on'+type]无法绑定多个处理函数的缺点，addEvent将所有事件类型存储在element的events对象中，events中的每一个事件类型以同样的形式存储着该类型下所有的处理函数</p>
 
@@ -225,8 +219,7 @@
 <span class="lineno">6</span>     <span class="p">},</span>
 <span class="lineno">7</span>     <span class="nx">mousedown</span><span class="o">:</span><span class="p">{...},</span>
 <span class="lineno">8</span>     <span class="p">...</span>
-<span class="lineno">9</span> <span class="p">}</span>
-</code></pre></div>
+<span class="lineno">9</span> <span class="p">}</span></code></pre></div>
 
 <p>总结：</p>
 
@@ -240,10 +233,10 @@
 <div class="pagination fn-clear" id="violet-paging">
     <div class="pagination-list">
         
-        <a class="prev" href="/javascript/2012/08/22/getElementById%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>getElementById方法的作用域</a>
+        <a class="prev" href="/javascript/2012/08/22/getElementById-scopes.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>getElementById方法的作用域</a>
         
         
-        <a class="next" href="/javascript/2013/12/19/javascript%E4%BA%8B%E4%BB%B6%E8%A7%A6%E5%8F%91%E5%99%A8.html" rel="bookmark">javascript事件触发器<i class="fa fa-chevron-circle-right"></i></a>
+        <a class="next" href="/javascript/2013/12/19/javascript-fireEvent.html" rel="bookmark">javascript事件触发器<i class="fa fa-chevron-circle-right"></i></a>
         
     </div>
 </div>
@@ -258,7 +251,7 @@
         </div>
         <div class="foot" id="violet-foot">
             <div class="footer fn-clear">
-                <h1 class="logo">acs1899</h1>
+                <h1 class="logo">John_conna</h1>
             </div>
             <div class="copyright">
                 <div class="copyright-cnt fn-clear">
@@ -275,7 +268,7 @@
                     
                     <a class="follow" href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a>
                     
-                    <p class="text">Powered By Jekyll. Theme Design by <a href="http://www.zhanxin.info">zhanxin.lin</a></p>
+                    <p class="text">Powered By Jekyll. <span style="color:#666">Theme Design by <a href="http://www.zhanxin.info" style="color:#666;text-decoration:none;">zhanxin.lin</a></span></p>
                 </div>
             </div>
         </div>

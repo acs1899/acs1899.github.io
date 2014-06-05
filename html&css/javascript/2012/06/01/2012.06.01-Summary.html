@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>js中escape,encodeURI,encodeURIComponent三个函数的区别-acs1899</title>
+    <title>2012.06.01近期项目总结-John_conna</title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="escape,encodeURI,encodeURComponent三者不同处及使用时需要注意的地方" />
-    <meta name="keywords" content="escape, encodeURI, encodeURIComponent" />
+    <meta name="description" content="总结最近项目中所遇到的问题" />
+    <meta name="keywords" content="总结,问题" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
@@ -20,7 +20,7 @@
     <div class="page-wrapper">
         <div class="head" id="violet-head">
             <div class="header" id="violet-header">
-                <h1 class="logo"><a href="">acs1899</a></h1>
+                <h1 class="logo"><a href="">John_conna</a></h1>
                 <h2 class="subtitle">To be or not to be,that is the question...</h2>
             </div>
             <div class="nav" id="violet-nav">
@@ -78,65 +78,72 @@
 	<div class="category_box">
             <ul>
             
+            <li class="cagory-li "><a href="/categories/javascript">javascript (8)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
+            
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
             <li class="cagory-li "><a href="/categories/bigbang">bigbang (1)</a></li>
-            
-            <li class="cagory-li "><a href="/categories/javascript">javascript (7)</a></li>
-            
-            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
             
             </ul>
     	</div>
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">js中escape,encodeURI,encodeURIComponent三个函数的区别</h3>
+        <h3 class="violet-title-item">2012.06.01近期项目总结</h3>
     </div>
     <div class="violet-post">
-        <p class="main-article-meta"><span pubdate="">2012-07-25</span></p>
+        <p class="main-article-meta"><span pubdate="">2012-06-01</span></p>
         <div class="main-article-contant">
-            <p>js对文字进行编码涉及3个函数：escape,encodeURI,encodeURIComponent，相应3个解码函数：unescape,decodeURI,decodeURIComponent</p>
+            <p>表单控件在IE6下始终处于Z-INDEX最高，需要用一个空白<span class="impo">iframe</span>将其覆盖。</p>
 
-<p>1、 传递参数时需要使用encodeURIComponent，这样组合的url才不会被#等特殊字符截断。                            </p>
+<p>IE的盒模型宽（高）度 = width(height)</p>
 
-<p>例如：</p>
+<p>w3c标准盒模型宽（高）度 = width(height) + padding</p>
 
-<div class="highlight"><pre><code class="javascript">    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;&lt;a href=&quot;http://www.cpuele.com?aid=7&amp;u=&#39;</span><span class="o">+</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.cpuele.com/index.htm)+&#39;&quot;&gt;退出&lt;/a&gt;&#39;)</span>
-</code></pre></div>
+<p>IE中AJAX 如果用get方式发送请求 URL后跟的值必须经过<span class="impo">encodeURIComponent</span>转码，否则在IE下可能导致AJAX无效(理论上只要是通过GET方式传送的数据都应该使用<span class="impo">encodeURIComponent</span>)。</p>
 
-<p>2、 进行url跳转时可以整体使用encodeURI</p>
+<p>要取<span class="impo">textarea</span>中的值 若使用<span class="impo">innerHTML</span>只能取到初始值。当textarea中的值改变之后用<span class="impo">innerHTML</span>就取不到现在的值，需要用value。</p>
 
-<p>例如：</p>
+<p>当文件使用 utf-8+BOM 编码时，文件开头会自带一个空白符。这会导致<span class="impo">DOCTYPE</span>申明无法被解析，需要将文件保存为 utf-8 无BOM编码。</p>
 
-<div class="highlight"><pre><code class="javascript">    <span class="nx">Location</span><span class="p">.</span><span class="nx">href</span><span class="o">=</span><span class="nb">encodeURI</span><span class="p">(</span><span class="nx">http</span><span class="o">:</span><span class="c1">//www.cpuele.com/do/s?word=恒特电器&amp;ct=21);</span>
-</code></pre></div>
+<p>在IE6下 a 标签设置 href="javascript:void(0)" <span class="impo">onclick</span> 事件将不能触发。有两种解决方法：</p>
+    
 
-<p>3、 js使用数据时可以使用escape</p>
+<p>  &lt;a style="cursor:pointer" onclick="alert('d')">&lt;/a> 直接不设置href</p>
+    
 
-<p>例如：搜藏中history纪录。</p>
+<p>  &lt;a href="javascript:void(0)" onclick="alert('d');return false">&lt;/a> 通过return false阻止触发a标签的默认事件</p>
 
-<p>4、 escape对0-255以外的unicode值进行编码时输出%u****格式，其它情况下escape，encodeURI，encodeURIComponent编码结果相同。</p>
+<p>IE下操作粘贴板：</p>
+    
 
-<p><span class="impo">注意：</span></p>
+<p>  获取粘贴板内容 window.clipboardData.getData("Text")</p>
+    
 
-<p>最多使用的应为encodeURIComponent，它是将中文、韩文等特殊字符转换成utf-8格式的url编码，所以如果给后台传递参数需要使用encodeURIComponent时需要后台解码对utf-8支持（form中的编码方式和当前页面编码方式相同）</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">escape不编码字符有69个：*，+，-，.，/，@，_，0-9，a-z，A-Z
+<p>  设置粘贴板内容 window.clipboardData.setData("Text",要复制的内容)</p>
 
-encodeURI不编码字符有82个：!，#，$，&amp;，&#39;，(，)，*，+，,，-，.，/，:，;，=，?，@，_，~，0-9，a-z，A-Z
+<p>判断IE6最简短的代码</p>
+    
 
-encodeURIComponent不编码字符有71个：!， &#39;，(，)，*，-，.，_，~，0-9，a-z，A-Z
-</code></pre></div>
+<p>  !-[1,]&&!window.XMLHttpRequest</p>
+    
+
+<p>  !-[1,]利用了IE与标准浏览器在处理数组的toString方法的差异来判断是否为IE浏览器（PS：只能判断IE6，7，8），!window.XMLHttpRequest则排出掉IE7及以上版本。</p>
+
+<p>水平<span class="impo">margin</span>不重叠，浮动元素上下<span class="impo">margin</span>不重叠，常规折行上下<span class="impo">margin</span>重叠。</p>
+
         </div>
     </div>
 </div>
 <div class="pagination fn-clear" id="violet-paging">
     <div class="pagination-list">
         
-        <a class="prev" href="/javascript/2012/07/05/%E8%B7%A8%E5%9F%9Fiframe%E6%95%B0%E6%8D%AE%E4%BC%A0%E9%80%92.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>跨域iframe数据传递</a>
+        <a class="prev" href="/html&css/2012/05/03/IE67-body-overflow-hidden.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>IE6、7下 body标签overflow:hidden失效的问题</a>
         
         
-        <a class="next" href="/javascript/2012/08/22/getElementById%E6%96%B9%E6%B3%95%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F.html" rel="bookmark">getElementById方法的作用域<i class="fa fa-chevron-circle-right"></i></a>
+        <a class="next" href="/javascript/2012/07/05/cc-iframe-transmission-data.html" rel="bookmark">跨域iframe数据传递<i class="fa fa-chevron-circle-right"></i></a>
         
     </div>
 </div>
@@ -151,7 +158,7 @@ encodeURIComponent不编码字符有71个：!， &#39;，(，)，*，-，.，_�
         </div>
         <div class="foot" id="violet-foot">
             <div class="footer fn-clear">
-                <h1 class="logo">acs1899</h1>
+                <h1 class="logo">John_conna</h1>
             </div>
             <div class="copyright">
                 <div class="copyright-cnt fn-clear">
@@ -168,7 +175,7 @@ encodeURIComponent不编码字符有71个：!， &#39;，(，)，*，-，.，_�
                     
                     <a class="follow" href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a>
                     
-                    <p class="text">Powered By Jekyll. Theme Design by <a href="http://www.zhanxin.info">zhanxin.lin</a></p>
+                    <p class="text">Powered By Jekyll. <span style="color:#666">Theme Design by <a href="http://www.zhanxin.info" style="color:#666;text-decoration:none;">zhanxin.lin</a></span></p>
                 </div>
             </div>
         </div>

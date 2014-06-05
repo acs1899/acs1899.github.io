@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>IE6、7下 body标签overflow:hidden失效的问题-acs1899</title>
+    <title>getElementById方法的作用域-John_conna</title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)" />
-    <meta name="keywords" content="IE6 IE7 overflow" />
+    <meta name="description" content="IE6~8下document.getElementById方法内部实现与其他浏览器（包括IE9及以上）不同" />
+    <meta name="keywords" content="getElementById,作用域" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
@@ -20,7 +20,7 @@
     <div class="page-wrapper">
         <div class="head" id="violet-head">
             <div class="header" id="violet-header">
-                <h1 class="logo"><a href="">acs1899</a></h1>
+                <h1 class="logo"><a href="">John_conna</a></h1>
                 <h2 class="subtitle">To be or not to be,that is the question...</h2>
             </div>
             <div class="nav" id="violet-nav">
@@ -78,53 +78,59 @@
 	<div class="category_box">
             <ul>
             
+            <li class="cagory-li "><a href="/categories/javascript">javascript (8)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
+            
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
             <li class="cagory-li "><a href="/categories/bigbang">bigbang (1)</a></li>
-            
-            <li class="cagory-li "><a href="/categories/javascript">javascript (7)</a></li>
-            
-            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
             
             </ul>
     	</div>
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">IE6、7下 body标签overflow:hidden失效的问题</h3>
+        <h3 class="violet-title-item">getElementById方法的作用域</h3>
     </div>
     <div class="violet-post">
-        <p class="main-article-meta"><span pubdate="">2012-05-03</span></p>
+        <p class="main-article-meta"><span pubdate="">2012-08-22</span></p>
         <div class="main-article-contant">
-            <div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;p&gt;</span>There are no scrollbars on this page in sane browsers<span class="nt">&lt;/p&gt;</span>
-</code></pre></div>
+            <p>在看jQuery内核详解一书时，为了比较jQuery与原生javascript效率，举到一个例子。</p>
 
-<div class="highlight"><pre><code class="css"><span class="lineno">1</span> <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="nt">p</span> <span class="p">{</span><span class="k">margin</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span> <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;}</span>
-<span class="lineno">2</span> <span class="nt">body</span> <span class="p">{</span><span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;}</span>
-<span class="lineno">3</span> <span class="nt">p</span> <span class="p">{</span><span class="k">width</span><span class="o">:</span> <span class="m">5000px</span><span class="p">;</span> <span class="k">height</span><span class="o">:</span> <span class="m">5000px</span><span class="p">;}</span>
-</code></pre></div>
+<p>里面有这样一段：</p>
 
-<p><span class="impo">IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)</span></p>
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="kd">var</span> <span class="nx">$</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">;</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">b</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;header&#39;</span><span class="p">);</span></code></pre></div>
 
-<p>原因：</p>
+<p>秉着&#39;实践出真理&#39;的原则，自己敲一敲代码跑了一下。</p>
 
-<p>明智的浏览器(ex. chrome and firefox)会初始付值给html<span class="inpo">{overflow:visible;}</span></p>
+<p>在chrome、firefox、IE9下运行时，会抛出错误：</p>
 
-<p>IE6 初始付值html<span class="impo">{overflow-x:auto;overflow-y:scroll;}</span></p>
+<p><span class="impo">Illegal invocation</span> chrome</p>
 
-<p>IE7 初始付值html<span class="impo">{overflow-x:visible;overflow-y:scroll;}</span></p>
+<p><span class="impo">&#39;getElementById&#39; called on an object that does not implement interface Document.</span> firefox</p>
 
-<p>只有dom根结点（也就是html根节点）设置html<span class="impo">{overflow:visible;}</span>的时候，浏览器才会将body元素中的overflow值应用到视图区。</p>
+<p>再到IE6~8下，却能够顺畅运行。</p>
 
-<p>举个例子说：</p>
+<p><span class="impo">Illegal invocation</span>意为非法调用</p>
 
-<p>设置了body<span class="impo">{overflow:hidden}<span>还会出现滚动条，不过这个滚动条不是body的，是html的</p>
+<p><span class="impo">&#39;getElementById&#39; called on an object that does not implement interface Document.</span>意为&#39;&quot;getElementById&quot;被一个不能实现document接口的对象调用&#39;（乱翻译的，不过大致意思应该是这样。。。）</p>
 
-<p>只有你设置html<span class="impo">{overflow:visible;}</span> body<span class="impo">{overflow的值}</span>才能传递到html中去</p>
+<p>说明肯能是作用域的问题</p>
 
-<p>这样html的值就变成了<span class="impo">{overflow:hidden}</span>ok没有滚动条了</p>
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="kd">var</span> <span class="nx">$</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">;</span>
+<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">b</span><span class="o">=</span><span class="nx">$</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span><span class="s1">&#39;header&#39;</span><span class="p">);</span>
+<span class="lineno">3</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span></code></pre></div>
 
-<p>这样就很明了啦，并不是bug，而是浏览器初始值不同产生的问题。</p>
+<p>这次在非IE6~8下成功运行</p>
+
+<p>总结：</p>
+
+<p>在IE6~8下document.getElementById与作用域无关，也就是说在何处调用不会影响函数本身。</p>
+
+<p>在其他浏览器（包括IE9及以上）document.getElementById与作用域有关，也就是说getElementById函数内部this必须指向<span class="impo">document
+</span>。<span class="impo">getElementsByTagName</span>也有同样的情况。</p>
 
         </div>
     </div>
@@ -132,10 +138,10 @@
 <div class="pagination fn-clear" id="violet-paging">
     <div class="pagination-list">
         
-        <a class="prev" href="/javascript/html&css/jekyll/2011/09/20/hello-world.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>Hello world</a>
+        <a class="prev" href="/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>js中escape,encodeURI,encodeURIComponent三个函数的区别</a>
         
         
-        <a class="next" href="/html&css/javascript/2012/06/01/2012.06.html" rel="bookmark">2012.06.01近期项目总结<i class="fa fa-chevron-circle-right"></i></a>
+        <a class="next" href="/javascript/2013/08/26/use-cloneNode-notice.html" rel="bookmark">使用cloneNode时需要注意的问题<i class="fa fa-chevron-circle-right"></i></a>
         
     </div>
 </div>
@@ -150,7 +156,7 @@
         </div>
         <div class="foot" id="violet-foot">
             <div class="footer fn-clear">
-                <h1 class="logo">acs1899</h1>
+                <h1 class="logo">John_conna</h1>
             </div>
             <div class="copyright">
                 <div class="copyright-cnt fn-clear">
@@ -167,7 +173,7 @@
                     
                     <a class="follow" href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a>
                     
-                    <p class="text">Powered By Jekyll. Theme Design by <a href="http://www.zhanxin.info">zhanxin.lin</a></p>
+                    <p class="text">Powered By Jekyll. <span style="color:#666">Theme Design by <a href="http://www.zhanxin.info" style="color:#666;text-decoration:none;">zhanxin.lin</a></span></p>
                 </div>
             </div>
         </div>
