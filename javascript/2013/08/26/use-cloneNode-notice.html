@@ -105,23 +105,23 @@
 
 <p style="color:#ff8c00">内嵌script标签：</p>
 
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">2</span>     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="nt">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span>  
-<span class="lineno">3</span> <span class="nt">&lt;/div&gt;</span>  
-<span class="lineno">4</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
-<span class="lineno">5</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
-<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="nt">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span>  
+<span class="nt">&lt;/div&gt;</span>  
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在所有浏览器中<span class="impo">alert</span>都只执行一次</p>
 
 <p style="color:#ff8c00">外链script标签：</p>
 
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
-<span class="lineno">2</span>     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&#39;clone.js&#39;</span><span class="nt">&gt;&lt;/script&gt;</span>  
-<span class="lineno">3</span> <span class="nt">&lt;/div&gt;</span>  
-<span class="lineno">4</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
-<span class="lineno">5</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
-<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&#39;clone.js&#39;</span><span class="nt">&gt;&lt;/script&gt;</span>  
+<span class="nt">&lt;/div&gt;</span>  
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在非IE浏览器中<span class="impo">alert</span>只执行一次</p>
 
@@ -133,36 +133,36 @@
 
 <p style="color:#ff8c00">HTML事件处理绑定：</p>
 
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span> <span class="na">onclick=</span><span class="s">&#39;alert(1)&#39;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
-<span class="lineno">2</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
-<span class="lineno">3</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
-<span class="lineno">4</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span> <span class="na">onclick=</span><span class="s">&#39;alert(1)&#39;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在所有浏览器中，click事件均被复制</p>
 
 <p style="color:#ff8c00">DOM0级事件处理绑定：</p>
 
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
-<span class="lineno">2</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
-<span class="lineno">3</span>     <span class="kd">var</span> <span class="nx">box</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">);</span>
-<span class="lineno">4</span>     <span class="nx">box</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)}</span>  
-<span class="lineno">5</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
-<span class="lineno">6</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
+    <span class="kd">var</span> <span class="nx">box</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">);</span>
+    <span class="nx">box</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)}</span>  
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在所有浏览器中，点击第一个div会有<span class="impo">alert</span>，点击第二个div无反应</p>
 
 <p style="color:#ff8c00">DOM2级事件处理绑定：</p>
 
-<div class="highlight"><pre><code class="html"><span class="lineno"> 1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
-<span class="lineno"> 2</span> <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
-<span class="lineno"> 3</span>     <span class="kd">var</span> <span class="nx">box</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">);</span>
-<span class="lineno"> 4</span>     <span class="k">if</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">){</span>  
-<span class="lineno"> 5</span>         <span class="nx">box</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s1">&#39;onclick&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)},</span><span class="kc">false</span><span class="p">)</span>  
-<span class="lineno"> 6</span>     <span class="p">}</span><span class="k">else</span><span class="p">{</span>  
-<span class="lineno"> 7</span>         <span class="nx">box</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)})</span>  
-<span class="lineno"> 8</span>     <span class="p">}</span>  
-<span class="lineno"> 9</span>     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
-<span class="lineno">10</span> <span class="nt">&lt;/script&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
+    <span class="kd">var</span> <span class="nx">box</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">){</span>  
+        <span class="nx">box</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="s1">&#39;onclick&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)},</span><span class="kc">false</span><span class="p">)</span>  
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>  
+        <span class="nx">box</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)})</span>  
+    <span class="p">}</span>  
+    <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
 
 <p>在非IE浏览器下 点击第二个div不会执行<span class="impo">alert</span></p>
 
@@ -170,59 +170,59 @@
 
 <p>在《精通javascript》一书中，作者推荐一种Dean Edwards提出的跨浏览器事件绑定/删除事件解决方案</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="kd">function</span> <span class="nx">addEvent</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span> <span class="p">{</span>  
-<span class="lineno"> 2</span>     <span class="c1">// 为每一个事件处理函数赋予一个独立ID</span>
-<span class="lineno"> 3</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span><span class="p">)</span> <span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span> <span class="o">=</span> <span class="nx">addEvent</span><span class="p">.</span><span class="nx">guid</span><span class="o">++</span><span class="p">;</span>
-<span class="lineno"> 4</span>     <span class="c1">// 为元素建立一个事件类型的散列表（元素的所有事件类型都保存在该对象中）</span>
-<span class="lineno"> 5</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">)</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="lineno"> 6</span>     <span class="c1">// 为每一个元素/事件建立一个事件函数处理的散列表(同一事件类型的不同处理函数保存在该对象中)</span>
-<span class="lineno"> 7</span>     <span class="kd">var</span> <span class="nx">handlers</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">type</span><span class="p">];</span>
-<span class="lineno"> 8</span>     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">handlers</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno"> 9</span>         <span class="nx">handlers</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">type</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
-<span class="lineno">10</span>         <span class="c1">// 存储已有事件处理函数（如果存在一个）</span>
-<span class="lineno">11</span>         <span class="k">if</span> <span class="p">(</span><span class="nx">element</span><span class="p">[</span><span class="s2">&quot;on&quot;</span> <span class="o">+</span> <span class="nx">type</span><span class="p">])</span> <span class="p">{</span>
-<span class="lineno">12</span>             <span class="nx">handlers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nx">element</span><span class="p">[</span><span class="s2">&quot;on&quot;</span> <span class="o">+</span> <span class="nx">type</span><span class="p">];</span> 
-<span class="lineno">13</span>         <span class="p">}</span>
-<span class="lineno">14</span>     <span class="p">}</span>
-<span class="lineno">15</span>     <span class="c1">// 在散列表中存储该事件类型的处理函数</span>
-<span class="lineno">16</span>     <span class="nx">handlers</span><span class="p">[</span><span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span><span class="p">]</span> <span class="o">=</span> <span class="nx">handler</span><span class="p">;</span>
-<span class="lineno">17</span>     <span class="c1">// 注册一个全局处理函数来处理所有函数</span>
-<span class="lineno">18</span>     <span class="nx">element</span><span class="p">[</span><span class="s2">&quot;on&quot;</span> <span class="o">+</span> <span class="nx">type</span><span class="p">]</span> <span class="o">=</span> <span class="nx">handleEvent</span><span class="p">;</span>
-<span class="lineno">19</span> <span class="p">}</span>
-<span class="lineno">20</span> 
-<span class="lineno">21</span> <span class="c1">// 创建独立ID计数器</span>
-<span class="lineno">22</span> <span class="nx">addEvent</span><span class="p">.</span><span class="nx">guid</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>                                                
-<span class="lineno">23</span> 
-<span class="lineno">24</span> <span class="kd">function</span> <span class="nx">removeEvent</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">25</span>     <span class="c1">// 从散列表中删除事件处理函数</span>
-<span class="lineno">26</span>     <span class="k">if</span> <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">events</span> <span class="o">&amp;&amp;</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">type</span><span class="p">])</span> <span class="p">{</span>
-<span class="lineno">27</span>         <span class="k">delete</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">type</span><span class="p">][</span><span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span><span class="p">];</span>
-<span class="lineno">28</span>     <span class="p">}</span>
-<span class="lineno">29</span> <span class="p">};</span>
-<span class="lineno">30</span>                                                             
-<span class="lineno">31</span> <span class="kd">function</span> <span class="nx">handleEvent</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">32</span>     <span class="c1">// 获取event对象 (IE 中使用全局event对象)</span>
-<span class="lineno">33</span>     <span class="nx">event</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
-<span class="lineno">34</span>     <span class="c1">// 获取对应事件的处理函数散列表</span>
-<span class="lineno">35</span>     <span class="kd">var</span> <span class="nx">handlers</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">];</span>
-<span class="lineno">36</span>     <span class="c1">// 依次执行处理函数散列表中的函数</span>
-<span class="lineno">37</span>     <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">handlers</span><span class="p">)</span> <span class="p">{</span>
-<span class="lineno">38</span>         <span class="k">this</span><span class="p">.</span><span class="nx">$$handleEvent</span> <span class="o">=</span> <span class="nx">handlers</span><span class="p">;</span>
-<span class="lineno">39</span>         <span class="nx">handlers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,[</span><span class="nx">event</span><span class="p">]);</span>
-<span class="lineno">40</span>     <span class="p">}</span>
-<span class="lineno">41</span> <span class="p">};</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="nx">addEvent</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="c1">// 为每一个事件处理函数赋予一个独立ID</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span><span class="p">)</span> <span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span> <span class="o">=</span> <span class="nx">addEvent</span><span class="p">.</span><span class="nx">guid</span><span class="o">++</span><span class="p">;</span>
+    <span class="c1">// 为元素建立一个事件类型的散列表（元素的所有事件类型都保存在该对象中）</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">)</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="c1">// 为每一个元素/事件建立一个事件函数处理的散列表(同一事件类型的不同处理函数保存在该对象中)</span>
+    <span class="kd">var</span> <span class="nx">handlers</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">type</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">handlers</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">handlers</span> <span class="o">=</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">type</span><span class="p">]</span> <span class="o">=</span> <span class="p">{};</span>
+        <span class="c1">// 存储已有事件处理函数（如果存在一个）</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">element</span><span class="p">[</span><span class="s2">&quot;on&quot;</span> <span class="o">+</span> <span class="nx">type</span><span class="p">])</span> <span class="p">{</span>
+            <span class="nx">handlers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nx">element</span><span class="p">[</span><span class="s2">&quot;on&quot;</span> <span class="o">+</span> <span class="nx">type</span><span class="p">];</span> 
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// 在散列表中存储该事件类型的处理函数</span>
+    <span class="nx">handlers</span><span class="p">[</span><span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span><span class="p">]</span> <span class="o">=</span> <span class="nx">handler</span><span class="p">;</span>
+    <span class="c1">// 注册一个全局处理函数来处理所有函数</span>
+    <span class="nx">element</span><span class="p">[</span><span class="s2">&quot;on&quot;</span> <span class="o">+</span> <span class="nx">type</span><span class="p">]</span> <span class="o">=</span> <span class="nx">handleEvent</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 创建独立ID计数器</span>
+<span class="nx">addEvent</span><span class="p">.</span><span class="nx">guid</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>                                                
+
+<span class="kd">function</span> <span class="nx">removeEvent</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 从散列表中删除事件处理函数</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">element</span><span class="p">.</span><span class="nx">events</span> <span class="o">&amp;&amp;</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">type</span><span class="p">])</span> <span class="p">{</span>
+        <span class="k">delete</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">type</span><span class="p">][</span><span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+                                                            
+<span class="kd">function</span> <span class="nx">handleEvent</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 获取event对象 (IE 中使用全局event对象)</span>
+    <span class="nx">event</span> <span class="o">=</span> <span class="nx">event</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+    <span class="c1">// 获取对应事件的处理函数散列表</span>
+    <span class="kd">var</span> <span class="nx">handlers</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">events</span><span class="p">[</span><span class="nx">event</span><span class="p">.</span><span class="nx">type</span><span class="p">];</span>
+    <span class="c1">// 依次执行处理函数散列表中的函数</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">handlers</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$$handleEvent</span> <span class="o">=</span> <span class="nx">handlers</span><span class="p">;</span>
+        <span class="nx">handlers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,[</span><span class="nx">event</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></div>
 
 <p style="color:#00bfff">为了弥补element['on'+type]无法绑定多个处理函数的缺点，addEvent将所有事件类型存储在element的events对象中，events中的每一个事件类型以同样的形式存储着该类型下所有的处理函数</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="o">=</span><span class="p">{</span>
-<span class="lineno">2</span>     <span class="nx">click</span><span class="o">:</span><span class="p">{</span>
-<span class="lineno">3</span>         <span class="mi">0</span><span class="o">:</span><span class="kd">function</span><span class="p">(){...},</span>
-<span class="lineno">4</span>         <span class="mi">1</span><span class="o">:</span><span class="kd">function</span><span class="p">(){...},</span>
-<span class="lineno">5</span>         <span class="p">...</span>
-<span class="lineno">6</span>     <span class="p">},</span>
-<span class="lineno">7</span>     <span class="nx">mousedown</span><span class="o">:</span><span class="p">{...},</span>
-<span class="lineno">8</span>     <span class="p">...</span>
-<span class="lineno">9</span> <span class="p">}</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="o">=</span><span class="p">{</span>
+    <span class="nx">click</span><span class="o">:</span><span class="p">{</span>
+        <span class="mi">0</span><span class="o">:</span><span class="kd">function</span><span class="p">(){...},</span>
+        <span class="mi">1</span><span class="o">:</span><span class="kd">function</span><span class="p">(){...},</span>
+        <span class="p">...</span>
+    <span class="p">},</span>
+    <span class="nx">mousedown</span><span class="o">:</span><span class="p">{...},</span>
+    <span class="p">...</span>
+<span class="p">}</span></code></pre></div>
 
 <p>总结：</p>
 

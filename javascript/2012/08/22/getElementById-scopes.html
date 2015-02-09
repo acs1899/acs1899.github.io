@@ -103,8 +103,8 @@
 
 <p>里面有这样一段：</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="kd">var</span> <span class="nx">$</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">;</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">b</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;header&#39;</span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">$</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">b</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;header&#39;</span><span class="p">);</span></code></pre></div>
 
 <p>秉着&#39;实践出真理&#39;的原则，自己敲一敲代码跑了一下。</p>
 
@@ -122,9 +122,9 @@
 
 <p>说明肯能是作用域的问题</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="kd">var</span> <span class="nx">$</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">;</span>
-<span class="lineno">2</span> <span class="kd">var</span> <span class="nx">b</span><span class="o">=</span><span class="nx">$</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span><span class="s1">&#39;header&#39;</span><span class="p">);</span>
-<span class="lineno">3</span> <span class="nx">alert</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">$</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">b</span><span class="o">=</span><span class="nx">$</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nb">document</span><span class="p">,</span><span class="s1">&#39;header&#39;</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span></code></pre></div>
 
 <p>这次在非IE6~8下成功运行</p>
 

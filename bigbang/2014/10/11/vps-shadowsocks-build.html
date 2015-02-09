@@ -107,55 +107,55 @@
 
 <h4>安装Setuptools</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="nx">wget</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">check</span><span class="o">-</span><span class="nx">certificate</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg</span>
-<span class="lineno">2</span> <span class="nx">chmod</span> <span class="o">+</span><span class="nx">x</span> <span class="nx">setuptools</span><span class="o">-</span><span class="mf">0.6</span><span class="nx">c11</span><span class="o">-</span><span class="nx">py2</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="nx">egg</span> 
-<span class="lineno">3</span> <span class="p">.</span><span class="o">/</span><span class="nx">setuptools</span><span class="o">-</span><span class="mf">0.6</span><span class="nx">c11</span><span class="o">-</span><span class="nx">py2</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="nx">egg</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="nx">wget</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">check</span><span class="o">-</span><span class="nx">certificate</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg</span>
+<span class="nx">chmod</span> <span class="o">+</span><span class="nx">x</span> <span class="nx">setuptools</span><span class="o">-</span><span class="mf">0.6</span><span class="nx">c11</span><span class="o">-</span><span class="nx">py2</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="nx">egg</span> 
+<span class="p">.</span><span class="o">/</span><span class="nx">setuptools</span><span class="o">-</span><span class="mf">0.6</span><span class="nx">c11</span><span class="o">-</span><span class="nx">py2</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="nx">egg</span></code></pre></div>
 
 <h4>安装Python-pip</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="nx">wget</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">check</span><span class="o">-</span><span class="nx">certificate</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//pypi.python.org/packages/source/p/pip/pip-1.4.tar.gz</span>
-<span class="lineno">2</span> <span class="nx">tar</span> <span class="o">-</span><span class="nx">zxvf</span> <span class="p">.</span><span class="o">/</span><span class="nx">pip</span><span class="o">-</span><span class="mf">1.4</span><span class="p">.</span><span class="nx">tar</span><span class="p">.</span><span class="nx">gz</span>
-<span class="lineno">3</span> <span class="nx">cd</span> <span class="nx">pip</span><span class="o">-</span><span class="mf">1.4</span>
-<span class="lineno">4</span> <span class="nx">sudo</span> <span class="nx">python</span> <span class="nx">setup</span><span class="p">.</span><span class="nx">py</span> <span class="nx">install</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="nx">wget</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">check</span><span class="o">-</span><span class="nx">certificate</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//pypi.python.org/packages/source/p/pip/pip-1.4.tar.gz</span>
+<span class="nx">tar</span> <span class="o">-</span><span class="nx">zxvf</span> <span class="p">.</span><span class="o">/</span><span class="nx">pip</span><span class="o">-</span><span class="mf">1.4</span><span class="p">.</span><span class="nx">tar</span><span class="p">.</span><span class="nx">gz</span>
+<span class="nx">cd</span> <span class="nx">pip</span><span class="o">-</span><span class="mf">1.4</span>
+<span class="nx">sudo</span> <span class="nx">python</span> <span class="nx">setup</span><span class="p">.</span><span class="nx">py</span> <span class="nx">install</span></code></pre></div>
 
 <h4>安装Python-Gevent</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">libevent</span><span class="o">-</span><span class="nx">dev</span>
-<span class="lineno">2</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">python</span><span class="o">-</span><span class="nx">dev</span>
-<span class="lineno">3</span> <span class="nx">pip</span> <span class="nx">install</span> <span class="nx">gevent</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">libevent</span><span class="o">-</span><span class="nx">dev</span>
+<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">python</span><span class="o">-</span><span class="nx">dev</span>
+<span class="nx">pip</span> <span class="nx">install</span> <span class="nx">gevent</span></code></pre></div>
 
 <h4>安装Python-M2Crypto</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">libssl</span><span class="o">-</span><span class="nx">dev</span>
-<span class="lineno">2</span> <span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">swig</span>
-<span class="lineno">3</span> <span class="nx">pip</span> <span class="nx">install</span> <span class="nx">M2Crypto</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">libssl</span><span class="o">-</span><span class="nx">dev</span>
+<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">swig</span>
+<span class="nx">pip</span> <span class="nx">install</span> <span class="nx">M2Crypto</span></code></pre></div>
 
 <h4>安装ShadowSocks-Python</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="nx">pip</span> <span class="nx">install</span> <span class="nx">shadowsocks</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="nx">pip</span> <span class="nx">install</span> <span class="nx">shadowsocks</span></code></pre></div>
 
 <h4>config.json</h4>
 
 <p>config.json是ShadowSocks Server端的配置文件</p>
 
-<div class="highlight"><pre><code class="html"><span class="lineno">1</span> vim ~/ShadowSocks/config.json</code></pre></div>
+<div class="highlight"><pre><code class="html">vim ~/ShadowSocks/config.json</code></pre></div>
 
 <p>config.json配置文件格式：</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="p">{</span>
-<span class="lineno">2</span> <span class="s2">&quot;server&quot;</span><span class="o">:</span><span class="s2">&quot;my_server_ip&quot;</span><span class="p">,</span><span class="c1">//服务器IP</span>
-<span class="lineno">3</span> <span class="s2">&quot;server_port&quot;</span><span class="o">:</span><span class="mi">8388</span><span class="p">,</span><span class="c1">//服务器端口</span>
-<span class="lineno">4</span> <span class="s2">&quot;local_port&quot;</span><span class="o">:</span><span class="mi">1080</span><span class="p">,</span><span class="c1">//本地端口(配置客户端时需要用到)</span>
-<span class="lineno">5</span> <span class="s2">&quot;password&quot;</span><span class="o">:</span><span class="s2">&quot;barfoo!&quot;</span><span class="p">,</span><span class="c1">//密码</span>
-<span class="lineno">6</span> <span class="s2">&quot;timeout&quot;</span><span class="o">:</span><span class="mi">600</span><span class="p">,</span><span class="c1">//超市时间</span>
-<span class="lineno">7</span> <span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="s2">&quot;aes-256-cfb&quot;</span><span class="c1">//加密方法，推荐&quot;aes-256-cfb&quot;</span>
-<span class="lineno">8</span> <span class="p">}</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="p">{</span>
+<span class="s2">&quot;server&quot;</span><span class="o">:</span><span class="s2">&quot;my_server_ip&quot;</span><span class="p">,</span><span class="c1">//服务器IP</span>
+<span class="s2">&quot;server_port&quot;</span><span class="o">:</span><span class="mi">8388</span><span class="p">,</span><span class="c1">//服务器端口</span>
+<span class="s2">&quot;local_port&quot;</span><span class="o">:</span><span class="mi">1080</span><span class="p">,</span><span class="c1">//本地端口(配置客户端时需要用到)</span>
+<span class="s2">&quot;password&quot;</span><span class="o">:</span><span class="s2">&quot;barfoo!&quot;</span><span class="p">,</span><span class="c1">//密码</span>
+<span class="s2">&quot;timeout&quot;</span><span class="o">:</span><span class="mi">600</span><span class="p">,</span><span class="c1">//超市时间</span>
+<span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="s2">&quot;aes-256-cfb&quot;</span><span class="c1">//加密方法，推荐&quot;aes-256-cfb&quot;</span>
+<span class="p">}</span></code></pre></div>
 
 <h4>运行ShadowSocks程序</h4>
 
 <p>cd到config.json所在目录</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="nx">nohup</span> <span class="nx">ssserver</span> <span class="o">&gt;</span> <span class="nx">log</span> <span class="o">&amp;</span></code></pre></div>
+<div class="highlight"><pre><code class="javascript"><span class="nx">nohup</span> <span class="nx">ssserver</span> <span class="o">&gt;</span> <span class="nx">log</span> <span class="o">&amp;</span></code></pre></div>
 
 <p>之所以选用ShadowSocks主要是看重其对客户端强大的支持，几乎所有你能想到的系统都用对应的客户端。</p>
 
