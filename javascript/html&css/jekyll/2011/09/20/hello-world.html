@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Hello world-John connor's blog</title>
+    <title>Github搭建自己的blog-John connor's blog</title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="这是 acs1899 在 GitHub 上面的第一篇文章，您好，世界。" />
-    <meta name="keywords" content="Hellow,World" />
+    <meta name="description" content="在Github上创建Gitpage与安装jekyll" />
+    <meta name="keywords" content="githubPage,jekyll" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
@@ -15,6 +15,7 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>-->
     <link rel="shortcut icon" href="/images/acs1899.ico" type="image/x-icon" />
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="/themes/violet/js/jquery-1.8.3.js"></script>
     <script type="text/javascript">
     var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?723791aaeeeb87cfe310f4ae78aac079";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();
     </script>
@@ -94,12 +95,71 @@
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">Hello world</h3>
+        <h3 class="violet-title-item">Github搭建自己的blog</h3>
     </div>
     <div class="violet-post">
         <p class="main-article-meta"><span pubdate="">2011-09-20</span></p>
         <div class="main-article-contant">
-            <p>Hello world!</p>
+            <p>Github Page 本是为git项目提供一个静态说明页，后来被开发成了一个bolg系统。</p>
+
+<h3>Step One</h3>
+
+<h4>安装Ruby</h4>
+
+<p>安装rvm（ruby管理工具）</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">curl</span> <span class="o">-</span><span class="nx">L</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//get.rvm.io | bash -s stable</span>
+<span class="nx">source</span> <span class="o">~</span><span class="err">/.rvm/script/rvm</span>
+<span class="nx">rvm</span> <span class="nx">install</span> <span class="nx">requirements</span></code></pre></div>
+
+<p>安装ruby</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">rvm</span> <span class="nx">install</span> <span class="nx">ruby</span>
+<span class="nx">rvm</span> <span class="nx">use</span> <span class="nx">ruby</span> <span class="o">--</span><span class="k">default</span></code></pre></div>
+
+<p>安装rubygems</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">rvm</span> <span class="nx">rubygems</span> <span class="nx">current</span></code></pre></div>
+
+<p>安装rails</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">gem</span> <span class="nx">install</span> <span class="nx">rails</span></code></pre></div>
+
+<h4>安装jekyll</h4>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">gem</span> <span class="nx">install</span> <span class="nx">jekyll</span></code></pre></div>
+
+<p>OK~现在你已经成功安装jekyll了（如果不出什么意外的话）</p>
+
+<p>那么来试试</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">jekyll</span> <span class="k">new</span> <span class="nx">myBlog</span>
+<span class="nx">cd</span> <span class="nx">myBlog</span>
+<span class="nx">jekyll</span> <span class="nx">server</span></code></pre></div>
+
+<p>然后你就能通过 <span class="impo">http://localhost:4000<span> 访问jekyll为你生成的blog了。</p>
+
+<h3>Step Two</h3>
+
+<p>在github上创建一个项目。进入项目setting</p>
+
+<p><img src="/image/s1.png" alt="setting"></p>
+
+<p><img src="/image/s2.png" alt="setting"></p>
+
+<p><span class="impo">Automatic page generator</span> 能帮你自动生成一些固定模板样式页面</p>
+
+<p>在本地搞个blog项目，代码写得飞起~~~</p>
+
+<p>当你觉得自己的blog已经完美之后，你可以通过<span class="impo">jekyll build</span>来让jekyll帮你生成最后的静态代码。这些代码会保存在./<em>site下。最后你也只需要将./</em>site下的文件pull到github上</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">jekyll</span> <span class="nx">build</span></code></pre></div>
+
+<p>当然在你调试的过程中需要不停地预览你的blog，这时你应该会用到</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">jekyll</span> <span class="nx">server</span></code></pre></div>
+
+<p><span class="impo">jekyll server</span>包含了上面的<span class="impo">jekyll build</span>，之后会起一个本地服务通过<span class="impo">http://localhost:4000</span>来预览./_site中的页面</p>
 
         </div>
     </div>
@@ -148,7 +208,6 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="/themes/violet/js/jquery-1.8.3.js"></script>
     <script type="text/javascript" src="/themes/violet/js/jquery-scrollTo.js"></script>
     <script type="text/javascript" src="/themes/violet/js/common.js"></script>
     <script type="text/javascript">
