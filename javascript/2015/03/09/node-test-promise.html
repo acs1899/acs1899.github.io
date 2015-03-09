@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>如何为使用Promise规范的接口写测试用例-John connor's blog</title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="" />
+    <meta name="description" content="当接口使用Promise规范时，常规的异步测试写法不能正常捕获错误" />
+    <meta name="keywords" content="nodejs,Promise,test" />
+    <!-- //页面样式 -->
+    <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+    <!--<link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'>-->
+    <link rel="shortcut icon" href="/images/acs1899.ico" type="image/x-icon" />
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="/themes/violet/js/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+    var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?723791aaeeeb87cfe310f4ae78aac079";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();
+    </script>
+</head>
+<body id="violet">
+    <div class="page-wrapper">
+        <div class="head" id="violet-head">
+            <div class="header" id="violet-header">
+                <h1 class="logo"><a href="">John connor's blog</a></h1>
+                <h2 class="subtitle">To be or not to be,that is the question...</h2>
+            </div>
+            <div class="nav" id="violet-nav">
+                <ul class="nav-list">
+                    
+                    
+                    
+		    
+		    
+                    <li class="nav-item  ">
+                        <a href="/index.html">
+                            首页
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+		    
+		    
+                      
+                    
+                    <li class="nav-item  category">
+                        <a href="javascript:void(0);">
+                            文章分类
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+		    
+		    
+                    <li class="nav-item  ">
+                        <a href="/archives.html">
+                            文章归档
+                        </a>
+                        
+                    </li>
+                    
+                    
+                    
+		    
+		    
+                    <li class="nav-item  ">
+                        <a href="/contact.html">
+                            关于
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+	<div class="category_box">
+            <ul>
+            
+            <li class="cagory-li "><a href="/categories/javascript">javascript (9)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
+            
+            <li class="cagory-li "><a href="/categories/bigbang">bigbang (2)</a></li>
+            
+            </ul>
+    	</div>
+        <div class="main" id="violet-main">
+            <div class="main-article main-article-page">
+    <div class="violet-title">
+        <h3 class="violet-title-item">如何为使用Promise规范的接口写测试用例</h3>
+    </div>
+    <div class="violet-post">
+        <p class="main-article-meta"><span pubdate="">2015-03-09</span></p>
+        <div class="main-article-contant">
+            <p>nodeJs为Javascript引入了单元测试的概念。单元测试能够帮助我们更好的提高代码质量，让BUG在代码编写的时候即被消灭掉。</p>
+
+<p>同步单元测试：</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span><span class="cm">/*断言库*/</span>
+
+    <span class="kd">function</span> <span class="nx">A</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
+        <span class="k">return</span> <span class="nx">x</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+
+    <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;function A test&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;when x = 1,return true&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">A</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">true</span><span class="p">;</span>
+        <span class="p">});</span>
+        <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;when x = 0,return false&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="nx">A</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="kc">false</span><span class="p">;</span>
+        <span class="p">});</span>
+    <span class="p">});</span></code></pre></div>
+
+<p>异步单元测试：</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+
+    <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;fs.readFile is ok&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+        <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;/test.txt&#39;</span><span class="p">,</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">data</span><span class="p">){</span>
+            <span class="nx">should</span><span class="p">.</span><span class="nx">not</span><span class="p">.</span><span class="nx">exist</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+            <span class="nx">done</span><span class="p">();</span>
+        <span class="p">});</span>
+    <span class="p">});</span></code></pre></div>
+
+<p>同步于异步测试区别就在于 <span class="impo">describe</span> 的回调函数是否有形参 <span class="impo">done</span></p>
+
+<p><span class="impo">Promise</span> 规范的目的是为了让程序员能以同步代码的形式来写异步代码。直观的表现就是，本来无限嵌套的回调函数变成了链式调用。</p>
+
+<p><span class="impo">Promise</span>规范来书写的接口：</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Promise</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;promise&#39;</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+    <span class="cm">/*Promise的实现方式有很多种，这里使用promise库*/</span>
+
+    <span class="kd">function</span> <span class="nx">fileRead</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span><span class="nx">encode</span><span class="p">){</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">resole</span><span class="p">,</span><span class="nx">reject</span><span class="p">){</span>
+            <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filePath</span><span class="p">,</span><span class="nx">encode</span><span class="o">?</span><span class="nx">encode</span><span class="o">:</span><span class="s1">&#39;utf-8&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">data</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+                    <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+                <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+                    <span class="nx">resolve</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*调用*/</span>
+    <span class="nx">fileRead</span><span class="p">(</span><span class="s1">&#39;/test.txt&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+            <span class="c1">//do something with data</span>
+            <span class="p">...</span>
+        <span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+            <span class="c1">//log err</span>
+            <span class="p">...</span>
+        <span class="p">});</span>
+
+    <span class="cm">/*测试*/</span>
+    <span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span>
+    <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;fileRead is ok&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+        <span class="nx">fileRead</span><span class="p">(</span><span class="s1">&#39;/test.txt&#39;</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">){</span>
+                <span class="nx">result</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nb">String</span><span class="p">;</span>
+                <span class="nx">done</span><span class="p">();</span>
+            <span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+                <span class="nx">done</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+            <span class="p">})</span>
+    <span class="p">});</span></code></pre></div>
+
+<p>跑一下测试。嗯，好像没问题。收拾东西下班！！！</p>
+
+<h3>wait a minute</h3>
+
+<p>注意测试代码中这一行代码</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">result</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nb">String</span><span class="p">;</span></code></pre></div>
+
+<p>这行代码的目的是检测 <span class="impo">result</span> 是否是字符串。如果 <span class="impo">result</span> 不是字符串，那应该会被测试框架捕获到。</p>
+
+<p>稍微修改下</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nb">String</span><span class="p">;</span>
+    <span class="cm">/*这里只是为了测试错误是否能被捕获到，所以用[1,2,3]替换了result*/</span></code></pre></div>
+
+<h3>纳尼！！！</h3>
+
+<p>测试如我所料没有通过，但是报的错误是 <span class="impo">timeout</span> 是什么鬼啊！！！</p>
+
+<p>好像一不小心又发现了一个知识点啊。嗯，今天晚上一定要把它解决了。</p>
+
+<p>兴奋的我带着电脑回到家中玩了一个晚上的魔兽。。。</p>
+
+<p>明天周六，我花一天时间肯定能搞定！！！（这话估计也就我自己会信╮(╯▽╰)╭）</p>
+
+<p>就这样，这个问题陪伴着我度过了一个愉快而又充实的3.8妇女节（什么鬼。。。摔）</p>
+
+<p>周一上班的路上突然想到会不会跟 <span class="impo">promise</span> 的实现有关。来到公司，遂看了 <span class="impo">promise</span> 的core.js代码。</p>
+
+<p>经过一番倒腾，大致理顺了 <span class="impo">promise</span> 的核心思路。 <span class="impo">promise</span> 是通过内部的一个handler构造函数来控制回调链的传递。并且你所传入的回调函数并非直接由handler控制，而是由两个叫 <span class="impo">resolve</span> 和 <span class="impo">reject</span> 的方法控制。</p>
+
+<p>所以我猜测错误可能是被 <span class="impo">promise</span> 捕获了，但是没有被测试框架捕获。（不要问我为什么，我也不知道）</p>
+
+<p>于是用尽了各种办法，最终还是没能证明上面的猜测（一股弱者的气息。。。）</p>
+
+<h3>google大法好</h3>
+
+<p>这是<a href="http://stackoverflow.com/questions/24071493/should-js-not-causing-mocha-test-to-fail">stackoverflow</a>上相同的问题，证实了我的猜测。</p>
+
+<p>被采纳的答案其实也没能说清其中原由。</p>
+
+<p>答案中引用的when.js的doc文档中也是一句话带过 <span class="impo">Errors in an asynchronous operation always occur in a different call stack than the the one that initiated the operation</span></p>
+
+<p>修改测试代码：</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span>
+    <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;fileRead is ok&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+        <span class="nx">fileRead</span><span class="p">(</span><span class="s1">&#39;/test.txt&#39;</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">){</span>
+                <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nb">String</span><span class="p">;</span>
+                <span class="nx">done</span><span class="p">();</span>
+            <span class="p">},</span><span class="nx">done</span><span class="p">).</span><span class="k">catch</span><span class="p">(</span><span class="nx">done</span><span class="p">);</span>
+    <span class="p">});</span></code></pre></div>
+
+<p>顺利捕获断言错误。至于为什么<span class="impo">promise</span>阻断了测试框架捕获错误，还有待研究。</p>
+
+        </div>
+    </div>
+</div>
+<div class="pagination fn-clear" id="violet-paging">
+    <div class="pagination-list">
+        
+        <a class="prev" href="/bigbang/2014/10/11/vps-shadowsocks-build.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>VPS搭建ShadowSocks</a>
+        
+        
+    </div>
+</div>
+<div class="comment">
+    
+        
+        <div class="comment-cnt">
+            <div class="ds-thread"></div>
+        </div>
+        
+    
+</div>
+
+        </div>
+        <div class="foot" id="violet-foot">
+            <div class="footer fn-clear">
+                <h1 class="logo">John connor's blog</h1>
+            </div>
+            <div class="copyright">
+                <div class="copyright-cnt fn-clear">
+                    
+                    <a class="follow" href="https://plus.google.com/111953488722726761148/posts" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    
+                    <a class="follow" href="https://www.facebook.com/wenqi.luo.12" target="_blank"><i class="fa fa-facebook"></i></a>
+                    
+                    <a class="follow" href="https://github.com/acs1899" target="_blank"><i class="fa fa-github"></i></a>
+                    
+                    <a class="follow" href="http://weibo.com/u/1308465790" target="_blank"><i class="fa fa-weibo"></i></a>
+                    
+                    <a class="follow" href="https://twitter.com/Mashell81326713" target="_blank"><i class="fa fa-twitter"></i></a>
+                    
+                    <a class="follow" href="/atom.xml" target="_blank"><i class="fa fa-rss"></i></a>
+                    
+                    <p class="text">Powered By <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>. <span style="color:#666">Theme Design by <a href="http://www.zhanxin.info" style="color:#666;text-decoration:none;">zhanxin.lin</a></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/themes/violet/js/jquery-scrollTo.js"></script>
+    <script type="text/javascript" src="/themes/violet/js/common.js"></script>
+    <script type="text/javascript">
+	$(function(){
+	    var cate=$('.category'),cb=$('.category_box'),p=$('.main-article-contant .description');
+	    cate.bind('click',function(){
+		cb.slideToggle();
+	    });
+	    p.each(function(){
+		if(this.innerHTML.length>40){
+		    this.innerHTML=this.innerHTML.slice(0,40)+'...';
+		}
+	    });
+	});
+    </script>
+    <script type="text/javascript">
+        var headImgArr = [];
+        
+            headImgArr.push("/themes/violet/images/hdbg01.jpg");
+        
+            headImgArr.push("/themes/violet/images/hdbg02.jpg");
+        
+            headImgArr.push("/themes/violet/images/hdbg03.jpg");
+        
+            headImgArr.push("/themes/violet/images/hdbg04.jpg");
+        
+        if(headImgArr.length <= 0) {
+            headImgArr = ["/themes/violet/images/hdbg03.jpg"];
+            var item = 0;
+        } else {
+            var item = Math.floor(Math.random() * (headImgArr.length));
+        }
+        $("#violet-head").css({
+            "background-image": "url(" + headImgArr[item] + ")"
+        });
+    </script>
+    
+        
+            
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"acs1899blog"};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = 'http://static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+            </script>
+            
+        
+    
+</body>
+</html>

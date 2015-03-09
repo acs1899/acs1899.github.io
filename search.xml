@@ -2,6 +2,12 @@
 <articles xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <article>
+	<title>如何为使用Promise规范的接口写测试用例</title>
+	<url>/javascript/2015/03/09/node-test-promise.html</url>
+	<date>2015-03-09</date>
+</article>
+
+<article>
 	<title>VPS搭建ShadowSocks</title>
 	<url>/bigbang/2014/10/11/vps-shadowsocks-build.html</url>
 	<date>2014-10-11</date>
