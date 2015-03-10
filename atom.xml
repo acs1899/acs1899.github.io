@@ -4,7 +4,7 @@
    <title>John connor's blog</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2015-03-09T20:13:04+08:00</updated>
+   <updated>2015-03-10T12:27:16+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -48,7 +48,7 @@
         &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;同步于异步测试区别就在于 &lt;span class=&quot;impo&quot;&gt;describe&lt;/span&gt; 的回调函数是否有形参 &lt;span class=&quot;impo&quot;&gt;done&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;同步与异步测试区别就在于 &lt;span class=&quot;impo&quot;&gt;describe&lt;/span&gt; 的回调函数是否有形参 &lt;span class=&quot;impo&quot;&gt;done&lt;/span&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;Promise&lt;/span&gt; 规范的目的是为了让程序员能以同步代码的形式来写异步代码。直观的表现就是，本来无限嵌套的回调函数变成了链式调用。&lt;/p&gt;
 
