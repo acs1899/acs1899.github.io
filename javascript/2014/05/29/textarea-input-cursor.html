@@ -341,6 +341,19 @@ function getAnchor(ele){
 <span class="kd">function</span> <span class="nx">ShowSelection</span><span class="p">(</span><span class="nx">ele</span><span class="p">){</span>
     <span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nx">GetSelection</span><span class="p">(</span><span class="nx">ele</span><span class="p">);</span>
     <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;选中的文本是：&#39;</span><span class="o">+</span><span class="nx">sel</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="cm">/*获取光标位置*/</span>
+<span class="kd">function</span> <span class="nx">getAnchor</span><span class="p">(</span><span class="nx">ele</span><span class="p">){</span>
+    <span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="nx">r</span> <span class="o">=</span> <span class="kc">null</span><span class="p">,</span><span class="nx">tb</span> <span class="o">=</span> <span class="nx">ele</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">?</span> <span class="nx">ele</span> <span class="o">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">all</span><span class="p">){</span>
+        <span class="nx">r</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">selection</span><span class="p">.</span><span class="nx">createRange</span><span class="p">();</span>
+        <span class="nx">tb</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+        <span class="nx">r</span><span class="p">.</span><span class="nx">moveStart</span><span class="p">(</span><span class="s1">&#39;character&#39;</span><span class="p">,</span> <span class="o">-</span><span class="nx">tb</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span> 
+        <span class="nx">index</span> <span class="o">=</span> <span class="nx">r</span><span class="p">.</span><span class="nx">text</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>  
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="nx">index</span> <span class="o">=</span> <span class="nx">tb</span><span class="p">.</span><span class="nx">selectionStart</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">index</span>
 <span class="p">}</span></code></pre></div>
 
 <p><a href="http://msdn.microsoft.com/zh-cn/library/ie/ms535869(v=vs.85).aspx">selection的官方文档</a></p>
