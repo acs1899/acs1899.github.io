@@ -88,7 +88,7 @@
             
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
-            <li class="cagory-li "><a href="/categories/bigbang">bigbang (2)</a></li>
+            <li class="cagory-li "><a href="/categories/bigbang">bigbang (3)</a></li>
             
             </ul>
     	</div>
@@ -106,7 +106,7 @@
 
 <p style="color:#ff8c00">内嵌script标签：</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="nt">&gt;</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="nt">&lt;/script&gt;</span>  
 <span class="nt">&lt;/div&gt;</span>  
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
@@ -117,7 +117,7 @@
 
 <p style="color:#ff8c00">外链script标签：</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&#39;clone.js&#39;</span><span class="nt">&gt;&lt;/script&gt;</span>  
 <span class="nt">&lt;/div&gt;</span>  
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
@@ -134,7 +134,7 @@
 
 <p style="color:#ff8c00">HTML事件处理绑定：</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span> <span class="na">onclick=</span><span class="s">&#39;alert(1)&#39;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span> <span class="na">onclick=</span><span class="s">&#39;alert(1)&#39;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
     <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">).</span><span class="nx">cloneNode</span><span class="p">(</span><span class="kc">true</span><span class="p">));</span>  
 <span class="nt">&lt;/script&gt;</span></code></pre></div>
@@ -143,7 +143,7 @@
 
 <p style="color:#ff8c00">DOM0级事件处理绑定：</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
     <span class="kd">var</span> <span class="nx">box</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">);</span>
     <span class="nx">box</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">alert</span><span class="p">(</span><span class="mi">1</span><span class="p">)}</span>  
@@ -154,7 +154,7 @@
 
 <p style="color:#ff8c00">DOM2级事件处理绑定：</p>
 
-<div class="highlight"><pre><code class="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;box&quot;</span><span class="nt">&gt;</span>点我<span class="nt">&lt;/div&gt;</span>  
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>  
     <span class="kd">var</span> <span class="nx">box</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;box&#39;</span><span class="p">);</span>
     <span class="k">if</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">){</span>  
@@ -171,7 +171,7 @@
 
 <p>在《精通javascript》一书中，作者推荐一种Dean Edwards提出的跨浏览器事件绑定/删除事件解决方案</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">function</span> <span class="nx">addEvent</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span> <span class="p">{</span>  
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">addEvent</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span> <span class="p">{</span>  
     <span class="c1">// 为每一个事件处理函数赋予一个独立ID</span>
     <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span><span class="p">)</span> <span class="nx">handler</span><span class="p">.</span><span class="nx">$$guid</span> <span class="o">=</span> <span class="nx">addEvent</span><span class="p">.</span><span class="nx">guid</span><span class="o">++</span><span class="p">;</span>
     <span class="c1">// 为元素建立一个事件类型的散列表（元素的所有事件类型都保存在该对象中）</span>
@@ -215,7 +215,7 @@
 
 <p style="color:#00bfff">为了弥补element['on'+type]无法绑定多个处理函数的缺点，addEvent将所有事件类型存储在element的events对象中，events中的每一个事件类型以同样的形式存储着该类型下所有的处理函数</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="o">=</span><span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">element</span><span class="p">.</span><span class="nx">events</span><span class="o">=</span><span class="p">{</span>
     <span class="nx">click</span><span class="o">:</span><span class="p">{</span>
         <span class="mi">0</span><span class="o">:</span><span class="kd">function</span><span class="p">(){...},</span>
         <span class="mi">1</span><span class="o">:</span><span class="kd">function</span><span class="p">(){...},</span>

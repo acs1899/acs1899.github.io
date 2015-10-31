@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>VPS搭建ShadowSocks-John connor's blog</title>
+    <title>在mac中使用cron-John connor's blog</title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="VPS搭建ShadowSocks，翻墙手记" />
-    <meta name="keywords" content="VPS ShadowSocks" />
+    <meta name="description" content="在mac osx 中使用 crontab 注意事项" />
+    <meta name="keywords" content="mac,crontab" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
     <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
@@ -95,78 +95,24 @@
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">VPS搭建ShadowSocks</h3>
+        <h3 class="violet-title-item">在mac中使用cron</h3>
     </div>
     <div class="violet-post">
-        <p class="main-article-meta"><span pubdate="">2014-10-11</span></p>
+        <p class="main-article-meta"><span pubdate="">2015-08-26</span></p>
         <div class="main-article-contant">
-            <p>ShadowSocks是一个轻量级socks5代理，以Python2.x写成。之前用的是用pptp搭建的vpn。</p>
+            <p>常用的cron命令:</p>
 
-<p>我的手机是Nexus 4，几乎所有的Google服务都不能用(那还要亲儿子干嘛!!!)，所以自己搞个代理不能再等了。</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">crontab</span> <span class="o">-</span><span class="nx">e</span> <span class="c1">//编辑任务</span>
+            <span class="o">-</span><span class="nx">l</span> <span class="c1">//显示已有任务</span>
+            <span class="o">-</span><span class="nx">r</span> <span class="c1">//删除所有任务</span></code></pre></div>
 
-<p>ShadowSocks有很多中版本，<span class="impo">Python</span><span class="impo">Nodejs</span><span class="impo">Go</span><span class="impo">C</span>，我用的是<span class="impo">Python</span>版。</p>
+<p>在mac下可能会遇见无法添加任务的情况</p>
 
-<h4>安装Setuptools</h4>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">crontab</span><span class="o">:</span> <span class="s2">&quot;/usr/bin/vi&quot;</span> <span class="nx">exited</span> <span class="kd">with</span> <span class="nx">status</span> <span class="mi">1</span></code></pre></div>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">wget</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">check</span><span class="o">-</span><span class="nx">certificate</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg</span>
-<span class="nx">chmod</span> <span class="o">+</span><span class="nx">x</span> <span class="nx">setuptools</span><span class="o">-</span><span class="mf">0.6</span><span class="nx">c11</span><span class="o">-</span><span class="nx">py2</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="nx">egg</span> 
-<span class="p">.</span><span class="o">/</span><span class="nx">setuptools</span><span class="o">-</span><span class="mf">0.6</span><span class="nx">c11</span><span class="o">-</span><span class="nx">py2</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="nx">egg</span></code></pre></div>
+<p>这是因为环境变量<span class="impo">$EDITOR</span> 是 <span class="impo">vi</span></p>
 
-<h4>安装Python-pip</h4>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">wget</span> <span class="o">--</span><span class="nx">no</span><span class="o">-</span><span class="nx">check</span><span class="o">-</span><span class="nx">certificate</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//pypi.python.org/packages/source/p/pip/pip-1.4.tar.gz</span>
-<span class="nx">tar</span> <span class="o">-</span><span class="nx">zxvf</span> <span class="p">.</span><span class="o">/</span><span class="nx">pip</span><span class="o">-</span><span class="mf">1.4</span><span class="p">.</span><span class="nx">tar</span><span class="p">.</span><span class="nx">gz</span>
-<span class="nx">cd</span> <span class="nx">pip</span><span class="o">-</span><span class="mf">1.4</span>
-<span class="nx">sudo</span> <span class="nx">python</span> <span class="nx">setup</span><span class="p">.</span><span class="nx">py</span> <span class="nx">install</span></code></pre></div>
-
-<h4>安装Python-Gevent</h4>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">libevent</span><span class="o">-</span><span class="nx">dev</span>
-<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">python</span><span class="o">-</span><span class="nx">dev</span>
-<span class="nx">pip</span> <span class="nx">install</span> <span class="nx">gevent</span></code></pre></div>
-
-<h4>安装Python-M2Crypto</h4>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">libssl</span><span class="o">-</span><span class="nx">dev</span>
-<span class="nx">sudo</span> <span class="nx">apt</span><span class="o">-</span><span class="nx">get</span> <span class="nx">install</span> <span class="nx">swig</span>
-<span class="nx">pip</span> <span class="nx">install</span> <span class="nx">M2Crypto</span></code></pre></div>
-
-<h4>安装ShadowSocks-Python</h4>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">pip</span> <span class="nx">install</span> <span class="nx">shadowsocks</span></code></pre></div>
-
-<h4>config.json</h4>
-
-<p>config.json是ShadowSocks Server端的配置文件</p>
-
-<div class="highlight"><pre><code class="language-html" data-lang="html">vim ~/ShadowSocks/config.json</code></pre></div>
-
-<p>config.json配置文件格式：</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
-<span class="s2">&quot;server&quot;</span><span class="o">:</span><span class="s2">&quot;my_server_ip&quot;</span><span class="p">,</span><span class="c1">//服务器IP</span>
-<span class="s2">&quot;server_port&quot;</span><span class="o">:</span><span class="mi">8388</span><span class="p">,</span><span class="c1">//服务器端口</span>
-<span class="s2">&quot;local_port&quot;</span><span class="o">:</span><span class="mi">1080</span><span class="p">,</span><span class="c1">//本地端口(配置客户端时需要用到)</span>
-<span class="s2">&quot;password&quot;</span><span class="o">:</span><span class="s2">&quot;barfoo!&quot;</span><span class="p">,</span><span class="c1">//密码</span>
-<span class="s2">&quot;timeout&quot;</span><span class="o">:</span><span class="mi">600</span><span class="p">,</span><span class="c1">//超市时间</span>
-<span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="s2">&quot;aes-256-cfb&quot;</span><span class="c1">//加密方法，推荐&quot;aes-256-cfb&quot;</span>
-<span class="p">}</span></code></pre></div>
-
-<h4>运行ShadowSocks程序</h4>
-
-<p>cd到config.json所在目录</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">nohup</span> <span class="nx">ssserver</span> <span class="o">&gt;</span> <span class="nx">log</span> <span class="o">&amp;</span></code></pre></div>
-
-<p>之所以选用ShadowSocks主要是看重其对客户端强大的支持，几乎所有你能想到的系统都用对应的客户端。</p>
-
-<h4>客户端设置</h4>
-
-<p>客户端的配置几乎于配置文件的内容一样，只需要将配置文件中配置项对应填入即可。</p>
-
-<p>使用之后，感觉比同等环境下的VPN快了不少。用手机到Google play上更新App尤为明显。</p>
-
-<p>PS:用aws的同学注意 <span class="impo">config.json</span> 中的 <span class="impo">server</span> 要填内网地址</p>
+<p>重新设置成 <span class="impo">vim</span> 就行了</p>
 
         </div>
     </div>
@@ -174,10 +120,8 @@
 <div class="pagination fn-clear" id="violet-paging">
     <div class="pagination-list">
         
-        <a class="prev" href="/javascript/2014/05/29/textarea-input-cursor.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>textarea光标位置定位、插入、获取选择文字</a>
+        <a class="prev" href="/javascript/2015/03/11/why-mocha-can-not-catch-promise-err.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>promise中的错误捕获</a>
         
-        
-        <a class="next" href="/javascript/2015/03/09/node-test-promise.html" rel="bookmark">如何为使用Promise规范的接口写测试用例<i class="fa fa-chevron-circle-right"></i></a>
         
     </div>
 </div>

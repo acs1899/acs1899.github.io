@@ -88,7 +88,7 @@
             
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
-            <li class="cagory-li "><a href="/categories/bigbang">bigbang (2)</a></li>
+            <li class="cagory-li "><a href="/categories/bigbang">bigbang (3)</a></li>
             
             </ul>
     	</div>
@@ -104,7 +104,7 @@
 
 <p>来看下面一个栗子：</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{};</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{};</span>
 
     <span class="kd">function</span> <span class="nx">A</span><span class="p">(){</span>
         <span class="k">try</span><span class="p">{</span>
@@ -127,7 +127,7 @@
 
 <p>上面的栗子说明 <span class="impo">try/catch</span> 在捕获到错误后阻止了错误向上传递。你只能手动抛出错误让上层函数捕获。</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{};</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{};</span>
 
     <span class="kd">function</span> <span class="nx">A</span><span class="p">(){</span>
         <span class="k">try</span><span class="p">{</span>
@@ -154,7 +154,7 @@
 
 <p>promise模块核心代码<a href="https://github.com/then/promise/blob/master/lib/core.js">core.js</a>:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="p">...</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">...</span>
     <span class="cm">/*直接跳至关键处*/</span>
     <span class="kd">var</span> <span class="nx">cb</span> <span class="o">=</span> <span class="nx">state</span> <span class="o">?</span> <span class="nx">deferred</span><span class="p">.</span><span class="nx">onFulfilled</span> <span class="o">:</span> <span class="nx">deferred</span><span class="p">.</span><span class="nx">onRejected</span>
       <span class="k">if</span> <span class="p">(</span><span class="nx">cb</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
@@ -182,7 +182,7 @@
 
 <p><a href="https://github.com/then/promise/blob/master/lib/es6-extensions.js">es6-extensions.js</a>:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">Promise</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="s1">&#39;catch&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">onRejected</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Promise</span><span class="p">.</span><span class="nx">prototype</span><span class="p">[</span><span class="s1">&#39;catch&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">onRejected</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">onRejected</span><span class="p">);</span>
     <span class="p">}</span></code></pre></div>
 
@@ -192,7 +192,7 @@
 
 <p><a href="https://github.com/then/promise/blob/master/lib/done.js">done.js</a>:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
 
     <span class="kd">var</span> <span class="nx">Promise</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./core.js&#39;</span><span class="p">)</span>
     <span class="kd">var</span> <span class="nx">asap</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;asap&#39;</span><span class="p">)</span>
@@ -217,6 +217,8 @@
         
         <a class="prev" href="/javascript/2015/03/09/node-test-promise.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>如何为使用Promise规范的接口写测试用例</a>
         
+        
+        <a class="next" href="/bigbang/2015/08/26/mac-crontab.html" rel="bookmark">在mac中使用cron<i class="fa fa-chevron-circle-right"></i></a>
         
     </div>
 </div>

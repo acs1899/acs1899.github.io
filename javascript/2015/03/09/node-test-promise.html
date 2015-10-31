@@ -88,7 +88,7 @@
             
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
-            <li class="cagory-li "><a href="/categories/bigbang">bigbang (2)</a></li>
+            <li class="cagory-li "><a href="/categories/bigbang">bigbang (3)</a></li>
             
             </ul>
     	</div>
@@ -104,7 +104,7 @@
 
 <p>同步单元测试：</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span><span class="cm">/*断言库*/</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span><span class="cm">/*断言库*/</span>
 
     <span class="kd">function</span> <span class="nx">A</span><span class="p">(</span><span class="nx">x</span><span class="p">){</span>
         <span class="k">return</span> <span class="nx">x</span> <span class="o">?</span> <span class="kc">true</span> <span class="o">:</span> <span class="kc">false</span>
@@ -121,7 +121,7 @@
 
 <p>异步单元测试：</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
 
     <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;fs.readFile is ok&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
@@ -137,7 +137,7 @@
 
 <p><span class="impo">Promise</span>规范来书写的接口：</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Promise</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;promise&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">Promise</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;promise&#39;</span><span class="p">);</span>
     <span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
     <span class="cm">/*Promise的实现方式有很多种，这里使用promise库*/</span>
 
@@ -181,13 +181,13 @@
 
 <p>注意测试代码中这一行代码</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">result</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nb">String</span><span class="p">;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">result</span><span class="p">.</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nb">String</span><span class="p">;</span></code></pre></div>
 
 <p>这行代码的目的是检测 <span class="impo">result</span> 是否是字符串。如果 <span class="impo">result</span> 不是字符串，那应该会被测试框架捕获到。</p>
 
 <p>稍微修改下</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nb">String</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">].</span><span class="nx">should</span><span class="p">.</span><span class="nx">be</span><span class="p">.</span><span class="nb">String</span><span class="p">;</span>
     <span class="cm">/*这里只是为了测试错误是否能被捕获到，所以用[1,2,3]替换了result*/</span></code></pre></div>
 
 <h3>纳尼！！！</h3>
@@ -220,7 +220,7 @@
 
 <p>修改测试代码：</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">should</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;should&#39;</span><span class="p">);</span>
     <span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;fileRead is ok&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
         <span class="nx">fileRead</span><span class="p">(</span><span class="s1">&#39;/test.txt&#39;</span><span class="p">)</span>
             <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">){</span>

@@ -88,7 +88,7 @@
             
             <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
             
-            <li class="cagory-li "><a href="/categories/bigbang">bigbang (2)</a></li>
+            <li class="cagory-li "><a href="/categories/bigbang">bigbang (3)</a></li>
             
             </ul>
     	</div>
@@ -108,32 +108,32 @@
 
 <p>安装rvm（ruby管理工具）</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">curl</span> <span class="o">-</span><span class="nx">L</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//get.rvm.io | bash -s stable</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">curl</span> <span class="o">-</span><span class="nx">L</span> <span class="nx">https</span><span class="o">:</span><span class="c1">//get.rvm.io | bash -s stable</span>
 <span class="nx">source</span> <span class="o">~</span><span class="err">/.rvm/script/rvm</span>
 <span class="nx">rvm</span> <span class="nx">install</span> <span class="nx">requirements</span></code></pre></div>
 
 <p>安装ruby</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">rvm</span> <span class="nx">install</span> <span class="nx">ruby</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">rvm</span> <span class="nx">install</span> <span class="nx">ruby</span>
 <span class="nx">rvm</span> <span class="nx">use</span> <span class="nx">ruby</span> <span class="o">--</span><span class="k">default</span></code></pre></div>
 
 <p>安装rubygems</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">rvm</span> <span class="nx">rubygems</span> <span class="nx">current</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">rvm</span> <span class="nx">rubygems</span> <span class="nx">current</span></code></pre></div>
 
 <p>安装rails</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">gem</span> <span class="nx">install</span> <span class="nx">rails</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">gem</span> <span class="nx">install</span> <span class="nx">rails</span></code></pre></div>
 
 <h4>安装jekyll</h4>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">gem</span> <span class="nx">install</span> <span class="nx">jekyll</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">gem</span> <span class="nx">install</span> <span class="nx">jekyll</span></code></pre></div>
 
 <p>OK~现在你已经成功安装jekyll了（如果不出什么意外的话）</p>
 
 <p>那么来试试</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">jekyll</span> <span class="k">new</span> <span class="nx">myBlog</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jekyll</span> <span class="k">new</span> <span class="nx">myBlog</span>
 <span class="nx">cd</span> <span class="nx">myBlog</span>
 <span class="nx">jekyll</span> <span class="nx">server</span></code></pre></div>
 
@@ -153,11 +153,11 @@
 
 <p>当你觉得自己的blog已经完美之后，你可以通过<span class="impo">jekyll build</span>来让jekyll帮你生成最后的静态代码。这些代码会保存在./<em>site下。最后你也只需要将./</em>site下的文件pull到github上</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">jekyll</span> <span class="nx">build</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jekyll</span> <span class="nx">build</span></code></pre></div>
 
 <p>当然在你调试的过程中需要不停地预览你的blog，这时你应该会用到</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">jekyll</span> <span class="nx">server</span></code></pre></div>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">jekyll</span> <span class="nx">server</span></code></pre></div>
 
 <p><span class="impo">jekyll server</span>包含了上面的<span class="impo">jekyll build</span>，之后会起一个本地服务通过<span class="impo">http://localhost:4000</span>来预览./_site中的页面</p>
 

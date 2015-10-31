@@ -2,6 +2,12 @@
 <articles xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <article>
+	<title>在mac中使用cron</title>
+	<url>/bigbang/2015/08/26/mac-crontab.html</url>
+	<date>2015-08-26</date>
+</article>
+
+<article>
 	<title>promise中的错误捕获</title>
 	<url>/javascript/2015/03/11/why-mocha-can-not-catch-promise-err.html</url>
 	<date>2015-03-11</date>
