@@ -4,7 +4,7 @@
    <title>John connor's blog</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2016-02-17T14:52:01+08:00</updated>
+   <updated>2016-02-17T16:46:23+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -57,6 +57,9 @@
 
 &lt;p&gt;注意：直接在终端是无法运行docker的，需要进入boot2docker中。&lt;/p&gt;
 
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;docker-machine start default // 让boot2docker启动一个虚拟机作为docker的运行环境 - default为虚拟机名
+docker-machine ssh default // 进入boot2docker生成的虚拟机&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。&lt;/p&gt;
 
 &lt;p&gt;我们下载一个 &lt;strong&gt;alexwhen/docker-2048&lt;/strong&gt; 镜像作为示例&lt;/p&gt;
@@ -93,13 +96,11 @@
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ti&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;应用代码&lt;/p&gt;
+&lt;p&gt;应用代码 &lt;code&gt;cd /usr/share/nginx/html&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/code-2048.png&quot; alt=&quot;alexwhen/docker-2048&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;nginx配置&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;vi /etc/nginx/nginx.conf&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;nginx配置 &lt;code&gt;vi /etc/nginx/nginx.conf&lt;/code&gt;&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;       &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -146,7 +147,9 @@
 
 &lt;p&gt;在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。&lt;/p&gt;
 
-&lt;p&gt;&lt;img style=&quot;display:block;width:200px;margin:0 auto;&quot; src=&quot;/images/weiguan.png&quot; title=&quot;不明真相的围观群众&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;display:block;width:200px;margin:0 auto;&quot; src=&quot;/images/weiguan.png&quot; title=&quot;赶紧买个瓜围观&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;display:block;width:200px;margin:0 auto;&quot; src=&quot;/images/weiguans.png&quot; title=&quot;不明真相的围观群众&quot; /&gt;&lt;/p&gt;
 </content>
    </entry>
    

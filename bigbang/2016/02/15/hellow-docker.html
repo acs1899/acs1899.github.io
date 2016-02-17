@@ -140,6 +140,9 @@
 
 <p>注意：直接在终端是无法运行docker的，需要进入boot2docker中。</p>
 
+<div class="highlight"><pre><code class="language-html" data-lang="html">docker-machine start default // 让boot2docker启动一个虚拟机作为docker的运行环境 - default为虚拟机名
+docker-machine ssh default // 进入boot2docker生成的虚拟机</code></pre></div>
+
 <p>Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。</p>
 
 <p>我们下载一个 <strong>alexwhen/docker-2048</strong> 镜像作为示例</p>
@@ -176,13 +179,11 @@
 
 <div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="n">alexwhen</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="mi">2048</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">sh</span></code></pre></div>
 
-<p>应用代码</p>
+<p>应用代码 <code>cd /usr/share/nginx/html</code></p>
 
 <p><img src="/images/code-2048.png" alt="alexwhen/docker-2048"></p>
 
-<p>nginx配置</p>
-
-<p><strong>vi /etc/nginx/nginx.conf</strong></p>
+<p>nginx配置 <code>vi /etc/nginx/nginx.conf</code></p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">server</span> <span class="p">{</span>
         <span class="nx">listen</span>       <span class="mi">80</span><span class="p">;</span>
@@ -229,7 +230,9 @@
 
 <p>在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。</p>
 
-<p><img style="display:block;width:200px;margin:0 auto;" src="/images/weiguan.png" title="不明真相的围观群众" /></p>
+<p><img style="display:block;width:200px;margin:0 auto;" src="/images/weiguan.png" title="赶紧买个瓜围观" /></p>
+
+<p><img style="display:block;width:200px;margin:0 auto;" src="/images/weiguans.png" title="不明真相的围观群众" /></p>
 
         </div>
     </div>
