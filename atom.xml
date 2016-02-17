@@ -4,7 +4,7 @@
    <title>John connor's blog</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2015-10-31T12:21:06+00:00</updated>
+   <updated>2016-02-17T14:52:01+08:00</updated>
    <id></id>
    <author>
      <name></name>
@@ -13,9 +13,147 @@
 
    
    <entry>
+     <title>初试Docker</title>
+     <link href="/bigbang/2016/02/15/hellow-docker.html"/>
+     <updated>2016-02-15T00:00:00+08:00</updated>
+     <id>/bigbang/2016/02/15/hellow-docker</id>
+     <content type="html">&lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt;，2015最火的开源项目之一。&lt;/p&gt;
+
+&lt;p&gt;关于Docker-“快速部署”、“隔离”、“镜像”、“容器”这些关键词想必你一定听过。Docker可以将你的基础配置和应用服务隔离开来，打包你的环境配置并实现快速部署。通过“镜像”，我们可以快速的将一个应用部署到多个服务器上，而“容器”则是用来承载这些应用的。&lt;/p&gt;
+
+&lt;p&gt;使用Docker能给我们带来哪些好处：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  根据镜像快速部署&lt;/li&gt;
+&lt;li&gt;  可以通过DockerHub或搭建私有镜像库来查找、上传镜像&lt;/li&gt;
+&lt;li&gt;  Docker对资源占少，应用之间能做到很好的隔离同时也能保证相互间的通信&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;本篇文章主要介绍如何使用docker，创建自己的镜像，运行容器等。具体使用准则参考官方&lt;a href=&quot;https://docs.docker.com/&quot;&gt;文档&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3&gt;你需要知道的一些基本概念&lt;/h3&gt;
+
+&lt;h5&gt;镜像-Image&lt;/h5&gt;
+
+&lt;p&gt;镜像可以理解为应用的一个快照。里面保存着该应用运行所需要的各个配置、依赖、环境参数等。镜像还有一个非常关键的概念便是可以&lt;strong&gt;叠加&lt;/strong&gt;。镜像使用了一种叫&lt;a href=&quot;https://en.wikipedia.org/wiki/UnionFS&quot;&gt;union file system&lt;/a&gt;的技术，将不同镜像按照层级叠加起来（可以理解成一种依赖关系）。&lt;/p&gt;
+
+&lt;h5&gt;容器-Container&lt;/h5&gt;
+
+&lt;p&gt;docker的容器则可理解为一个基础版的Linux系统。容器会根据镜像中的配置、资源在镜像的上层再添加一个应用运行的读写层。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/docker-filesystems.png&quot; alt=&quot;docker-filesystem&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;安装&lt;/h3&gt;
+
+&lt;p&gt;以下是&lt;strong&gt;mac os&lt;/strong&gt;系统安装流程，&lt;a href=&quot;https://docs.docker.com/linux/step_one/&quot;&gt;Linux&lt;/a&gt; &lt;a href=&quot;https://docs.docker.com/windows/step_one/&quot;&gt;Windows&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Docker本身并不支持直接在Mac OS上运行，不过Docker社区提供了一个工具boot2docker（实际是在Mac OS上创建一个虚拟机）。目前官方已将boot2docker整合到了官方工具&lt;strong&gt;Docker Toolbox&lt;/strong&gt;中。&lt;/p&gt;
+
+&lt;p&gt;下载&lt;a href=&quot;https://github.com/docker/toolbox/releases/download/v1.10.1/DockerToolbox-1.10.1.pkg&quot;&gt;Docker Toolbox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;具体安装流程可参考&lt;a href=&quot;https://docs.docker.com/mac/step_one/&quot;&gt;Docker Mac OS 安装&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;运行&lt;/h3&gt;
+
+&lt;p&gt;注意：直接在终端是无法运行docker的，需要进入boot2docker中。&lt;/p&gt;
+
+&lt;p&gt;Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。&lt;/p&gt;
+
+&lt;p&gt;我们下载一个 &lt;strong&gt;alexwhen/docker-2048&lt;/strong&gt; 镜像作为示例&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/docker-images.png&quot; alt=&quot;docker-images&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;docker images&lt;/strong&gt; 列出本地所有可用的Image，包括镜像名、TAG、创建时间和大小等信息。&lt;/p&gt;
+
+&lt;p&gt;现在我们可以用 &lt;strong&gt;alexwhen/docker-2048&lt;/strong&gt; 镜像运行一个容器。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt; 让Container以后台进程运行，&lt;strong&gt;-p&lt;/strong&gt; 指定8080端口的请求转发到Container的80端口。&lt;/p&gt;
+
+&lt;p&gt;通过 &lt;strong&gt;docker ps&lt;/strong&gt; 检查我们容器是否运行正常。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/docker-ps.png&quot; alt=&quot;docker-ps&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;如何访问我们的应用呢？注意在Mac OS下，我们的docker是运行在boot2docker里的，所以需要链接虚拟机地址才能访问docker中的应用。&lt;/p&gt;
+
+&lt;p&gt;退出boot2docker 执行 &lt;strong&gt;docker-machine ls&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/docker-machine-ls.png&quot; alt=&quot;docker-machine-ls&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;显示boot2docker地址 &lt;strong&gt;192.168.99.100&lt;/strong&gt; 访问 &lt;strong&gt;http://192.168.99.100:8080&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/docker-2048.png&quot; alt=&quot;docker-2048&quot;&gt;&lt;/p&gt;
+
+&lt;h3&gt;Container内部&lt;/h3&gt;
+
+&lt;p&gt;下面我们可以进入Container，来看看Container内部是如何运作的。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ti&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;应用代码&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/code-2048.png&quot; alt=&quot;alexwhen/docker-2048&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;nginx配置&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;vi /etc/nginx/nginx.conf&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;       &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;server_name&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;   &lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;htm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;当容器以 &lt;strong&gt;alexwhen/docker-2048&lt;/strong&gt; 镜像启动时，会启动一个nginx并监听Container的80端口。&lt;/p&gt;
+
+&lt;p&gt;当我们访问 &lt;strong&gt;http://192.168.99.100:8080&lt;/strong&gt; 时，boot2docker会将8080端口的请求转发到Container的80端口，进而访问到应用。&lt;/p&gt;
+
+&lt;p&gt;其实上面的例子并不够典型，因为具体的应用代码是保存在镜像中的，但是应用的代码是经常更新的，所以不适合放在镜像中。&lt;/p&gt;
+
+&lt;p&gt;一种解决方案应该是将具体的应用代码放在宿主机，然后挂载到容器上运行。&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/home/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;这会把本地目录 &lt;strong&gt;/usr/data&lt;/strong&gt; 挂载到容器 &lt;strong&gt;/home/data&lt;/strong&gt; 目录。&lt;/p&gt;
+
+&lt;p&gt;另一种方案是在容器内生成 &lt;strong&gt;数据卷&lt;/strong&gt;，然后用它来做数据持久化。&lt;/p&gt;
+
+&lt;h5&gt;数据卷&lt;/h5&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  数据卷可在容器之间共享或重用&lt;/li&gt;
+&lt;li&gt;  数据卷中的更改可以直接生效&lt;/li&gt;
+&lt;li&gt;  数据卷中的更改不会包含在镜像的更新中&lt;/li&gt;
+&lt;li&gt;  数据卷的生命周期一直持续到没有容器使用它为止&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;生成数据卷&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mydata&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;在另外一个容器挂载刚才生成的数据卷&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mydata&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mydb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;写在最后&lt;/h3&gt;
+
+&lt;p&gt;在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;display:block;width:200px;margin:0 auto;&quot; src=&quot;/images/weiguan.png&quot; title=&quot;不明真相的围观群众&quot; /&gt;&lt;/p&gt;
+</content>
+   </entry>
+   
+   <entry>
      <title>在mac中使用cron</title>
      <link href="/bigbang/2015/08/26/mac-crontab.html"/>
-     <updated>2015-08-26T00:00:00+00:00</updated>
+     <updated>2015-08-26T00:00:00+08:00</updated>
      <id>/bigbang/2015/08/26/mac-crontab</id>
      <content type="html">&lt;p&gt;常用的cron命令:&lt;/p&gt;
 
@@ -36,7 +174,7 @@
    <entry>
      <title>promise中的错误捕获</title>
      <link href="/javascript/2015/03/11/why-mocha-can-not-catch-promise-err.html"/>
-     <updated>2015-03-11T00:00:00+00:00</updated>
+     <updated>2015-03-11T00:00:00+08:00</updated>
      <id>/javascript/2015/03/11/why-mocha-can-not-catch-promise-err</id>
      <content type="html">&lt;p&gt;接&lt;a href=&quot;http://acs1899.info/javascript/2015/03/09/node-test-promise.html&quot;&gt;上篇&lt;/a&gt;文章留下的一个没有解决的问题：&lt;strong&gt;在promise中的错误为什么在外层函数捕获不到？&lt;/strong&gt;&lt;/p&gt;
 
@@ -152,7 +290,7 @@
    <entry>
      <title>如何为使用Promise规范的接口写测试用例</title>
      <link href="/javascript/2015/03/09/node-test-promise.html"/>
-     <updated>2015-03-09T00:00:00+00:00</updated>
+     <updated>2015-03-09T00:00:00+08:00</updated>
      <id>/javascript/2015/03/09/node-test-promise</id>
      <content type="html">&lt;p&gt;nodeJs为Javascript引入了单元测试的概念。单元测试能够帮助我们更好的提高代码质量，让BUG在代码编写的时候即被消灭掉。&lt;/p&gt;
 
@@ -290,7 +428,7 @@
    <entry>
      <title>VPS搭建ShadowSocks</title>
      <link href="/bigbang/2014/10/11/vps-shadowsocks-build.html"/>
-     <updated>2014-10-11T00:00:00+00:00</updated>
+     <updated>2014-10-11T00:00:00+08:00</updated>
      <id>/bigbang/2014/10/11/vps-shadowsocks-build</id>
      <content type="html">&lt;p&gt;ShadowSocks是一个轻量级socks5代理，以Python2.x写成。之前用的是用pptp搭建的vpn。&lt;/p&gt;
 
@@ -365,7 +503,7 @@
    <entry>
      <title>textarea光标位置定位、插入、获取选择文字</title>
      <link href="/javascript/2014/05/29/textarea-input-cursor.html"/>
-     <updated>2014-05-29T00:00:00+00:00</updated>
+     <updated>2014-05-29T00:00:00+08:00</updated>
      <id>/javascript/2014/05/29/textarea-input-cursor</id>
      <content type="html">&lt;p&gt;微博&amp;quot;@&amp;quot;功能相信每一个玩过微博的人都用过，当你输入&amp;quot;@&amp;quot;字符串时，在光标位置旁边就会生成一个提示框，你可以快速的选取你最近&amp;quot;@&amp;quot;过的人。&lt;/p&gt;
 
@@ -632,7 +770,7 @@ function getAnchor(ele){
    <entry>
      <title>javascript事件触发器</title>
      <link href="/javascript/2013/12/19/javascript-fireEvent.html"/>
-     <updated>2013-12-19T00:00:00+00:00</updated>
+     <updated>2013-12-19T00:00:00+08:00</updated>
      <id>/javascript/2013/12/19/javascript-fireEvent</id>
      <content type="html">&lt;p&gt;转载此文方便以后查阅&lt;/p&gt;
 
@@ -700,7 +838,7 @@ function getAnchor(ele){
    <entry>
      <title>使用cloneNode时需要注意的问题</title>
      <link href="/javascript/2013/08/26/use-cloneNode-notice.html"/>
-     <updated>2013-08-26T00:00:00+00:00</updated>
+     <updated>2013-08-26T00:00:00+08:00</updated>
      <id>/javascript/2013/08/26/use-cloneNode-notice</id>
      <content type="html">&lt;p&gt;oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM节点。cloneNode()接收一个参数&lt;span class=&quot;impo&quot;&gt;include_all&lt;/span&gt;。&lt;span class=&quot;impo&quot;&gt;include_all&lt;/span&gt;为一个布尔值，true表示被clone的节点的所有子节点也会被clone（既深度clone），false(默认)只会clone原节点。&lt;/p&gt;
 
@@ -838,7 +976,7 @@ function getAnchor(ele){
    <entry>
      <title>getElementById方法的作用域</title>
      <link href="/javascript/2012/08/22/getElementById-scopes.html"/>
-     <updated>2012-08-22T00:00:00+00:00</updated>
+     <updated>2012-08-22T00:00:00+08:00</updated>
      <id>/javascript/2012/08/22/getElementById-scopes</id>
      <content type="html">&lt;p&gt;在看jQuery内核详解一书时，为了比较jQuery与原生javascript效率，举到一个例子。&lt;/p&gt;
 
@@ -881,7 +1019,7 @@ function getAnchor(ele){
    <entry>
      <title>js中escape,encodeURI,encodeURIComponent三个函数的区别</title>
      <link href="/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent.html"/>
-     <updated>2012-07-25T00:00:00+00:00</updated>
+     <updated>2012-07-25T00:00:00+08:00</updated>
      <id>/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent</id>
      <content type="html">&lt;p&gt;js对文字进行编码涉及3个函数：escape,encodeURI,encodeURIComponent，相应3个解码函数：unescape,decodeURI,decodeURIComponent&lt;/p&gt;
 
@@ -912,79 +1050,6 @@ encodeURI不编码字符有82个：!，#，$，&amp;amp;，&amp;#39;，(，)，*
 
 encodeURIComponent不编码字符有71个：!， &amp;#39;，(，)，*，-，.，_，~，0-9，a-z，A-Z
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
-   </entry>
-   
-   <entry>
-     <title>wow宏教程</title>
-     <link href="/bigbang/2012/07/05/wow-macro.html"/>
-     <updated>2012-07-05T00:00:00+00:00</updated>
-     <id>/bigbang/2012/07/05/wow-macro</id>
-     <content type="html">&lt;p&gt;在WoW 2.0中出现了一个新的命令，&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt;。它允许你在一次次点击某个宏时，将其中定义的一系列法术逐个施放，格式如下： &lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt; [&amp;lt;条件选项&amp;gt;] reset=&amp;lt;#&amp;gt;/target/combat &amp;lt;法术1&amp;gt;, &amp;lt;法术2&amp;gt;, &amp;lt;法术3&amp;gt; &lt;/p&gt;
-
-&lt;p&gt;“啥？你在说啥？” &lt;/p&gt;
-
-&lt;p&gt;它设定了一个法术列表，当你第一次点击这个宏时，它施放列表中的第一个法术，第二次点击的时候，施放第二个法术，以此类推。 当它施放完最后一个时，又回到起始点开始循环。 &lt;/p&gt;
-
-&lt;p&gt;“我还是不太明白耶。” &lt;/p&gt;
-
-&lt;p&gt;OK，假设你是一个法师，有时候你需要冰霜新星后立刻闪现开，你没法同时做到这些事情，现在你可以设定一个序列去做！ &lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt; 冰霜新星, 闪现 &lt;/p&gt;
-
-&lt;p&gt;就这么简单，第一次你按这个宏，你施放冰霜新星，再按一次，闪现。 &lt;/p&gt;
-
-&lt;p&gt;“那如果冰霜新星在冷却中怎么办？它会直接施放闪现么？还是不施放冰霜新星，等第二次按这个宏的时候，再施放闪现？” &lt;/p&gt;
-
-&lt;p&gt;都不是。如果法术无法施放（冷却，超出距离，法力不足等等情况下），序列就不会走到下一个法术，下一次你再点这个宏的时候，它会再度尝试施放冰霜新星。（抵抗，躲闪，招架等并不会算作无法施放，这些情况下法术/技能确实施放了，只不过没有命中。） &lt;/p&gt;
-
-&lt;p&gt;如果我没有处于战斗中怎么办？我不想在非战斗情况下浪费一个冰霜新星。” &lt;/p&gt;
-
-&lt;p&gt;你可以把之前所有的宏条件选项应用于此（可惜的是，只能应用于整个序列，而不能为每个法术单独设定）。 &lt;/p&gt;
-
-&lt;p&gt;“呃，其实刚才我只是随便说说，OK，那如果我在冰霜新星后不想闪现了怎么办？下一次我想施放冰霜新星时，它会不会还是停滞在施放闪现的设定上？” &lt;/p&gt;
-
-&lt;p&gt;这完全没问题，我们会用到重置这个设定。因为冰霜新星一般的冷却时间为24秒，我们可以设定序列在24秒内不被使用就重置它。 &lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt; reset=24 冰霜新星, 闪现 &lt;/p&gt;
-
-&lt;p&gt;当你第一次点击这个宏时，它会施放冰霜新星，如果你决定不闪现了，等过了24秒后，它会重置到冰霜新星的状态，因为冰霜新星的冷却时间为24秒，那时候它就可以被重新使用了，真棒！ &lt;/p&gt;
-
-&lt;p&gt;“好吧，这真的很厉害，不过我实际上是个术士啊。” &lt;/p&gt;
-
-&lt;p&gt;当然，作为一个术士，我相信你会一直重复上三种DoT，现在你可以为它们设置一个序列以节省按钮空间啦。 &lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt; 腐蚀, 献祭, 痛苦诅咒 &lt;/p&gt;
-
-&lt;p&gt;就这么简单，你可以连续点击三次这个宏来上这三种DoT。 &lt;/p&gt;
-
-&lt;p&gt;“但如果在我施放完这些前目标就死了呢？我又卡在这个序列里了，我可不想设什么定时器！” &lt;/p&gt;
-
-&lt;p&gt;那也没关系，我们可以用其他的条件选项。如果你设定“reset=target”，那序列将在你改变目标时就重置到起始位置。你也可以设置“reset=combat”，每当你脱离战斗，这个序列就会被重置了。如果你使用“/”控制符（你还记得吧，之前提到过），你也可以将这些重置条件选项组合起来！ &lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt; reset=combat/target 腐蚀, 献祭, 痛苦诅咒 &lt;/p&gt;
-
-&lt;p&gt;就这全了，这下子每当你改变目标（比如原来的目标快死了，你选中的新的目标）或脱离了战斗（可能目标在你施放完所有DoT前就死了），它将会把整个序列重置，让你可以从头开始。 &lt;/p&gt;
-
-&lt;p&gt;“OK，真棒，我想我现在弄明白了！给我点时间设置新的宏....搞定！” &lt;/p&gt;
-
-&lt;p&gt;好极了，我很高兴能帮上忙。 &lt;/p&gt;
-
-&lt;p&gt;“那...来决斗一盘吧？” &lt;/p&gt;
-
-&lt;p&gt;呃，不了，我从不和术士决斗。 &lt;/p&gt;
-
-&lt;p&gt;“切，胆小鬼。” &lt;/p&gt;
-
-&lt;p&gt;另外本人是巨魔暗M,暗道理说MS不用写什么宏,不过本人觉得&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt;有必要
-&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt; reset=3 心灵之火,暗影守卫
-大概这个宏是在PVP中使用,特别是战场,死了之后一般都加这2个技能,一键搞定&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;/castsequence&lt;/span&gt; reset=3 真言术·痛,吸血鬼拥抱
-实现PK中一键上完暗M的DOT
-另外可根据自己设置恐吓后心爆宏之类`&lt;/p&gt;
-</content>
    </entry>
    
  
