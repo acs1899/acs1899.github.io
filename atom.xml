@@ -4,13 +4,48 @@
    <title>John connor's blog</title>
    <link href="/atom.xml" rel="self" type="application/atom+xml"/>
    <link href="" rel="alternate" type="text/html" />
-   <updated>2016-02-25T00:11:34+08:00</updated>
+   <updated>2016-02-26T01:15:06+08:00</updated>
    <id></id>
    <author>
      <name></name>
      <email></email>
    </author>
 
+   
+   <entry>
+     <title>《活着》</title>
+     <link href="/bigbang/2016/02/25/alive.html"/>
+     <updated>2016-02-25T00:00:00+08:00</updated>
+     <id>/bigbang/2016/02/25/alive</id>
+     <content type="html">&lt;p&gt;lusir总是说着&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;活着就有希望&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;一开始我并不理解，为何一个18岁的少年会一边写着代码一边语重心长地说出这样的话。&lt;/p&gt;
+
+&lt;p&gt;在我有限的记忆里，每当他说出这句话，我总能从他小得快看不见的眼睛中察觉到一丝睿智，但微扬的嘴角又让我觉得这一切只是他对生活的嘲讽。&lt;/p&gt;
+
+&lt;p&gt;正如《活着》中福贵说过&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;做人不能忘记四条，话不要说错，床不要睡错，门槛不要踏错，口袋不要摸错。&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;书中的福贵，年轻时便睡错了床、踏错了门槛、说错了话、摸错了口袋。祖辈的基业被他从牛输成了羊，羊输成了鹅，鹅输成了鸡，到最后连鸡也没有了。&lt;/p&gt;
+
+&lt;p&gt;就是这样一个“败家子”，经历了上个世纪中华大地最动荡的几十年，身边的亲人一个个离他而去，而他依然活着。&lt;/p&gt;
+
+&lt;p&gt;人们常说上过真正战场的人，才能真正理解生命的意义。&lt;/p&gt;
+
+&lt;p&gt;春生，和福贵一起从死人堆里爬出来的战友，解放后当上了县长，文革中被批斗成“走资派”。那天春生来和福贵告别，福贵不停开导春生要他活下去，春生也答应了福贵。&lt;/p&gt;
+
+&lt;p&gt;最后春生还是自杀了。我想不通春生为什么会自杀，早已经历过生死的人为什么不能忍受一时之辱。后来我突然明白了，在战场上只要你活着就有希望，但是在那个时代，活着看不到希望。&lt;/p&gt;
+
+&lt;p&gt;写这篇文章的时候已是深夜，此时此刻我的希望是什么？&lt;/p&gt;
+
+&lt;p&gt;需求不再改？代码不再出bug？线上不再报故障？&lt;/p&gt;
+
+&lt;p&gt;漆黑的夜中，能看见几颗星，这就是希望吧。&lt;/p&gt;
+</content>
+   </entry>
    
    <entry>
      <title>初试Docker</title>
@@ -992,49 +1027,6 @@ function getAnchor(ele){
 &lt;p&gt;1.在使用cloneNode()时，最好在插入前将clone出来的节点中的script手动清除掉，以避免脚本可能被重复执行。&lt;/p&gt;
 
 &lt;p&gt;2.使用cloneNode()会将通过attachEvent绑定的事件复制到clone出来的节点上，可以通过使用跨浏览器的事件绑定解决方案来统一让绑定的事件不被复制。&lt;/p&gt;
-</content>
-   </entry>
-   
-   <entry>
-     <title>getElementById方法的作用域</title>
-     <link href="/javascript/2012/08/22/getElementById-scopes.html"/>
-     <updated>2012-08-22T00:00:00+08:00</updated>
-     <id>/javascript/2012/08/22/getElementById-scopes</id>
-     <content type="html">&lt;p&gt;在看jQuery内核详解一书时，为了比较jQuery与原生javascript效率，举到一个例子。&lt;/p&gt;
-
-&lt;p&gt;里面有这样一段：&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;header&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;秉着&amp;#39;实践出真理&amp;#39;的原则，自己敲一敲代码跑了一下。&lt;/p&gt;
-
-&lt;p&gt;在chrome、firefox、IE9下运行时，会抛出错误：&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;Illegal invocation&lt;/span&gt; chrome&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;&amp;#39;getElementById&amp;#39; called on an object that does not implement interface Document.&lt;/span&gt; firefox&lt;/p&gt;
-
-&lt;p&gt;再到IE6~8下，却能够顺畅运行。&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;Illegal invocation&lt;/span&gt;意为非法调用&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;&amp;#39;getElementById&amp;#39; called on an object that does not implement interface Document.&lt;/span&gt;意为&amp;#39;&amp;quot;getElementById&amp;quot;被一个不能实现document接口的对象调用&amp;#39;（乱翻译的，不过大致意思应该是这样。。。）&lt;/p&gt;
-
-&lt;p&gt;说明肯能是作用域的问题&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;header&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;这次在非IE6~8下成功运行&lt;/p&gt;
-
-&lt;p&gt;总结：&lt;/p&gt;
-
-&lt;p&gt;在IE6~8下document.getElementById与作用域无关，也就是说在何处调用不会影响函数本身。&lt;/p&gt;
-
-&lt;p&gt;在其他浏览器（包括IE9及以上）document.getElementById与作用域有关，也就是说getElementById函数内部this必须指向&lt;span class=&quot;impo&quot;&gt;document
-&lt;/span&gt;。&lt;span class=&quot;impo&quot;&gt;getElementsByTagName&lt;/span&gt;也有同样的情况。&lt;/p&gt;
 </content>
    </entry>
    
