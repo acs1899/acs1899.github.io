@@ -9,19 +9,25 @@
 
 <article>
 	<title>初试Docker</title>
-	<url>/bigbang/2016/02/15/hellow-docker.html</url>
+	<url>/linux/mac/2016/02/15/hellow-docker.html</url>
 	<date>2016-02-15</date>
 </article>
 
 <article>
 	<title>Mac下卸载mysql</title>
-	<url>/bigbang/2016/02/12/mac-uninstall-mysql.html</url>
+	<url>/linux/mac/2016/02/12/mac-uninstall-mysql.html</url>
 	<date>2016-02-12</date>
 </article>
 
 <article>
+	<title>日志分割</title>
+	<url>/linux/mac/2016/01/26/cronologo.html</url>
+	<date>2016-01-26</date>
+</article>
+
+<article>
 	<title>在mac中使用cron</title>
-	<url>/bigbang/2015/08/26/mac-crontab.html</url>
+	<url>/linux/mac/2015/08/26/mac-crontab.html</url>
 	<date>2015-08-26</date>
 </article>
 
@@ -39,7 +45,7 @@
 
 <article>
 	<title>VPS搭建ShadowSocks</title>
-	<url>/bigbang/2014/10/11/vps-shadowsocks-build.html</url>
+	<url>/linux/mac/2014/10/11/vps-shadowsocks-build.html</url>
 	<date>2014-10-11</date>
 </article>
 
@@ -99,7 +105,7 @@
 
 <article>
 	<title>Github搭建自己的blog</title>
-	<url>/javascript/html&css/jekyll/2011/09/20/hello-world.html</url>
+	<url>/javascript/html&css/linux/mac/2011/09/20/hello-world.html</url>
 	<date>2011-09-20</date>
 </article>
 

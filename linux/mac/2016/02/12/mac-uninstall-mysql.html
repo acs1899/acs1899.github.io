@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>在mac中使用cron-John connor's blog</title>
+    <title>Mac下卸载mysql-John connor's blog</title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="在mac osx 中使用 crontab 注意事项" />
-    <meta name="keywords" content="mac,crontab" />
+    <meta name="description" content="mac下卸载DMG包安装的mysql" />
+    <meta name="keywords" content="mac,uninstall,mysql" />
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
@@ -87,33 +87,31 @@
             
             <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
             
-            <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
+            <li class="cagory-li "><a href="/categories/linux/mac">linux/mac (6)</a></li>
             
-            <li class="cagory-li "><a href="/categories/bigbang">bigbang (6)</a></li>
+            <li class="cagory-li "><a href="/categories/bigbang">bigbang (2)</a></li>
             
             </ul>
     	</div>
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">在mac中使用cron</h3>
+        <h3 class="violet-title-item">Mac下卸载mysql</h3>
     </div>
     <div class="violet-post">
-        <p class="main-article-meta"><span pubdate="">2015-08-26</span></p>
+        <p class="main-article-meta"><span pubdate="">2016-02-12</span></p>
         <div class="main-article-contant">
-            <p>常用的cron命令:</p>
+            <p>记录删除需要的操作，供以后查阅。</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">crontab</span> <span class="o">-</span><span class="nx">e</span> <span class="c1">//编辑任务</span>
-    <span class="o">-</span><span class="nx">l</span> <span class="c1">//显示已有任务</span>
-    <span class="o">-</span><span class="nx">r</span> <span class="c1">//删除所有任务</span></code></pre></div>
-
-<p>在mac下可能会遇见无法添加任务的情况</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">crontab</span><span class="o">:</span> <span class="s2">&quot;/usr/bin/vi&quot;</span> <span class="nx">exited</span> <span class="kd">with</span> <span class="nx">status</span> <span class="mi">1</span></code></pre></div>
-
-<p>这是因为环境变量<span class="impo">$EDITOR</span> 是 <span class="impo">vi</span></p>
-
-<p>重新设置成 <span class="impo">vim</span> 就行了</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">sudo</span> <span class="n">rm</span> <span class="sr">/usr/</span><span class="n">local</span><span class="o">/</span><span class="n">mysql</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="sr">/usr/</span><span class="n">local</span><span class="o">/</span><span class="n">mysql</span><span class="o">*</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="sr">/Library/</span><span class="no">StartupItems</span><span class="o">/</span><span class="no">MySQLCOM</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="sr">/Library/</span><span class="no">PreferencePanes</span><span class="o">/</span><span class="no">My</span><span class="o">*</span>
+<span class="n">vim</span> <span class="sr">/etc/</span><span class="n">hostconfig</span> <span class="ow">and</span> <span class="n">removed</span> <span class="n">the</span> <span class="n">line</span> <span class="no">MYSQLCOM</span><span class="o">=-</span><span class="no">YES</span><span class="o">-</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">~</span><span class="sr">/Library/</span><span class="no">PreferencePanes</span><span class="o">/</span><span class="no">My</span><span class="o">*</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="sr">/Library/</span><span class="no">Receipts</span><span class="o">/</span><span class="n">mysql</span><span class="o">*</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="sr">/Library/</span><span class="no">Receipts</span><span class="o">/</span><span class="no">MySQL</span><span class="o">*</span>
+<span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="sr">/var/</span><span class="n">db</span><span class="o">/</span><span class="n">receipts</span><span class="o">/</span><span class="n">com</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">*</span></code></pre></div>
 
         </div>
     </div>
@@ -121,10 +119,10 @@
 <div class="pagination fn-clear" id="violet-paging">
     <div class="pagination-list">
         
-        <a class="prev" href="/javascript/2015/03/11/why-mocha-can-not-catch-promise-err.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>promise中的错误捕获</a>
+        <a class="prev" href="/linux/mac/2016/01/26/cronologo.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>日志分割</a>
         
         
-        <a class="next" href="/bigbang/2016/02/12/mac-uninstall-mysql.html" rel="bookmark">Mac下卸载mysql<i class="fa fa-chevron-circle-right"></i></a>
+        <a class="next" href="/linux/mac/2016/02/15/hellow-docker.html" rel="bookmark">初试Docker<i class="fa fa-chevron-circle-right"></i></a>
         
     </div>
 </div>

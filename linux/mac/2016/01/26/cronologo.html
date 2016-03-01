@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Category: jekyll-John connor's blog</title>
+    <title>日志分割-John connor's blog</title>
     <meta name="generator" content="Jekyll" />
     <meta name="author" content="" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="用cronolog分割Nginx日志" />
+    <meta name="keywords" content="cronolog,nginx" />
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <!-- //页面样式 -->
     <link rel="stylesheet" href="/themes/violet/css/style.css" type="text/css" />
@@ -87,31 +87,71 @@
             
             <li class="cagory-li "><a href="/categories/html&css">html&css (3)</a></li>
             
-            <li class="cagory-li "><a href="/categories/jekyll">jekyll (1)</a></li>
+            <li class="cagory-li "><a href="/categories/linux/mac">linux/mac (6)</a></li>
             
-            <li class="cagory-li "><a href="/categories/bigbang">bigbang (6)</a></li>
+            <li class="cagory-li "><a href="/categories/bigbang">bigbang (2)</a></li>
             
             </ul>
     	</div>
         <div class="main" id="violet-main">
             <div class="main-article main-article-page">
     <div class="violet-title">
-        <h3 class="violet-title-item">Category:&nbsp;&nbspjekyll</h3>
+        <h3 class="violet-title-item">日志分割</h3>
     </div>
     <div class="violet-post">
+        <p class="main-article-meta"><span pubdate="">2016-01-26</span></p>
         <div class="main-article-contant">
-            
-            <h3>2011</h3>
-            <ul class="article-year fn-clear">
-                <li>
-                    <span>2011-09-20</span>
-                    <a href="/javascript/html&css/jekyll/2011/09/20/hello-world.html">Github搭建自己的blog</a>
-		    <P class="description">在Github上创建Gitpage与安装jekyll</p>
-                </li>
-            </ul>
-	    
+            <h2>日志分割</h2>
+
+<p>bizfe平台的nginx日志由于一直写在一个文件里，长年累月后导致该日志文件过于臃肿，对日志数据的查找和分析带来很多不便。</p>
+
+<h4>工具</h4>
+
+<p>cronolog日志分割工具</p>
+
+<h4>安装</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vps/cronolog-1.6.2.tar.gz
+tar zxvf cronolog-1.6.2.tar.gz
+cd cronolog-1.6.2
+./configure
+make
+make install
+</code></pre></div>
+<h4>创建日志管道</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">cd /home/service/nginx/logs
+mkfifo /home/service/nginx/logs/bizfe.access.pipe.log
+mkdir pipe /*用来存放分割后的日志*/
+</code></pre></div>
+<h4>修改nginx配置&amp;重启</h4>
+<div class="highlight"><pre><code class="language-text" data-lang="text">access_log logs/bizfe.access.pipe.log;
+./nginx -s reload
+</code></pre></div>
+<h4>启动cronolog</h4>
+
+<p>以下命令将日志以天为单位分割</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">nohup cat /home/service/nginx/logs/bizfe.access.pipe.log | nohup /usr/sbin/cronolog /home/service/nginx/logs/pipe/bizfe.access.%Y%m%d.log &amp;
+</code></pre></div>
         </div>
     </div>
+</div>
+<div class="pagination fn-clear" id="violet-paging">
+    <div class="pagination-list">
+        
+        <a class="prev" href="/linux/mac/2015/08/26/mac-crontab.html" rel="bookmark"><i class="fa fa-chevron-circle-left"></i>在mac中使用cron</a>
+        
+        
+        <a class="next" href="/linux/mac/2016/02/12/mac-uninstall-mysql.html" rel="bookmark">Mac下卸载mysql<i class="fa fa-chevron-circle-right"></i></a>
+        
+    </div>
+</div>
+<div class="comment">
+    
+        
+        <div class="comment-cnt">
+            <div class="ds-thread"></div>
+        </div>
+        
+    
 </div>
 
         </div>
@@ -176,6 +216,22 @@
             "background-image": "url(" + headImgArr[item] + ")"
         });
     </script>
+    
+        
+            
+            <script type="text/javascript">
+                var duoshuoQuery = {short_name:"acs1899blog"};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = 'http://static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+            </script>
+            
+        
     
 </body>
 </html>

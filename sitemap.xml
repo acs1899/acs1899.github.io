@@ -27,17 +27,22 @@
     </url>
     
     <url>
-        <loc>/bigbang/2016/02/15/hellow-docker.html</loc>
+        <loc>/linux/mac/2016/02/15/hellow-docker.html</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>/bigbang/2016/02/12/mac-uninstall-mysql.html</loc>
+        <loc>/linux/mac/2016/02/12/mac-uninstall-mysql.html</loc>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>/bigbang/2015/08/26/mac-crontab.html</loc>
+        <loc>/linux/mac/2016/01/26/cronologo.html</loc>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>/linux/mac/2015/08/26/mac-crontab.html</loc>
         <priority>0.8</priority>
     </url>
     
@@ -52,7 +57,7 @@
     </url>
     
     <url>
-        <loc>/bigbang/2014/10/11/vps-shadowsocks-build.html</loc>
+        <loc>/linux/mac/2014/10/11/vps-shadowsocks-build.html</loc>
         <priority>0.8</priority>
     </url>
     
@@ -102,7 +107,7 @@
     </url>
     
     <url>
-        <loc>/javascript/html&css/jekyll/2011/09/20/hello-world.html</loc>
+        <loc>/javascript/html&css/linux/mac/2011/09/20/hello-world.html</loc>
         <priority>0.8</priority>
     </url>
     
