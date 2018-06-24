@@ -137,12 +137,13 @@
       author: '博主'
     },
     algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
+      applicationID: 'FKA6EK1AZ9',
+      apiKey: 'c29a025383920aa2b4d4e27165a265f5',
+      indexName: 'blog',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    base_assets: '/assets/'
   };
 </script>
 
@@ -274,9 +275,47 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
   
 </nav>
 
@@ -380,17 +419,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/javascript/2013/08/26/use-cloneNode-notice/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/javascript/2013/08/26/use-cloneNode-notice/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -543,17 +571,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/javascript/2012/08/22/getElementById-scopes/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/javascript/2012/08/22/getElementById-scopes/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -704,17 +721,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -867,17 +873,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/bigbang/2012/07/05/wow-macro/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/bigbang/2012/07/05/wow-macro/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -1028,17 +1023,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/javascript/2012/07/05/cc-iframe-transmission-data/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/javascript/2012/07/05/cc-iframe-transmission-data/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1203,17 +1187,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/html&css/javascript/2012/06/01/2012.06.01-Summary/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/html&css/javascript/2012/06/01/2012.06.01-Summary/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -1364,17 +1337,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/html&css/2012/05/03/IE67-body-overflow-hidden/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/html&css/2012/05/03/IE67-body-overflow-hidden/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1550,17 +1512,6 @@
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/javascript/html&css/linux/mac/2011/09/20/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="/javascript/html&css/linux/mac/2011/09/20/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1958,14 +1909,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://blog-acs1899-com.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -1994,6 +1937,10 @@
 
   
 
+    
+
+  
+
 
 
 
@@ -2002,6 +1949,19 @@
 
 
 
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/assets/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/assets/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/assets/js/src/algolia-search.js?v=5.1.1"></script>
 
 
 
