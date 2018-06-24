@@ -1,0 +1,1091 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next mist" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="mac,docker" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Acs1899" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="初步了解docker及使用">
+<meta name="keywords" content="mac,docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初试Docker">
+<meta property="og:url" content="/linux/mac/2016/02/15/hellow-docker/">
+<meta property="og:site_name" content="Acs1899">
+<meta property="og:description" content="初步了解docker及使用">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/assets/images/post/docker-filesystems.png">
+<meta property="og:image" content="/assets/images/post/docker-images.png">
+<meta property="og:image" content="/assets/images/post/docker-ps.png">
+<meta property="og:image" content="/assets/images/post/docker-machine-ls.png">
+<meta property="og:image" content="/assets/images/post/docker-2048.png">
+<meta property="og:image" content="/assets/images/post/code-2048.png">
+<meta property="og:image" content="display:block;width:200px;margin:0 auto;">
+<meta property="og:image" content="display:block;width:200px;margin:0 auto;">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初试Docker">
+<meta name="twitter:description" content="初步了解docker及使用">
+<meta name="twitter:image" content="/assets/images/post/docker-filesystems.png">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href=""/>
+
+
+
+
+
+  <title>初试Docker | Acs1899</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?eec227dc99a70c6f3621b921d56e8dce";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Acs1899</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="/linux/mac/2016/02/15/hellow-docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="番茄拌糖">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Acs1899">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            初试Docker
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-15T00:00:00+08:00">
+                2016-02-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/Linux%2FMac" itemprop="url" rel="index">
+                    <span itemprop="name">Linux/Mac</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/linux/mac/2016/02/15/hellow-docker/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/linux/mac/2016/02/15/hellow-docker/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    初步了解docker及使用
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <p><strong>Docker</strong>，2015最火的开源项目之一。</p>
+
+<p>关于Docker-“快速部署”、“隔离”、“镜像”、“容器”这些关键词想必你一定听过。Docker可以将你的基础配置和应用服务隔离开来，打包你的环境配置并实现快速部署。通过“镜像”，我们可以快速的将一个应用部署到多个服务器上，而“容器”则是用来承载这些应用的。</p>
+
+<p>使用Docker能给我们带来哪些好处：</p>
+
+<ul>
+  <li>根据镜像快速部署</li>
+  <li>可以通过DockerHub或搭建私有镜像库来查找、上传镜像</li>
+  <li>Docker对资源占少，应用之间能做到很好的隔离同时也能保证相互间的通信</li>
+</ul>
+
+<p>本篇文章主要介绍如何使用docker，创建自己的镜像，运行容器等。具体使用准则参考官方<a href="https://docs.docker.com/">文档</a>。</p>
+
+<h3 id="你需要知道的一些基本概念">你需要知道的一些基本概念</h3>
+
+<h5 id="镜像-image">镜像-Image</h5>
+
+<p>镜像可以理解为应用的一个快照。里面保存着该应用运行所需要的各个配置、依赖、环境参数等。镜像还有一个非常关键的概念便是可以<strong>叠加</strong>。镜像使用了一种叫<a href="https://en.wikipedia.org/wiki/UnionFS">union file system</a>的技术，将不同镜像按照层级叠加起来（可以理解成一种依赖关系）。</p>
+
+<h5 id="容器-container">容器-Container</h5>
+
+<p>docker的容器则可理解为一个基础版的Linux系统。容器会根据镜像中的配置、资源在镜像的上层再添加一个应用运行的读写层。</p>
+
+<p><img src="/assets/images/post/docker-filesystems.png" alt="docker-filesystem" /></p>
+
+<h3 id="安装">安装</h3>
+
+<p>以下是<strong>mac os</strong>系统安装流程，<a href="https://docs.docker.com/linux/step_one/">Linux</a> <a href="https://docs.docker.com/windows/step_one/">Windows</a></p>
+
+<p>Docker本身并不支持直接在Mac OS上运行，不过Docker社区提供了一个工具boot2docker（实际是在Mac OS上创建一个虚拟机）。目前官方已将boot2docker整合到了官方工具<strong>Docker Toolbox</strong>中。</p>
+
+<p>下载<a href="https://github.com/docker/toolbox/releases/download/v1.10.1/DockerToolbox-1.10.1.pkg">Docker Toolbox</a></p>
+
+<p>具体安装流程可参考<a href="https://docs.docker.com/mac/step_one/">Docker Mac OS 安装</a></p>
+
+<h3 id="运行">运行</h3>
+
+<p>注意：直接在终端是无法运行docker的，需要进入boot2docker中。</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html">docker-machine start default // 让boot2docker启动一个虚拟机作为docker的运行环境 - default为虚拟机名
+docker-machine ssh default // 进入boot2docker生成的虚拟机</code></pre></figure>
+
+<p>Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。</p>
+
+<p>我们下载一个 <strong>alexwhen/docker-2048</strong> 镜像作为示例</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">docker</span> <span class="n">pull</span> <span class="n">alexwhen</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="mi">2048</span></code></pre></figure>
+
+<p><img src="/assets/images/post/docker-images.png" alt="docker-images" /></p>
+
+<p><strong>docker images</strong> 列出本地所有可用的Image，包括镜像名、TAG、创建时间和大小等信息。</p>
+
+<p>现在我们可以用 <strong>alexwhen/docker-2048</strong> 镜像运行一个容器。</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="n">alexwhen</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="mi">2048</span></code></pre></figure>
+
+<p><strong>-d</strong> 让Container以后台进程运行，<strong>-p</strong> 指定8080端口的请求转发到Container的80端口。</p>
+
+<p>通过 <strong>docker ps</strong> 检查我们容器是否运行正常。</p>
+
+<p><img src="/assets/images/post/docker-ps.png" alt="docker-ps" /></p>
+
+<p>如何访问我们的应用呢？注意在Mac OS下，我们的docker是运行在boot2docker里的，所以需要链接虚拟机地址才能访问docker中的应用。</p>
+
+<p>退出boot2docker 执行 <strong>docker-machine ls</strong></p>
+
+<p><img src="/assets/images/post/docker-machine-ls.png" alt="docker-machine-ls" /></p>
+
+<p>显示boot2docker地址 <strong>192.168.99.100</strong> 访问 <strong>http://192.168.99.100:8080</strong></p>
+
+<p><img src="/assets/images/post/docker-2048.png" alt="docker-2048" /></p>
+
+<h3 id="container内部">Container内部</h3>
+
+<p>下面我们可以进入Container，来看看Container内部是如何运作的。</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="n">alexwhen</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="mi">2048</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">sh</span></code></pre></figure>
+
+<p>应用代码 <code class="highlighter-rouge">cd /usr/share/nginx/html</code></p>
+
+<p><img src="/assets/images/post/code-2048.png" alt="alexwhen/docker-2048" /></p>
+
+<p>nginx配置 <code class="highlighter-rouge">vi /etc/nginx/nginx.conf</code></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">server</span> <span class="p">{</span>
+        <span class="nx">listen</span>       <span class="mi">80</span><span class="p">;</span>
+        <span class="nx">server_name</span>  <span class="nx">localhost</span><span class="p">;</span>
+
+        <span class="nx">location</span> <span class="o">/</span> <span class="p">{</span>
+            <span class="nx">root</span>   <span class="nx">html</span><span class="p">;</span>
+            <span class="nx">index</span>  <span class="nx">index</span><span class="p">.</span><span class="nx">html</span> <span class="nx">index</span><span class="p">.</span><span class="nx">htm</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>当容器以 <strong>alexwhen/docker-2048</strong> 镜像启动时，会启动一个nginx并监听Container的80端口。</p>
+
+<p>当我们访问 <strong>http://192.168.99.100:8080</strong> 时，boot2docker会将8080端口的请求转发到Container的80端口，进而访问到应用。</p>
+
+<p>其实上面的例子并不够典型，因为具体的应用代码是保存在镜像中的，但是应用的代码是经常更新的，所以不适合放在镜像中。</p>
+
+<p>一种解决方案应该是将具体的应用代码放在宿主机，然后挂载到容器上运行。</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">v</span> <span class="sr">/usr/</span><span class="n">data</span><span class="ss">:/</span><span class="n">home</span><span class="o">/</span><span class="n">data</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="n">alexwhen</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="mi">2048</span></code></pre></figure>
+
+<p>这会把本地目录 <strong>/usr/data</strong> 挂载到容器 <strong>/home/data</strong> 目录。</p>
+
+<p>另一种方案是在容器内生成 <strong>数据卷</strong>，然后用它来做数据持久化。</p>
+
+<h5 id="数据卷">数据卷</h5>
+
+<ul>
+  <li>数据卷可在容器之间共享或重用</li>
+  <li>数据卷中的更改可以直接生效</li>
+  <li>数据卷中的更改不会包含在镜像的更新中</li>
+  <li>数据卷的生命周期一直持续到没有容器使用它为止</li>
+</ul>
+
+<p>生成数据卷</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">v</span> <span class="sr">/usr/</span><span class="n">data</span> <span class="o">--</span><span class="nb">name</span> <span class="n">mydata</span> <span class="o">-</span><span class="nb">p</span> <span class="mi">8080</span><span class="p">:</span><span class="mi">80</span> <span class="n">alexwhen</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="mi">2048</span></code></pre></figure>
+
+<p>在另外一个容器挂载刚才生成的数据卷</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">v</span> <span class="o">--</span><span class="n">volumes</span><span class="o">-</span><span class="n">from</span> <span class="n">mydata</span> <span class="o">--</span><span class="nb">name</span> <span class="n">mydb</span> <span class="n">alexwhen</span><span class="o">/</span><span class="n">docker</span><span class="o">-</span><span class="mi">2048</span></code></pre></figure>
+
+<h3 id="写在最后">写在最后</h3>
+
+<p>在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。</p>
+
+<p><img style="display:block;width:200px;margin:0 auto;" src="/assets/images/post/weiguan.png" title="赶紧买个瓜围观" /></p>
+
+<p><img style="display:block;width:200px;margin:0 auto;" src="/assets/images/post/weiguans.png" title="不明真相的围观群众" /></p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/bigbang/2016/02/25/alive/" rel="next" title="《活着》">
+                <i class="fa fa-chevron-left"></i> 《活着》
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/linux/mac/2016/02/12/mac-uninstall-mysql/" rel="prev" title="Mac下卸载mysql">
+                Mac下卸载mysql <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/head.jpg"
+               alt="番茄拌糖" />
+          <p class="site-author-name" itemprop="name">番茄拌糖</p>
+           
+              <p class="site-description motion-element" itemprop="description">To be or not to be, that is the question...</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://github.com/acs1899" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/Mashell81326713" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/1308465790" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-block">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.fexnotes.com/" title="fexnotes" target="_blank">fexnotes</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://wilee.me/" title="wilee" target="_blank">wilee</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://nodefe.com/" title="nodefe" target="_blank">nodefe</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="https://thunf.cn/" title="thunf" target="_blank">thunf</a>
+                </li>
+              
+                
+                
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidufe.com/" title="baidufe" target="_blank">baidufe</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-3"> <a class="nav-link" href="#你需要知道的一些基本概念"> <span class="nav-number">1</span> <span class="nav-text">你需要知道的一些基本概念</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-5"> <a class="nav-link" href="#镜像-image"> <span class="nav-number">1.1</span> <span class="nav-text">镜像-Image</span> </a> </li> <li class="nav-item nav-level-5"> <a class="nav-link" href="#容器-container"> <span class="nav-number">1.2</span> <span class="nav-text">容器-Container</span> </a> </li> </ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#安装"> <span class="nav-number">2</span> <span class="nav-text">安装</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#运行"> <span class="nav-number">3</span> <span class="nav-text">运行</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#container内部"> <span class="nav-number">4</span> <span class="nav-text">Container内部</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-5"> <a class="nav-link" href="#数据卷"> <span class="nav-number">4.1</span> <span class="nav-text">数据卷</span> </a> </li> </ol> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#写在最后"> <span class="nav-number">5</span> <span class="nav-text">写在最后</span> </a> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy;  2013 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">番茄拌糖</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://blog-acs1899-com.disqus.com/count.js" async></script>
+    
+
+    
+      
+      <script type="text/javascript">
+          var disqus_config = function () {
+              this.page.url = '/linux/mac/2016/02/15/hellow-docker/';
+              this.page.identifier = '/linux/mac/2016/02/15/hellow-docker/';
+              this.page.title = '初试Docker';
+          };
+          var d = document, s = d.createElement('script');
+          s.src = 'https://blog-acs1899-com.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', '' + +new Date());
+          (d.head || d.body).appendChild(s);
+      </script>
+      
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

@@ -1,112 +1,280 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<articles xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<article>
-	<title>《活着》</title>
-	<url>/bigbang/2016/02/25/alive.html</url>
-	<date>2016-02-25</date>
-</article>
-
-<article>
-	<title>初试Docker</title>
-	<url>/linux/mac/2016/02/15/hellow-docker.html</url>
-	<date>2016-02-15</date>
-</article>
-
-<article>
-	<title>Mac下卸载mysql</title>
-	<url>/linux/mac/2016/02/12/mac-uninstall-mysql.html</url>
-	<date>2016-02-12</date>
-</article>
-
-<article>
-	<title>日志分割</title>
-	<url>/linux/mac/2016/01/26/cronologo.html</url>
-	<date>2016-01-26</date>
-</article>
-
-<article>
-	<title>在mac中使用cron</title>
-	<url>/linux/mac/2015/08/26/mac-crontab.html</url>
-	<date>2015-08-26</date>
-</article>
-
-<article>
-	<title>promise中的错误捕获</title>
-	<url>/javascript/2015/03/11/why-mocha-can-not-catch-promise-err.html</url>
-	<date>2015-03-11</date>
-</article>
-
-<article>
-	<title>如何为使用Promise规范的接口写测试用例</title>
-	<url>/javascript/2015/03/09/node-test-promise.html</url>
-	<date>2015-03-09</date>
-</article>
-
-<article>
-	<title>VPS搭建ShadowSocks</title>
-	<url>/linux/mac/2014/10/11/vps-shadowsocks-build.html</url>
-	<date>2014-10-11</date>
-</article>
-
-<article>
-	<title>textarea光标位置定位、插入、获取选择文字</title>
-	<url>/javascript/2014/05/29/textarea-input-cursor.html</url>
-	<date>2014-05-29</date>
-</article>
-
-<article>
-	<title>javascript事件触发器</title>
-	<url>/javascript/2013/12/19/javascript-fireEvent.html</url>
-	<date>2013-12-19</date>
-</article>
-
-<article>
-	<title>使用cloneNode时需要注意的问题</title>
-	<url>/javascript/2013/08/26/use-cloneNode-notice.html</url>
-	<date>2013-08-26</date>
-</article>
-
-<article>
-	<title>getElementById方法的作用域</title>
-	<url>/javascript/2012/08/22/getElementById-scopes.html</url>
-	<date>2012-08-22</date>
-</article>
-
-<article>
-	<title>js中escape,encodeURI,encodeURIComponent三个函数的区别</title>
-	<url>/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent.html</url>
-	<date>2012-07-25</date>
-</article>
-
-<article>
-	<title>wow宏教程</title>
-	<url>/bigbang/2012/07/05/wow-macro.html</url>
-	<date>2012-07-05</date>
-</article>
-
-<article>
-	<title>跨域iframe数据传递</title>
-	<url>/javascript/2012/07/05/cc-iframe-transmission-data.html</url>
-	<date>2012-07-05</date>
-</article>
-
-<article>
-	<title>2012.06.01近期项目总结</title>
-	<url>/html&css/javascript/2012/06/01/2012.06.01-Summary.html</url>
-	<date>2012-06-01</date>
-</article>
-
-<article>
-	<title>IE6、7下 body标签overflow:hidden失效的问题</title>
-	<url>/html&css/2012/05/03/IE67-body-overflow-hidden.html</url>
-	<date>2012-05-03</date>
-</article>
-
-<article>
-	<title>Github搭建自己的blog</title>
-	<url>/javascript/html&css/linux/mac/2011/09/20/hello-world.html</url>
-	<date>2011-09-20</date>
-</article>
-
-</articles>
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    <entry>
+      <title><![CDATA[《活着》]]></title>
+      <url>/bigbang/2016/02/25/alive/</url>
+      <content type="text"><![CDATA[lusir总是说着  活着就有希望一开始我并不理解，为何一个18岁的少年会一边写着代码一边语重心长地说出这样的话。在我有限的记忆里，每当他说出这句话，我总能从他小得快看不见的眼睛中察觉到一丝睿智，但微扬的嘴角又让我觉得这一切只是他对生活的嘲讽。正如《活着》中福贵说过  做人不能忘记四条，话不要说错，床不要睡错，门槛不要踏错，口袋不要摸错。书中的福贵，年轻时便睡错了床、踏错了门槛、说错了话、摸错了口袋。祖辈的基业被他从牛输成了羊，羊输成了鹅，鹅输成了鸡，到最后连鸡也没有了。就是这样一个“败家子”，经历了上个世纪中华大地最动荡的几十年，身边的亲人一个个离他而去，而他依然活着。人们常说上过真正战场的人，才能真正理解生命的意义。春生，和福贵一起从死人堆里爬出来的战友，解放后当上了县长，文革中被批斗成“走资派”。那天春生来和福贵告别，福贵不停开导春生要他活下去，春生也答应了福贵。最后春生还是自杀了。我想不通春生为什么会自杀，早已经历过生死的人为什么不能忍受一时之辱。后来我突然明白了，在战场上只要你活着就有希望，但是在那个时代，活着看不到希望。是什么让福贵一直坚持下去的？找了很久，好像并没有什么是福贵身上特有的。唯一特有的是他悲惨的一生。每当悲剧来临，福贵就这样默默承受着，作为一个普通人，他除了接受命运的安排和自我安慰之外，还能干什么。这不就是一个真实的普通人吗？真实的有点可怕，你明知这一切只是小说虚构出来的，但你却真实地感受到他的存在。真实到你会认为这一切有一天会发生在你的头上。书中最后，福贵和他的老牛（也叫福贵）伴着夕阳的余晖远去，两个福贵在生命最后的里程中找到了依靠。夕阳落下，大地和黑夜融为一体，两个垂暮的生命走向他们的归宿。写这篇文章的时候已是深夜，此时此刻我在希望着什么？需求不再改？代码不再出bug？线上不再报故障？漆黑的夜中，能看见几颗星，这就是希望吧。]]></content>
+      <categories>
+        
+          <category> BigBang </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[初试Docker]]></title>
+      <url>/linux/mac/2016/02/15/hellow-docker/</url>
+      <content type="text"><![CDATA[Docker，2015最火的开源项目之一。关于Docker-“快速部署”、“隔离”、“镜像”、“容器”这些关键词想必你一定听过。Docker可以将你的基础配置和应用服务隔离开来，打包你的环境配置并实现快速部署。通过“镜像”，我们可以快速的将一个应用部署到多个服务器上，而“容器”则是用来承载这些应用的。使用Docker能给我们带来哪些好处：  根据镜像快速部署  可以通过DockerHub或搭建私有镜像库来查找、上传镜像  Docker对资源占少，应用之间能做到很好的隔离同时也能保证相互间的通信本篇文章主要介绍如何使用docker，创建自己的镜像，运行容器等。具体使用准则参考官方文档。你需要知道的一些基本概念镜像-Image镜像可以理解为应用的一个快照。里面保存着该应用运行所需要的各个配置、依赖、环境参数等。镜像还有一个非常关键的概念便是可以叠加。镜像使用了一种叫union file system的技术，将不同镜像按照层级叠加起来（可以理解成一种依赖关系）。容器-Containerdocker的容器则可理解为一个基础版的Linux系统。容器会根据镜像中的配置、资源在镜像的上层再添加一个应用运行的读写层。安装以下是mac os系统安装流程，Linux WindowsDocker本身并不支持直接在Mac OS上运行，不过Docker社区提供了一个工具boot2docker（实际是在Mac OS上创建一个虚拟机）。目前官方已将boot2docker整合到了官方工具Docker Toolbox中。下载Docker Toolbox具体安装流程可参考Docker Mac OS 安装运行注意：直接在终端是无法运行docker的，需要进入boot2docker中。docker-machine start default // 让boot2docker启动一个虚拟机作为docker的运行环境 - default为虚拟机名docker-machine ssh default // 进入boot2docker生成的虚拟机Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。我们下载一个 alexwhen/docker-2048 镜像作为示例docker pull alexwhen/docker-2048docker images 列出本地所有可用的Image，包括镜像名、TAG、创建时间和大小等信息。现在我们可以用 alexwhen/docker-2048 镜像运行一个容器。docker run -d -p 8080:80 alexwhen/docker-2048-d 让Container以后台进程运行，-p 指定8080端口的请求转发到Container的80端口。通过 docker ps 检查我们容器是否运行正常。如何访问我们的应用呢？注意在Mac OS下，我们的docker是运行在boot2docker里的，所以需要链接虚拟机地址才能访问docker中的应用。退出boot2docker 执行 docker-machine ls显示boot2docker地址 192.168.99.100 访问 http://192.168.99.100:8080Container内部下面我们可以进入Container，来看看Container内部是如何运作的。docker run -ti -p 8080:80 alexwhen/docker-2048 /bin/sh应用代码 cd /usr/share/nginx/htmlnginx配置 vi /etc/nginx/nginx.confserver {        listen       80;        server_name  localhost;        location / {            root   html;            index  index.html index.htm;        }}当容器以 alexwhen/docker-2048 镜像启动时，会启动一个nginx并监听Container的80端口。当我们访问 http://192.168.99.100:8080 时，boot2docker会将8080端口的请求转发到Container的80端口，进而访问到应用。其实上面的例子并不够典型，因为具体的应用代码是保存在镜像中的，但是应用的代码是经常更新的，所以不适合放在镜像中。一种解决方案应该是将具体的应用代码放在宿主机，然后挂载到容器上运行。docker run -d -v /usr/data:/home/data -p 8080:80 alexwhen/docker-2048这会把本地目录 /usr/data 挂载到容器 /home/data 目录。另一种方案是在容器内生成 数据卷，然后用它来做数据持久化。数据卷  数据卷可在容器之间共享或重用  数据卷中的更改可以直接生效  数据卷中的更改不会包含在镜像的更新中  数据卷的生命周期一直持续到没有容器使用它为止生成数据卷docker run -d -v /usr/data --name mydata -p 8080:80 alexwhen/docker-2048在另外一个容器挂载刚才生成的数据卷docker run -d -v --volumes-from mydata --name mydb alexwhen/docker-2048写在最后在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。]]></content>
+      <categories>
+        
+          <category> Linux/Mac </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Mac下卸载mysql]]></title>
+      <url>/linux/mac/2016/02/12/mac-uninstall-mysql/</url>
+      <content type="text"><![CDATA[记录删除需要的操作，供以后查阅。sudo rm /usr/local/mysqlsudo rm -rf /usr/local/mysql*sudo rm -rf /Library/StartupItems/MySQLCOMsudo rm -rf /Library/PreferencePanes/My*vim /etc/hostconfig and removed the line MYSQLCOM=-YES-rm -rf ~/Library/PreferencePanes/My*sudo rm -rf /Library/Receipts/mysql*sudo rm -rf /Library/Receipts/MySQL*sudo rm -rf /var/db/receipts/com.mysql.*]]></content>
+      <categories>
+        
+          <category> Linux/Mac </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[日志分割]]></title>
+      <url>/linux/mac/2016/01/26/cronologo/</url>
+      <content type="text"><![CDATA[日志分割bizfe平台的nginx日志由于一直写在一个文件里，长年累月后导致该日志文件过于臃肿，对日志数据的查找和分析带来很多不便。工具cronolog日志分割工具安装wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vps/cronolog-1.6.2.tar.gztar zxvf cronolog-1.6.2.tar.gzcd cronolog-1.6.2./configuremakemake install创建日志管道cd /home/service/nginx/logsmkfifo /home/service/nginx/logs/bizfe.access.pipe.logmkdir pipe /*用来存放分割后的日志*/修改nginx配置&amp;重启access_log logs/bizfe.access.pipe.log;./nginx -s reload启动cronolog以下命令将日志以天为单位分割nohup cat /home/service/nginx/logs/bizfe.access.pipe.log | nohup /usr/sbin/cronolog /home/service/nginx/logs/pipe/bizfe.access.%Y%m%d.log &amp;]]></content>
+      <categories>
+        
+          <category> Linux/Mac </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[在mac中使用cron]]></title>
+      <url>/linux/mac/2015/08/26/mac-crontab/</url>
+      <content type="text"><![CDATA[常用的cron命令:  crontab -e //编辑任务  -l //显示已有任务  -r //删除所有任务在mac下可能会遇见无法添加任务的情况  crontab: "/usr/bin/vi" exited with status 1这是因为环境变量$EDITOR 是 vi重新设置成 vim 就行了]]></content>
+      <categories>
+        
+          <category> Linux/Mac </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[promise中的错误捕获]]></title>
+      <url>/javascript/2015/03/11/why-mocha-can-not-catch-promise-err/</url>
+      <content type="text"><![CDATA[接上篇文章留下的一个没有解决的问题：在promise中的错误为什么在外层函数捕获不到？来看下面一个栗子：    var o = {};    function A(){        try{            o.show();        }catch(err){        }    }    function B(){        try{            A();            console.log("你看不见我")        }catch(err){            console.log(err)        }    }    B();//输出结果："你看不见我"上面的栗子说明 try/catch 在捕获到错误后阻止了错误向上传递。你只能手动抛出错误让上层函数捕获。    var o = {};    function A(){        try{            o.show();        }catch(err){            throw err        }    }    function B(){        try{            A();            console.log("你看不见我")        }catch(err){            console.log(err)        }    }    B();//输出结果："[TypeError: Object #&lt;Object&gt; has no method 'show']"再看看文章开头提到的问题 在promise中的错误为什么在外层函数捕获不到？###真相只有一个promise模块核心代码core.js:    ...    /*直接跳至关键处*/    var cb = state ? deferred.onFulfilled : deferred.onRejected      if (cb === null) {        (state ? deferred.resolve : deferred.reject)(value)        return      }      var ret      /* #A */      try {        ret = cb(value)      }      catch (e) {        deferred.reject(e)        return      }      /* #B */      deferred.resolve(ret)    ...注意 #A 与 #B 之间的代码。没错就是它！！！这里 catch 错误后并没有将其抛出，而是传递给了下级 reject 并结束当前函数。好了，现在菊势基本明了了。问题根源便是 Promise 始终劫持着错误对象没有抛出，导致外层函数捕获不到错误。那么再往下看 Promise.catch 方法又是如何捕获错误的？es6-extensions.js:    Promise.prototype['catch'] = function (onRejected) {        return this.then(null, onRejected);    }原来 Promise.catch 不过是 Promise.then(null,reject) 的缩写版。其实 Promise 作者是建议在所有 Promise 对象后加上 Promise.done 方法。Promise.catch 方法只是为了与ES6标准规范保持一致而添加的。done.js:    'use strict';    var Promise = require('./core.js')    var asap = require('asap')    module.exports = Promise    Promise.prototype.done = function (onFulfilled, onRejected) {        var self = arguments.length ? this.then.apply(this, arguments) : this        self.then(null, function (err) {            asap(function () {                throw err            })        })    }Promise.done 的作用与 Promise.then 基本一致（注意done并没有 return Promise对象，所以 done 只能放在最后），只是在后面加了一层抛出捕获到的错误。]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[如何为使用Promise规范的接口写测试用例]]></title>
+      <url>/javascript/2015/03/09/node-test-promise/</url>
+      <content type="text"><![CDATA[nodeJs为Javascript引入了单元测试的概念。单元测试能够帮助我们更好的提高代码质量，让BUG在代码编写的时候即被消灭掉。同步单元测试：    var should = require('should');/*断言库*/    function A(x){        return x ? true : false    }    describe('function A test',function(){        it('when x = 1,return true',function(){            A(1).should.be.true;        });        it('when x = 0,return false',function(){            A(0).should.be.false;        });    });异步单元测试：    var should = require('should');    var fs = require('fs');    describe('fs.readFile is ok',function(done){        fs.readFile('/test.txt','utf-8',function(err,data){            should.not.exist(err);            done();        });    });同步与异步测试区别就在于 describe 的回调函数是否有形参 donePromise 规范的目的是为了让程序员能以同步代码的形式来写异步代码。直观的表现就是，本来无限嵌套的回调函数变成了链式调用。Promise规范来书写的接口：    var Promise = require('promise');    var fs = require('fs');    /*Promise的实现方式有很多种，这里使用promise库*/    function fileRead(filePath,encode){        return new Promise(function(resole,reject){            fs.readFile(filePath,encode?encode:'utf-8',function(err,data){                if(err){                    reject(err);                }else{                    resolve(data);                }            });        });    }    /*调用*/    fileRead('/test.txt')        .then(function(data){            //do something with data            ...        },function(err){            //log err            ...        });    /*测试*/    var should = require('should');    describe('fileRead is ok',function(done){        fileRead('/test.txt')            .then(function(result){                result.should.be.String;                done();            },function(err){                done(err);            })    });跑一下测试。嗯，好像没问题。收拾东西下班！！！###wait a minute注意测试代码中这一行代码    result.should.be.String;这行代码的目的是检测 result 是否是字符串。如果 result 不是字符串，那应该会被测试框架捕获到。稍微修改下    [1,2,3].should.be.String;    /*这里只是为了测试错误是否能被捕获到，所以用[1,2,3]替换了result*/###纳尼！！！测试如我所料没有通过，但是报的错误是 timeout 是什么鬼啊！！！好像一不小心又发现了一个知识点啊。嗯，今天晚上一定要把它解决了。兴奋的我带着电脑回到家中玩了一个晚上的魔兽。。。明天周六，我花一天时间肯定能搞定！！！（这话估计也就我自己会信╮(╯▽╰)╭）就这样，这个问题陪伴着我度过了一个愉快而又充实的3.8妇女节（什么鬼。。。摔）周一上班的路上突然想到会不会跟 promise 的实现有关。来到公司，遂看了 promise 的core.js代码。经过一番倒腾，大致理顺了 promise 的核心思路。 promise 是通过内部的一个handler构造函数来控制回调链的传递。并且你所传入的回调函数并非直接由handler控制，而是由两个叫 resolve 和 reject 的方法控制。所以我猜测错误可能是被 promise 捕获了，但是没有被测试框架捕获。（不要问我为什么，我也不知道）于是用尽了各种办法，最终还是没能证明上面的猜测（一股弱者的气息。。。）###google大法好这是stackoverflow上相同的问题，证实了我的猜测。被采纳的答案其实也没能说清其中原由。答案中引用的when.js的doc文档中也是一句话带过 Errors in an asynchronous operation always occur in a different call stack than the the one that initiated the operation修改测试代码：    var should = require('should');    describe('fileRead is ok',function(done){        fileRead('/test.txt')            .then(function(result){                [1,2,3].should.be.String;                done();            },done).catch(done);    });顺利捕获断言错误。至于为什么promise阻断了测试框架捕获错误，还有待研究。]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[VPS搭建ShadowSocks]]></title>
+      <url>/linux/mac/2014/10/11/vps-shadowsocks-build/</url>
+      <content type="text"><![CDATA[ShadowSocks是一个轻量级socks5代理，以Python2.x写成。之前用的是用pptp搭建的vpn。我的手机是Nexus 4，几乎所有的Google服务都不能用(那还要亲儿子干嘛!!!)，所以自己搞个代理不能再等了。ShadowSocks有很多中版本，PythonNodejsGoC，我用的是Python版。安装Setuptoolswget --no-check-certificate https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.eggchmod +x setuptools-0.6c11-py2.7.egg ./setuptools-0.6c11-py2.6.egg安装Python-pipwget --no-check-certificate https://pypi.python.org/packages/source/p/pip/pip-1.4.tar.gztar -zxvf ./pip-1.4.tar.gzcd pip-1.4sudo python setup.py install安装Python-Geventsudo apt-get install libevent-devsudo apt-get install python-devpip install gevent安装Python-M2Cryptosudo apt-get install libssl-devsudo apt-get install swigpip install M2Crypto安装ShadowSocks-Pythonpip install shadowsocksconfig.jsonconfig.json是ShadowSocks Server端的配置文件vim ~/ShadowSocks/config.jsonconfig.json配置文件格式：{"server":"my_server_ip",//服务器IP"server_port":8388,//服务器端口"local_port":1080,//本地端口(配置客户端时需要用到)"password":"barfoo!",//密码"timeout":600,//超市时间"method":"aes-256-cfb"//加密方法，推荐"aes-256-cfb"}运行ShadowSocks程序cd到config.json所在目录nohup ssserver &gt; log &amp;之所以选用ShadowSocks主要是看重其对客户端强大的支持，几乎所有你能想到的系统都用对应的客户端。客户端设置客户端的配置几乎于配置文件的内容一样，只需要将配置文件中配置项对应填入即可。使用之后，感觉比同等环境下的VPN快了不少。用手机到Google play上更新App尤为明显。PS:用aws的同学注意 config.json 中的 server 要填内网地址]]></content>
+      <categories>
+        
+          <category> Linux/Mac </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[textarea光标位置定位、插入、获取选择文字]]></title>
+      <url>/javascript/2014/05/29/textarea-input-cursor/</url>
+      <content type="text"><![CDATA[微博”@”功能相信每一个玩过微博的人都用过，当你输入”@”字符串时，在光标位置旁边就会生成一个提示框，你可以快速的选取你最近”@”过的人。不过想要操作textarea可是一件麻烦事。由于获取选中区域的接口属于BOM，不同浏览器下的接口差别很大。先来看看IE下的接口 document.selectiondocument.selection  method  clear : Clears the contents of the selection.  createRange : Creates a TextRange object from the current text selection, or a controlRange collection from a control selection.  createRangeCollection : Creates a TextRange object collection from the current selection.  empty : Cancels the current selection, sets the selection type to none, and sets the item property to null.  properties  type : Retrieves the type of selection.  typeDetail : Retrieves the name of the selection type.值得注意的是，从IE11开始不再支持selection对象.请使用getSelection对象.再来看看FF提供的document.getSelectiondocument.getSelection  method  getRangeAt : Returns a range object representing one of the ranges currently selected.  注意,用户用鼠标在同一页面永远都只有一个选择区域,所以一般情况getRangeAt只能接收0这一个参数.但用脚本可以创建多个选择区域(Chrome下通过脚本也只能创建一个选择区域)  collapse(parentNode,offset) : Collapses the current selection to a single point.  压缩选择区域至单个光标(在输入框中)位置    parentNode:光标将要移动到的目标元素    offset:光标在目标元素中所在偏移量.这里的偏移量会有两个值”0”和”1”,分别表示parentNode文本的起始位置和结束位置.  extend(parentNode,offset):Moves the focus of the selection to a specified point.    parentNode:光标将要移动到的目标元素    offset:光标在目标元素中所在偏移量.这里的偏移量会有两种情况:      1.目标元素只有textNode.这时offset的值表示光标在字符串中的位置      2.目标元素含有非textNode子元素.这时offset的值表示光标定位到第offset个元素的末尾.  modify(alert,direction,granularity) : Changes the current selection.  改变选择区域                      alert:声明修改类型(move                 extend)                direction:移动(合并)的方向.可能的值forward,backward,left,right.    granularity:移动(合并)的单位.可能的值charracter,word,sentence,line,paragraph,lineboundary,sentenceboundary,paragraphboundary,documentboundary.(注意,FF不支持sentence,paragraph,sentenceboundary,paragraphboundary,documentboundary.值得一提的是在被选择内容为中文时,FF不支持”granularity=word“,但在Chrome上能正常使用.)  collapseToStart : Collapses the selection to the start of the first range in the selection.  将选择区域压缩至区域开始的位置  collapseToEnd : Collapses the selection to the end of the last range in the selection.  将选择区域压缩至区域结束的位置  selectAllChildren(parentNode) : Adds all the children of the specified node to the selection.  选择parentNode的所有子节点内容  addRange(range) : A Range object that will be added to the selection.  将指定的区域添加到已选择区域    range:指定区域range可以通过document.createRange创建,也可以通过getRangeAt从已有区域选择  removeRange(range) : Removes a range from the selection.  从选择区域中删除指定的区域  removeAllRanges : Removes all ranges from the selection.  删除所有选择区域  deleteFromDocument : Deletes the selection’s content from the document.  删除选择区域中的文字(只能删除文字,不会删除DOM元素)  selectionLanguageChangae : Modifies the cursor Bidi level after a change in keyboard direction.  在写这篇文章时,这个方法貌似已经不存在了,但官方文档还保留了这个方法.  toString : Returns a string currently being represented by the selection object, i.e. the currently selected text.  输出当前选择区域文本  containNode(aNode,aPartlyContained) : Indicates if a certain node is part of the selection.  检测某些节点,当它属于选择区域时返回true,否则返回false    aNode:待检测的节点    aPartlyContained:检测类型      1.aPartlyContained=true:当aNode的部分或全部属于选择区域的一部分时,则返回true      1.aPartlyContained=false:当aNode整个节点属于选择区域的一部分时,则返回true(aNode等于选择区域时也返回false,也就是说aNode必须小于选择区域才会返回true)  properties  anchorNode : Returns the Node in which the selection begins.  返回选择区域开始位置所在的节点  anchorOffset : Returns a number representing the offset of the selection’s anchor within the anchorNode. If anchorNode is a text node, this is the number of characters within anchorNode preceding the anchor. If anchorNode is an element, this is the number of child nodes of the anchorNode preceding the anchor.  返回选择区域开始的位置.如果选择区域是纯文本,返回选择区域中第一个字符的位置.如果选择区域是元素,返回那些在选择区域前面的同时也属于anchorNode的子节点的个数.  focusNode : Returns the Node in which the selection ends.  返回选择区域结束位置所在的节点  focusOffset : Returns a number representing the offset of the selection’s anchor within the focusNode. If focusNode is a text node, this is the number of characters within focusNode preceding the focus. If focusNode is an element, this is the number of child nodes of the focusNode preceding the focus.  参照anchorOffset  ifCollapsed : Returns a Boolean indicating whether the selection’s start and end points are at the same position.  判断选择区域开始于结束位置是否相同  rangeCount : Returns the number of ranges in the selection.  返回getSelection中的range数hellow world点我插入”_(:3」∠)_“内容 点我获取选择内容 点我获取光标当前位置/*向输入框当前位置插入字符*/function InsertString(ele, str){    var r = null,newstart = 0,tb = ele.nodeType == 1 ? ele : docuemnt.body;    tb.focus();    if (document.all){        r = document.selection.createRange();        document.selection.empty();        r.text = str;        r.collapse();        r.select();    }else{        newstart = tb.selectionStart+str.length;        tb.value=tb.value.substr(0,tb.selectionStart)+str+tb.value.substring(tb.selectionEnd);        tb.selectionStart = newstart;        tb.selectionEnd = newstart;    }}/*获取当前选择区域文字*/function GetSelection(ele){    var sel = '',r = null,tb = ele.nodeType == 1 ? ele : docuemnt.body;    if (document.all){        r = document.selection.createRange();        document.selection.empty();        sel = r.text;    }else{        sel = tb.value.substring(tb.selectionStart, tb.selectionEnd);    }    return sel;}function ShowSelection(ele){    var sel = GetSelection(ele);    alert('选中的文本是：'+sel);}/*获取光标位置*/function getAnchor(ele){	var index = 0,r = null,tb = ele.nodeType == 1 ? ele : document.body;	if(document.all){		r = document.selection.createRange();		tb.focus();		r.moveStart('character', -tb.value.length); 		index = r.text.length;		}else{		index = tb.selectionStart	}	return index}selection的官方文档getSelection的官方文档]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[javascript事件触发器]]></title>
+      <url>/javascript/2013/12/19/javascript-fireEvent/</url>
+      <content type="text"><![CDATA[转载此文方便以后查阅事件触发器就是用来触发某个元素下的某个事件，IE下fireEvent方法，高级浏览器（chrome,firefox等）有dispatchEvent方法。一般我们在元素上绑定事件后，是靠用户在这些元素上的鼠标行为来捕获或者触发事件的，或者自带的浏览器行为事件，比如click，mouseover，load等等，有些时候我们需要自定义事件或者在特定的情况下需要触发这些事件。这个时候我们可以使用IE下fireEvent方法，高级浏览器（chrome,firefox等）有dispatchEvent方法。在IE下：//document上绑定自定义事件ondataavailabledocument.attachEvent('ondataavailable', function (event) {    alert(event.eventType);});var obj=document.getElementById("obj");//obj元素上绑定click事件obj.attachEvent('onclick', function (event) {    alert(event.eventType);});//调用document对象的createEventObject方法得到一个event的对象实例。var event = document.createEventObject();event.eventType = 'message';//触发document上绑定的自定义事件ondataavailabledocument.fireEvent('ondataavailable', event);//触发obj元素上绑定click事件document.getElementById("test").onclick = function () {    obj.fireEvent('onclick', event);};fireEvent的官方文档createEventObject的官方文档再看看高级浏览器（chrome,firefox等）：//document上绑定自定义事件ondataavailabledocument.addEventListener('ondataavailable', function (event) {    alert(event.eventType);}, false);var obj = document.getElementById("obj");//obj元素上绑定click事件obj.addEventListener('click', function (event) {    alert(event.eventType);}, false);//调用document对象的 createEvent 方法得到一个event的对象实例。var event = document.createEvent('HTMLEvents');// initEvent接受3个参数：// 事件类型，是否冒泡，是否阻止浏览器的默认行为event.initEvent("ondataavailable", true, true);event.eventType = 'message';//触发document上绑定的自定义事件ondataavailabledocument.dispatchEvent(event);var event1 = document.createEvent('HTMLEvents');event1.initEvent("click", true, true);event1.eventType = 'message';//触发obj元素上绑定click事件document.getElementById("test").onclick = function () {    obj.dispatchEvent(event1);};原文地址：javascript事件触发器fireEvent和dispatchEvent]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[使用cloneNode时需要注意的问题]]></title>
+      <url>/javascript/2013/08/26/use-cloneNode-notice/</url>
+      <content type="text"><![CDATA[oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM节点。cloneNode()接收一个参数include_all。include_all为一个布尔值，true表示被clone的节点的所有子节点也会被clone（既深度clone），false(默认)只会clone原节点。1、当被clone的节点包含script标签时，clone后script标签是否会再次被执行内嵌script标签：&lt;div id="box"&gt;    &lt;script type="text/javascript" &gt;alert(1)&lt;/script&gt;  &lt;/div&gt;  &lt;script type="text/javascript"&gt;      document.body.appendChild(document.getElementById('box').cloneNode(true));  &lt;/script&gt;在所有浏览器中alert都只执行一次外链script标签：&lt;div id="box"&gt;    &lt;script type="text/javascript" src='clone.js'&gt;&lt;/script&gt;  &lt;/div&gt;  &lt;script type="text/javascript"&gt;      document.body.appendChild(document.getElementById('box').cloneNode(true));  &lt;/script&gt;在非IE浏览器中alert只执行一次在IE中，只有IE6会执行两次解决方法：在将clone后的节点加入DOM前，手动删除掉里面的script标签2.当被clone节点被绑定了事件处理函数时，事件处理函数是否会被一同cloneHTML事件处理绑定：&lt;div id="box" onclick='alert(1)'&gt;点我&lt;/div&gt;  &lt;script type="text/javascript"&gt;      document.body.appendChild(document.getElementById('box').cloneNode(true));  &lt;/script&gt; 在所有浏览器中，click事件均被复制DOM0级事件处理绑定：&lt;div id="box"&gt;点我&lt;/div&gt;  &lt;script type="text/javascript"&gt;      var box=document.getElementById('box');    box.onclick=function(){alert(1)}      document.body.appendChild(box.cloneNode(true));  &lt;/script&gt;在所有浏览器中，点击第一个div会有alert，点击第二个div无反应DOM2级事件处理绑定：&lt;div id="box"&gt;点我&lt;/div&gt;  &lt;script type="text/javascript"&gt;      var box=document.getElementById('box');    if(box.attachEvent){          box.attachEvent('onclick',function(){alert(1)},false)      }else{          box.addEventListener('click',function(){alert(1)})      }      document.body.appendChild(box.cloneNode(true));&lt;/script&gt;在非IE浏览器下 点击第二个div不会执行alert但是在IE6、7、8中 点击第二个div则会执行alert在《精通javascript》一书中，作者推荐一种Dean Edwards提出的跨浏览器事件绑定/删除事件解决方案function addEvent(element, type, handler) {      // 为每一个事件处理函数赋予一个独立ID    if (!handler.$$guid) handler.$$guid = addEvent.guid++;    // 为元素建立一个事件类型的散列表（元素的所有事件类型都保存在该对象中）    if (!element.events) element.events = {};    // 为每一个元素/事件建立一个事件函数处理的散列表(同一事件类型的不同处理函数保存在该对象中)    var handlers = element.events[type];    if (!handlers) {        handlers = element.events[type] = {};        // 存储已有事件处理函数（如果存在一个）        if (element["on" + type]) {            handlers[0] = element["on" + type];         }    }    // 在散列表中存储该事件类型的处理函数    handlers[handler.$$guid] = handler;    // 注册一个全局处理函数来处理所有函数    element["on" + type] = handleEvent;}// 创建独立ID计数器addEvent.guid = 1;                                                function removeEvent(element, type, handler) {    // 从散列表中删除事件处理函数    if (element.events &amp;&amp; element.events[type]) {        delete element.events[type][handler.$$guid];    }};                                                            function handleEvent(event) {    // 获取event对象 (IE 中使用全局event对象)    event = event || window.event;    // 获取对应事件的处理函数散列表    var handlers = this.events[event.type];    // 依次执行处理函数散列表中的函数    for (var i in handlers) {        this.$$handleEvent = handlers;        handlers[i].apply(this,[event]);    }};为了弥补element['on'+type]无法绑定多个处理函数的缺点，addEvent将所有事件类型存储在element的events对象中，events中的每一个事件类型以同样的形式存储着该类型下所有的处理函数element.events={    click:{        0:function(){...},        1:function(){...},        ...    },    mousedown:{...},    ...}总结：1.在使用cloneNode()时，最好在插入前将clone出来的节点中的script手动清除掉，以避免脚本可能被重复执行。2.使用cloneNode()会将通过attachEvent绑定的事件复制到clone出来的节点上，可以通过使用跨浏览器的事件绑定解决方案来统一让绑定的事件不被复制。]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[getElementById方法的作用域]]></title>
+      <url>/javascript/2012/08/22/getElementById-scopes/</url>
+      <content type="text"><![CDATA[在看jQuery内核详解一书时，为了比较jQuery与原生javascript效率，举到一个例子。里面有这样一段：var $=document.getElementById;var b=$('header');秉着’实践出真理’的原则，自己敲一敲代码跑了一下。在chrome、firefox、IE9下运行时，会抛出错误：Illegal invocation chrome‘getElementById’ called on an object that does not implement interface Document. firefox再到IE6~8下，却能够顺畅运行。Illegal invocation意为非法调用‘getElementById’ called on an object that does not implement interface Document.意为’“getElementById”被一个不能实现document接口的对象调用’（乱翻译的，不过大致意思应该是这样。。。）说明肯能是作用域的问题var $=document.getElementById;var b=$.call(document,'header');alert(b);这次在非IE6~8下成功运行总结：在IE6~8下document.getElementById与作用域无关，也就是说在何处调用不会影响函数本身。在其他浏览器（包括IE9及以上）document.getElementById与作用域有关，也就是说getElementById函数内部this必须指向document。getElementsByTagName也有同样的情况。]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[js中escape,encodeURI,encodeURIComponent三个函数的区别]]></title>
+      <url>/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent/</url>
+      <content type="text"><![CDATA[js对文字进行编码涉及3个函数：escape,encodeURI,encodeURIComponent，相应3个解码函数：unescape,decodeURI,decodeURIComponent1、 传递参数时需要使用encodeURIComponent，这样组合的url才不会被#等特殊字符截断。例如：  document.write('&lt;a href="http://www.cpuele.com?aid=7&amp;u='+encodeURIComponent(http://www.cpuele.com/index.htm)+'"&gt;退出&lt;/a&gt;')2、 进行url跳转时可以整体使用encodeURI例如：  Location.href=encodeURI(http://www.cpuele.com/do/s?word=恒特电器&amp;ct=21);3、 js使用数据时可以使用escape例如：搜藏中history纪录。4、 escape对0-255以外的unicode值进行编码时输出%u**格式，其它情况下escape，encodeURI，encodeURIComponent编码结果相同。注意：最多使用的应为encodeURIComponent，它是将中文、韩文等特殊字符转换成utf-8格式的url编码，所以如果给后台传递参数需要使用encodeURIComponent时需要后台解码对utf-8支持（form中的编码方式和当前页面编码方式相同）escape不编码字符有69个：*，+，-，.，/，@，_，0-9，a-z，A-ZencodeURI不编码字符有82个：!，#，$，&amp;，'，(，)，*，+，,，-，.，/，:，;，=，?，@，_，~，0-9，a-z，A-ZencodeURIComponent不编码字符有71个：!， '，(，)，*，-，.，_，~，0-9，a-z，A-Z]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[wow宏教程]]></title>
+      <url>/bigbang/2012/07/05/wow-macro/</url>
+      <content type="text"><![CDATA[在WoW 2.0中出现了一个新的命令，/castsequence。它允许你在一次次点击某个宏时，将其中定义的一系列法术逐个施放，格式如下：/castsequence [] reset=&lt;#&gt;/target/combat , , “啥？你在说啥？”它设定了一个法术列表，当你第一次点击这个宏时，它施放列表中的第一个法术，第二次点击的时候，施放第二个法术，以此类推。 当它施放完最后一个时，又回到起始点开始循环。“我还是不太明白耶。”OK，假设你是一个法师，有时候你需要冰霜新星后立刻闪现开，你没法同时做到这些事情，现在你可以设定一个序列去做！/castsequence 冰霜新星, 闪现就这么简单，第一次你按这个宏，你施放冰霜新星，再按一次，闪现。“那如果冰霜新星在冷却中怎么办？它会直接施放闪现么？还是不施放冰霜新星，等第二次按这个宏的时候，再施放闪现？”都不是。如果法术无法施放（冷却，超出距离，法力不足等等情况下），序列就不会走到下一个法术，下一次你再点这个宏的时候，它会再度尝试施放冰霜新星。（抵抗，躲闪，招架等并不会算作无法施放，这些情况下法术/技能确实施放了，只不过没有命中。）如果我没有处于战斗中怎么办？我不想在非战斗情况下浪费一个冰霜新星。”你可以把之前所有的宏条件选项应用于此（可惜的是，只能应用于整个序列，而不能为每个法术单独设定）。“呃，其实刚才我只是随便说说，OK，那如果我在冰霜新星后不想闪现了怎么办？下一次我想施放冰霜新星时，它会不会还是停滞在施放闪现的设定上？”这完全没问题，我们会用到重置这个设定。因为冰霜新星一般的冷却时间为24秒，我们可以设定序列在24秒内不被使用就重置它。/castsequence reset=24 冰霜新星, 闪现当你第一次点击这个宏时，它会施放冰霜新星，如果你决定不闪现了，等过了24秒后，它会重置到冰霜新星的状态，因为冰霜新星的冷却时间为24秒，那时候它就可以被重新使用了，真棒！“好吧，这真的很厉害，不过我实际上是个术士啊。”当然，作为一个术士，我相信你会一直重复上三种DoT，现在你可以为它们设置一个序列以节省按钮空间啦。/castsequence 腐蚀, 献祭, 痛苦诅咒就这么简单，你可以连续点击三次这个宏来上这三种DoT。“但如果在我施放完这些前目标就死了呢？我又卡在这个序列里了，我可不想设什么定时器！”那也没关系，我们可以用其他的条件选项。如果你设定“reset=target”，那序列将在你改变目标时就重置到起始位置。你也可以设置“reset=combat”，每当你脱离战斗，这个序列就会被重置了。如果你使用“/”控制符（你还记得吧，之前提到过），你也可以将这些重置条件选项组合起来！/castsequence reset=combat/target 腐蚀, 献祭, 痛苦诅咒就这全了，这下子每当你改变目标（比如原来的目标快死了，你选中的新的目标）或脱离了战斗（可能目标在你施放完所有DoT前就死了），它将会把整个序列重置，让你可以从头开始。“OK，真棒，我想我现在弄明白了！给我点时间设置新的宏….搞定！”好极了，我很高兴能帮上忙。“那…来决斗一盘吧？”呃，不了，我从不和术士决斗。“切，胆小鬼。”另外本人是巨魔暗M,暗道理说MS不用写什么宏,不过本人觉得/castsequence有必要/castsequence reset=3 心灵之火,暗影守卫大概这个宏是在PVP中使用,特别是战场,死了之后一般都加这2个技能,一键搞定/castsequence reset=3 真言术·痛,吸血鬼拥抱实现PK中一键上完暗M的DOT另外可根据自己设置恐吓后心爆宏之类`]]></content>
+      <categories>
+        
+          <category> BigBang </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[跨域iframe数据传递]]></title>
+      <url>/javascript/2012/07/05/cc-iframe-transmission-data/</url>
+      <content type="text"><![CDATA[转载此文，方便以后查阅先看一下我们遇到了什么问题？在我们的白社会里，需要嵌入第三方应用，而嵌入的方式是使用 iframe，为了页面美观，这里就有一个最简单的需求：iframe 的高度需要跟随其本身内容的变化而实时变化，这就要求主页面根据 iframe 的内容实时的去设置其样式 height 值，但是因为第三方应用和白社会不属于同一个域，所以给实现带来了一点小小的麻烦，所以才有以下的一些讨论…仔细分析一下问题的实质是什么呢？其实这里需要解决的是，在一个页面 A 中嵌入一个iframe B，A 和 B 不属于同一个域，但是 A 和 B 需要进行一些必要的通信，传递少量的数据信息，所以问题的实质就是主页面与跨域 iframe 之间怎么通信，也就是怎么传递数据信息下面就针对两种不同的需求，总结一些比较简单，常用和稳定的解决方案。  主页面A 怎么向 iframe B 传递数据  iframe B 怎么向 主页面A 传递数据需求一：主页面A 怎么向 iframe B 传递数据呢？这种方式，是主页面需要给 iframe B 传递数据，然后 iframe B 获得到数据后进行特定的处理实现的技巧就是利用 location 对象的 hash 值，通过它传递通信数据，我们只需要在主页面A中设置 iframe B 的 src 后面多加个 #data 字符串（data就是你要传递的数据）然后在 iframe B 中通过某种方式能即时的获取到这儿 data 就可以了，其实常用的一种方式就是：  在 iframe B 中通过 setInterval 方法设置定时器， 监听 location.href 的变化即可获得上面的 data 信息  然后 iframe B 就能根据这个 data 信息进行相应的逻辑处理需求二：iframe B 怎么向 主页面A 传递数据呢？这种方式，是 iframe B 需要给主页面传递数据，然后主页面根据获得到数据后进行特定的处理实现的技巧就是利用一个代理 iframeC，它嵌入到 iframe B 中，并且和主页面A必须保持是同域，然后我们通过它充分利用上面第一种通信方式的实现原理就能把 iframe B 的数据传递给 iframeC，接下来的问题就是怎么让iframeC把数据传递给主页面A因为，iframeC 和主页面是同域的，所以它们之间传递数据就变得简单多了，我们这里的方式就是使用一个经常使用的属性 window.top (也可以使用window.parent.parent)，它返回对载入浏览器得最顶层 window 对象的引用，这样我们就能直接条用主页面A中方法啦，到此，我们做个简单分析总结当然还有其他一些方式，也都测试过，不是浏览器兼容性不好，就是实现起来复杂，通过以上方式就能很方便的在跨域的 iframe 和主页面之间传递数据了，当然也就能解决上面提到的设置 iframe 高度的问题了，但是这种实现方式的前提也是最大的缺点就是 iframe 中的内容必须是我们可控的，但是至少我们这种实现方式是建立在浏览器的安全规则之上的，没有破坏应用本身的安全性。实现时需要考虑的一些细节上面的分析，其实只是一个简单的原理，在白社会里，虽然我们目前的需求还仅仅是实现第三方 iframe 形式的 App 的高度自适应，但是我们在实现的时候尽量考虑到了易用，可扩展性和可维护性，比如：  让第三方 App 只需加载一个我们提供的JS种子文件就能很方便的使用我们为其提供的各种工具  上面的各种工具，我们采用包的形式进行组织，最大化的实现按需加载  第一条中的JS种子文件只提供基础的方法实现，并且把最常用的工具包放在里面，比如高度自适应  通过种子文件，我们还提供给第三方 App 一些常用的JS工具包，而且直接使用的类似YUI3模块的动态加载机制就可使用指定的工具包  对第三方 App 和 主页面传递的数据进行分类（自我调用，登录验证，传递数据等等）  传递的数据使用满足特定规范的JSON格式，并通过统一的服务出口发出去，主页面提供一个统一服务接口解析数据，并根据规范调用相应的方法  还有，就是版本控制的问题，为了尽量减少给第三方App带来影响，以上所有这些JS文件的版本都是采用向后兼容的策略，小版本使用服务器设置SQUID缓存特定频率的失效时间实现，大版本更新根据用户自己的需求手动更改  当然，以上可能不是最优的解决方案，只是希望能给你一些帮助和引导，我们也在逐步的改进我们的一些实现方式，比如版本控制这块儿，我们也有一些问题需要解决主页面A的源码&lt;script type="text/javascript"&gt;function init(){    document.domain = 'bai.sohu.com';    alert('我是主框架，嵌入了第三方应用IframeB,下面开始加载应用');    var iframeTag = document.getElementById('frameB'),        iframeSrc = 'http://test.com/iframePage.html';    iframeTag.src = iframeSrc;    iframeTag.style.display = 'block';}function callback(h){    var iframeB = document.getElementById('frameB');    alert('IframeC调用我（主框架）接口，把IframeB的高度传给我，具体值是：' + h);    iframeB.style.height= h + 10 + 'px';    iframeB.src += '#'+ h;}&lt;/script&gt;&lt;body onload="init();"&gt;    &lt;p&gt;我是主页框架，我的域是：bai.sohu.com&lt;/p&gt;    &lt;iframe id="frameB" style="display:none;"&gt;&lt;/iframe&gt;&lt;/body&gt;iframeB的源码&lt;script type="text/javascript"&gt;function init(){    alert('我是第三方App，下面开始创建和主框架同域的通信通道IframeC,并设置它的src，用#号传递高度值');    var iframeTag = document.getElementById('frameC'),    iframeSrc = 'http://bai.sohu.com/iframePageC.html#',    pageHeight = document.documentElement.scrollHeight || document.body.scrollHeight;    iframeTag.src = iframeSrc + pageHeight;    iframeTag.style.display = 'block';    window.setTimeout(function(){        alert('主页面设置我（IframeB）的src，通过Hash（#）给我传递它收到的高度：' + location.hash);    },2000);}&lt;/script&gt;iframeC的源码&lt;script type="text/javascript"&gt;document.domain = 'bai.sohu.com';alert('我（IframeC）收到iframeB通过参数（#）给我传递高度值，我现在调用主页面方法去设置IframeB的高度');top.callback(window.location.href.split('#')[1]);&lt;/script&gt;]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[2012.06.01近期项目总结]]></title>
+      <url>/html&css/javascript/2012/06/01/2012.06.01-Summary/</url>
+      <content type="text"><![CDATA[表单控件在IE6下始终处于Z-INDEX最高，需要用一个空白iframe将其覆盖。IE的盒模型宽（高）度 = width(height)w3c标准盒模型宽（高）度 = width(height) + paddingIE中AJAX 如果用get方式发送请求 URL后跟的值必须经过encodeURIComponent转码，否则在IE下可能导致AJAX无效(理论上只要是通过GET方式传送的数据都应该使用encodeURIComponent)。要取textarea中的值 若使用innerHTML只能取到初始值。当textarea中的值改变之后用innerHTML就取不到现在的值，需要用value。当文件使用 utf-8+BOM 编码时，文件开头会自带一个空白符。这会导致DOCTYPE申明无法被解析，需要将文件保存为 utf-8 无BOM编码。在IE6下 a 标签设置 href="javascript:void(0)" onclick 事件将不能触发。有两种解决方法：  &lt;a style="cursor:pointer" onclick="alert('d')"&gt;&lt;/a&gt; 直接不设置href  &lt;a href="javascript:void(0)" onclick="alert('d');return false"&gt;&lt;/a&gt; 通过return false阻止触发a标签的默认事件IE下操作粘贴板：  获取粘贴板内容 window.clipboardData.getData("Text")  设置粘贴板内容 window.clipboardData.setData("Text",要复制的内容)判断IE6最简短的代码  !-[1,]&amp;&amp;!window.XMLHttpRequest  !-[1,]利用了IE与标准浏览器在处理数组的toString方法的差异来判断是否为IE浏览器（PS：只能判断IE6，7，8），!window.XMLHttpRequest则排出掉IE7及以上版本。水平margin不重叠，浮动元素上下margin不重叠，常规折行上下margin重叠。]]></content>
+      <categories>
+        
+          <category> html&amp;css </category>
+        
+          <category> javascript </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[IE6、7下 body标签overflow:hidden失效的问题]]></title>
+      <url>/html&css/2012/05/03/IE67-body-overflow-hidden/</url>
+      <content type="text"><![CDATA[&lt;p&gt;There are no scrollbars on this page in sane browsers&lt;/p&gt;html, body, p {margin: 0; padding: 0;}body {overflow: hidden;}p {width: 5000px; height: 5000px;}IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)原因：明智的浏览器(ex. chrome and firefox)会初始付值给html{overflow:visible;}IE6 初始付值html{overflow-x:auto;overflow-y:scroll;}IE7 初始付值html{overflow-x:visible;overflow-y:scroll;}只有dom根结点（也就是html根节点）设置html{overflow:visible;}的时候，浏览器才会将body元素中的overflow值应用到视图区。举个例子说：设置了body{overflow:hidden}还会出现滚动条，不过这个滚动条不是body的，是html的只有你设置html{overflow:visible;} body{overflow的值}才能传递到html中去这样html的值就变成了{overflow:hidden}ok没有滚动条了这样就很明了啦，并不是bug，而是浏览器初始值不同产生的问题。]]></content>
+      <categories>
+        
+          <category> html&amp;css </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+    <entry>
+      <title><![CDATA[Github搭建自己的blog]]></title>
+      <url>/javascript/html&css/linux/mac/2011/09/20/hello-world/</url>
+      <content type="text"><![CDATA[Github Page 本是为git项目提供一个静态说明页，后来被开发成了一个bolg系统。Step One安装Ruby安装rvm（ruby管理工具）curl -L https://get.rvm.io | bash -s stablesource ~/.rvm/script/rvmrvm install requirements安装rubyrvm install rubyrvm use ruby --default安装rubygemsrvm rubygems current安装railsgem install rails安装jekyllgem install jekyllOK~现在你已经成功安装jekyll了（如果不出什么意外的话）那么来试试jekyll new myBlogcd myBlogjekyll server然后你就能通过 http://localhost:4000 访问jekyll为你生成的blog了。Step Two在github上创建一个项目。进入项目settingAutomatic page generator 能帮你自动生成一些固定模板样式页面在本地搞个blog项目，代码写得飞起~~~当你觉得自己的blog已经完美之后，你可以通过jekyll build来让jekyll帮你生成最后的静态代码。这些代码会保存在./_site下。最后你也只需要将./_site下的文件pull到github上jekyll build当然在你调试的过程中需要不停地预览你的blog，这时你应该会用到jekyll serverjekyll server包含了上面的jekyll build，之后会起一个本地服务通过http://localhost:4000来预览./_site中的页面]]></content>
+      <categories>
+        
+          <category> javascript </category>
+        
+          <category> html&amp;css </category>
+        
+          <category> Linux/Mac </category>
+        
+      </categories>
+      <tags>
+        
+      </tags>
+      <tags></tags>
+    </entry>
+  
+</search>

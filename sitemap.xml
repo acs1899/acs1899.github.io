@@ -1,114 +1,120 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>/</loc>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>/archives.html</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>/plugins.html</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>/works.html</loc>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>/contact.html</loc>
-        <priority>0.6</priority>
-    </url>
-    
-    <url>
-        <loc>/bigbang/2016/02/25/alive.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/linux/mac/2016/02/15/hellow-docker.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/linux/mac/2016/02/12/mac-uninstall-mysql.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/linux/mac/2016/01/26/cronologo.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/linux/mac/2015/08/26/mac-crontab.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/2015/03/11/why-mocha-can-not-catch-promise-err.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/2015/03/09/node-test-promise.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/linux/mac/2014/10/11/vps-shadowsocks-build.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/2014/05/29/textarea-input-cursor.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/2013/12/19/javascript-fireEvent.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/2013/08/26/use-cloneNode-notice.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/2012/08/22/getElementById-scopes.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/bigbang/2012/07/05/wow-macro.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/2012/07/05/cc-iframe-transmission-data.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/html&css/javascript/2012/06/01/2012.06.01-Summary.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/html&css/2012/05/03/IE67-body-overflow-hidden.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>/javascript/html&css/linux/mac/2011/09/20/hello-world.html</loc>
-        <priority>0.8</priority>
-    </url>
-    
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>/javascript/html&css/linux/mac/2011/09/20/hello-world/</loc>
+<lastmod>2011-09-20T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/html&css/2012/05/03/IE67-body-overflow-hidden/</loc>
+<lastmod>2012-05-03T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/html&css/javascript/2012/06/01/2012.06.01-Summary/</loc>
+<lastmod>2012-06-01T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/javascript/2012/07/05/cc-iframe-transmission-data/</loc>
+<lastmod>2012-07-05T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/bigbang/2012/07/05/wow-macro/</loc>
+<lastmod>2012-07-05T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/javascript/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent/</loc>
+<lastmod>2012-07-25T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/javascript/2012/08/22/getElementById-scopes/</loc>
+<lastmod>2012-08-22T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/javascript/2013/08/26/use-cloneNode-notice/</loc>
+<lastmod>2013-08-26T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/javascript/2013/12/19/javascript-fireEvent/</loc>
+<lastmod>2013-12-19T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/javascript/2014/05/29/textarea-input-cursor/</loc>
+<lastmod>2014-05-29T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/linux/mac/2014/10/11/vps-shadowsocks-build/</loc>
+<lastmod>2014-10-11T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/javascript/2015/03/09/node-test-promise/</loc>
+<lastmod>2015-03-09T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/javascript/2015/03/11/why-mocha-can-not-catch-promise-err/</loc>
+<lastmod>2015-03-11T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/linux/mac/2015/08/26/mac-crontab/</loc>
+<lastmod>2015-08-26T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/linux/mac/2016/01/26/cronologo/</loc>
+<lastmod>2016-01-26T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/linux/mac/2016/02/12/mac-uninstall-mysql/</loc>
+<lastmod>2016-02-12T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/linux/mac/2016/02/15/hellow-docker/</loc>
+<lastmod>2016-02-15T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/bigbang/2016/02/25/alive/</loc>
+<lastmod>2016-02-25T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/archives/</loc>
+</url>
+<url>
+<loc>/tags/</loc>
+</url>
+<url>
+<loc>/category/</loc>
+</url>
+<url>
+<loc>/categories/</loc>
+</url>
+<url>
+<loc>/tag/</loc>
+</url>
+<url>
+<loc>/about/</loc>
+</url>
+<url>
+<loc>/README.en/</loc>
+</url>
+<url>
+<loc>/assets/lib/fastclick/</loc>
+</url>
+<url>
+<loc>/assets/lib/jquery_lazyload/</loc>
+</url>
+<url>
+<loc>/page2/</loc>
+</url>
+<url>
+<loc>/404.html</loc>
+<lastmod>2018-06-24T11:57:13+08:00</lastmod>
+</url>
+<url>
+<loc>/demo/loading.html</loc>
+<lastmod>2018-06-24T15:36:23+08:00</lastmod>
+</url>
+<url>
+<loc>/demo/shell.html</loc>
+<lastmod>2018-06-24T15:36:23+08:00</lastmod>
+</url>
 </urlset>
