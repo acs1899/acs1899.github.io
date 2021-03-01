@@ -1,0 +1,331 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="To be or not to be, that is the question..."><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>textarea光标位置定位、插入、获取选择文字 | Acs1899</title><link rel="stylesheet" type="text/css" href="/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="stylesheet" href="/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Acs1899" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/css/customize.css"><link rel="stylesheet" type="text/css" href="/plugins/highlight/atom-one-dark.min.css"><script type="text/javascript" src="/plugins/highlight/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();
+</script><script type="text/javascript" src="/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Acs1899</a></h1></div><p class="m-desc">To be or not to be, that is the question...</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/archives/">归档</a></li><li><span class="dot">●</span><a href="/categories/">分类</a></li><li><span class="dot">●</span><a href="/tags/">标签</a></li><li><span class="dot">●</span><a href="/about/">关于</a></li><li><span class="dot">●</span><a href="/lab/">实验室</a></li><li><span class="dot">●</span><a href="/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="搜索" onfocus="if(this.value=='搜索'){this.value='';}" onblur="if(this.value==''){this.value='搜索';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">textarea光标位置定位、插入、获取选择文字</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/2014/05/29/textarea-input-cursor/">2014-05-29</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div></div><div class="p-content"><p>微博”@”功能相信每一个玩过微博的人都用过，当你输入”@”字符串时，在光标位置旁边就会生成一个提示框，你可以快速的选取你最近”@”过的人。</p>
+<p>不过想要操作textarea可是一件麻烦事。由于获取选中区域的接口属于BOM，不同浏览器下的接口差别很大。</p>
+<p>先来看看IE下的接口 <span class="impo">document.selection</span></p>
+<h3 id="document-selection"><a href="#document-selection" class="headerlink" title="document.selection"></a>document.selection</h3><h4 id="nbsp-nbsp-method"><a href="#nbsp-nbsp-method" class="headerlink" title="&nbsp;&nbsp;method"></a>&nbsp;&nbsp;method</h4><blockquote>
+<p><span class="impo">clear</span> : Clears the contents of the selection.</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">createRange</span> : Creates a TextRange object from the current text selection, or a controlRange collection from a control selection.</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">createRangeCollection</span> : Creates a TextRange object collection from the current selection.</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">empty</span> : Cancels the current selection, sets the selection type to none, and sets the item property to null.</p>
+</blockquote>
+<h4 id="nbsp-nbsp-properties"><a href="#nbsp-nbsp-properties" class="headerlink" title="&nbsp;&nbsp;properties"></a>&nbsp;&nbsp;properties</h4><blockquote>
+<p><span class="impo">type</span> : Retrieves the type of selection.</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">typeDetail</span> : Retrieves the name of the selection type.</p>
+</blockquote>
+<p>值得注意的是，从IE11开始不再支持<span class="impo">selection</span>对象.请使用<span class="impo">getSelection</span>对象.</p>
+<p>再来看看FF提供的<span class="impo">document.getSelection</span></p>
+<h3 id="document-getSelection"><a href="#document-getSelection" class="headerlink" title="document.getSelection"></a>document.getSelection</h3><h4 id="nbsp-nbsp-method-1"><a href="#nbsp-nbsp-method-1" class="headerlink" title="&nbsp;&nbsp;method"></a>&nbsp;&nbsp;method</h4><blockquote>
+<p><span class="impo">getRangeAt</span> : Returns a range object representing one of the ranges currently selected.</p>
+</blockquote>
+<blockquote>
+<p>注意,用户用鼠标在同一页面永远都只有一个选择区域,所以一般情况getRangeAt只能接收<span class="impo">0</span>这一个参数.但用脚本可以创建多个选择区域(Chrome下通过脚本也只能创建一个选择区域)</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">collapse(parentNode,offset)</span> : Collapses the current selection to a single point.</p>
+</blockquote>
+<blockquote>
+<p>压缩选择区域至单个光标(在输入框中)位置</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">parentNode</span>:光标将要移动到的目标元素</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">offset</span>:光标在目标元素中所在偏移量.这里的偏移量会有两个值”0”和”1”,分别表示parentNode文本的起始位置和结束位置.</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">extend(parentNode,offset)</span>:Moves the focus of the selection to a specified point.</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">parentNode</span>:光标将要移动到的目标元素</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">offset</span>:光标在目标元素中所在偏移量.这里的偏移量会有两种情况:</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.目标元素只有textNode.这时<span class="para">offset</span>的值表示光标在字符串中的位置</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;2.目标元素含有非textNode子元素.这时<span class="para">offset</span>的值表示光标定位到第<span class="para">offset</span>个元素的末尾.</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">modify(alert,direction,granularity)</span> : Changes the current selection.</p>
+</blockquote>
+<blockquote>
+<p>改变选择区域</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">alert</span>:声明修改类型(move || extend)</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">direction</span>:移动(合并)的方向.可能的值<span class="para">forward</span>,<span class="para">backward</span>,<span class="para">left</span>,<span class="para">right</span>.</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">granularity</span>:移动(合并)的单位.可能的值<span class="para">charracter</span>,<span class="para">word</span>,<span class="para">sentence</span>,<span class="para">line</span>,<span class="para">paragraph</span>,<span class="para">lineboundary</span>,<span class="para">sentenceboundary</span>,<span class="para">paragraphboundary</span>,<span class="para">documentboundary</span>.(注意,FF不支持<span class="para">sentence</span>,<span class="para">paragraph</span>,<span class="para">sentenceboundary</span>,<span class="para">paragraphboundary</span>,<span class="para">documentboundary</span>.值得一提的是在被选择内容为中文时,FF不支持”granularity=<span class='para'>word</span>“,但在Chrome上能正常使用.)</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">collapseToStart</span> : Collapses the selection to the start of the first range in the selection.</p>
+</blockquote>
+<blockquote>
+<p>将选择区域压缩至区域开始的位置</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">collapseToEnd</span> : Collapses the selection to the end of the last range in the selection.</p>
+</blockquote>
+<blockquote>
+<p>将选择区域压缩至区域结束的位置</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">selectAllChildren(parentNode)</span> : Adds all the children of the specified node to the selection.</p>
+</blockquote>
+<blockquote>
+<p>选择<span class="para">parentNode</span>的所有子节点内容</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">addRange(range)</span> : A Range object that will be added to the selection.</p>
+</blockquote>
+<blockquote>
+<p>将指定的区域添加到已选择区域</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">range</span>:指定区域<span class="para">range</span>可以通过<span class="impo">document.createRange</span>创建,也可以通过<span class="impo">getRangeAt</span>从已有区域选择</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">removeRange(range)</span> : Removes a range from the selection.</p>
+</blockquote>
+<blockquote>
+<p>从选择区域中删除指定的区域</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">removeAllRanges</span> : Removes all ranges from the selection.</p>
+</blockquote>
+<blockquote>
+<p>删除所有选择区域</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">deleteFromDocument</span> : Deletes the selection’s content from the document.</p>
+</blockquote>
+<blockquote>
+<p>删除选择区域中的文字(只能删除文字,不会删除DOM元素)</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">selectionLanguageChangae</span> : Modifies the cursor Bidi level after a change in keyboard direction.</p>
+</blockquote>
+<blockquote>
+<p>在写这篇文章时,这个方法貌似已经不存在了,但官方文档还保留了这个方法.</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">toString</span> : Returns a string currently being represented by the selection object, i.e. the currently selected text.</p>
+</blockquote>
+<blockquote>
+<p>输出当前选择区域文本</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">containNode(aNode,aPartlyContained)</span> : Indicates if a certain node is part of the selection.</p>
+</blockquote>
+<blockquote>
+<p>检测某些节点,当它属于选择区域时返回true,否则返回false</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">aNode</span>:待检测的节点</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;<span class="para">aPartlyContained</span>:检测类型</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.<span class="para">aPartlyContained</span>=true:当<span class="para">aNode</span>的部分或全部属于选择区域的一部分时,则返回true</p>
+</blockquote>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;1.<span class="para">aPartlyContained</span>=false:当<span class="para">aNode</span>整个节点属于选择区域的一部分时,则返回true(<span class="para">aNode</span>等于选择区域时也返回false,也就是说<span class="para">aNode</span>必须小于选择区域才会返回true)</p>
+</blockquote>
+<h4 id="nbsp-nbsp-properties-1"><a href="#nbsp-nbsp-properties-1" class="headerlink" title="&nbsp;&nbsp;properties"></a>&nbsp;&nbsp;properties</h4><blockquote>
+<p><span class="impo">anchorNode</span> : Returns the Node in which the selection begins.</p>
+</blockquote>
+<blockquote>
+<p>返回选择区域开始位置所在的节点</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">anchorOffset</span> : Returns a number representing the offset of the selection’s anchor within the anchorNode. If anchorNode is a text node, this is the number of characters within anchorNode preceding the anchor. If anchorNode is an element, this is the number of child nodes of the anchorNode preceding the anchor.</p>
+</blockquote>
+<blockquote>
+<p>返回选择区域开始的位置.如果选择区域是纯文本,返回选择区域中第一个字符的位置.如果选择区域是元素,返回那些在选择区域前面的同时也属于<span class="para">anchorNode</span>的子节点的个数.</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">focusNode</span> : Returns the Node in which the selection ends.</p>
+</blockquote>
+<blockquote>
+<p>返回选择区域结束位置所在的节点</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">focusOffset</span> : Returns a number representing the offset of the selection’s anchor within the focusNode. If focusNode is a text node, this is the number of characters within focusNode preceding the focus. If focusNode is an element, this is the number of child nodes of the focusNode preceding the focus.</p>
+</blockquote>
+<blockquote>
+<p>参照<span class="impo">anchorOffset</span></p>
+</blockquote>
+<blockquote>
+<p><span class="impo">ifCollapsed</span> : Returns a Boolean indicating whether the selection’s start and end points are at the same position.</p>
+</blockquote>
+<blockquote>
+<p>判断选择区域开始于结束位置是否相同</p>
+</blockquote>
+<blockquote>
+<p><span class="impo">rangeCount</span> : Returns the number of ranges in the selection.</p>
+</blockquote>
+<blockquote>
+<p>返回<span class="impo">getSelection</span>中的<span class="impo">range</span>数</p>
+</blockquote>
+<p><textarea id="test" style="width:700px;height:200px;padding:4px 5px;margin:10px auto;resize:none;">hellow world</textarea><br><button id="insertStr">点我插入”_(:3」∠)_“内容</button> <button id="getStr">点我获取选择内容</button> <button id="showOffset">点我获取光标当前位置</button></p>
+<script type="text/javascript">
+(function(){
+var $ = function(s){return document.getElementById(s)},
+    text = $('test'),
+    insert = $('insertStr'),
+    get = $('getStr'),
+    show = $('showOffset');
+
+insert.onclick=function(){insertString(text,'_(:3」∠)_');}
+get.onclick=function(){showSelection(text);}
+show.onclick=function(){alert(getAnchor(text));}
+
+function insertString(ele, str){
+    var r = null,newstart = 0,tb = ele.nodeType == 1 ? ele : docuemnt.body;
+    tb.focus();
+    if (document.all){
+        r = document.selection.createRange();
+        document.selection.empty();
+        r.text = str;
+        r.collapse();
+        r.select();
+    }else{
+        newstart = tb.selectionStart+str.length;
+        tb.value=tb.value.substr(0,tb.selectionStart)+str+tb.value.substring(tb.selectionEnd);
+        tb.selectionStart = newstart;
+        tb.selectionEnd = newstart;
+    }
+}
+function getSelection(ele){
+    var sel = '',r = null,tb = ele.nodeType == 1 ? ele : docuemnt.body;
+    if (document.all){
+        r = document.selection.createRange();
+        document.selection.empty();
+        sel = r.text;
+    }else{
+        sel = tb.value.substring(tb.selectionStart, tb.selectionEnd);
+    }
+    return sel;
+}
+function showSelection(ele){
+    var sel = getSelection(ele);
+    alert('选中的文本是：'+sel);
+}
+function getAnchor(ele){
+    var index = 0,r = null,tb = ele.nodeType == 1 ? ele : document.body;
+    if(document.all){
+        r = document.selection.createRange();
+        tb.focus();
+        r.moveStart('character', -tb.value.length); 
+        index = r.text.length;    
+    }else{
+        index = tb.selectionStart
+    }
+    return index
+}
+})();
+</script>
+
+<pre><code class="[javascript]">/*向输入框当前位置插入字符*/
+function InsertString(ele, str)&#123;
+    var r = null,newstart = 0,tb = ele.nodeType == 1 ? ele : docuemnt.body;
+    tb.focus();
+    if (document.all)&#123;
+        r = document.selection.createRange();
+        document.selection.empty();
+        r.text = str;
+        r.collapse();
+        r.select();
+    &#125;else&#123;
+        newstart = tb.selectionStart+str.length;
+        tb.value=tb.value.substr(0,tb.selectionStart)+str+tb.value.substring(tb.selectionEnd);
+        tb.selectionStart = newstart;
+        tb.selectionEnd = newstart;
+    &#125;
+&#125;
+/*获取当前选择区域文字*/
+function GetSelection(ele)&#123;
+    var sel = &#39;&#39;,r = null,tb = ele.nodeType == 1 ? ele : docuemnt.body;
+    if (document.all)&#123;
+        r = document.selection.createRange();
+        document.selection.empty();
+        sel = r.text;
+    &#125;else&#123;
+        sel = tb.value.substring(tb.selectionStart, tb.selectionEnd);
+    &#125;
+    return sel;
+&#125;
+function ShowSelection(ele)&#123;
+    var sel = GetSelection(ele);
+    alert(&#39;选中的文本是：&#39;+sel);
+&#125;
+/*获取光标位置*/
+function getAnchor(ele)&#123;
+    var index = 0,r = null,tb = ele.nodeType == 1 ? ele : document.body;
+    if(document.all)&#123;
+        r = document.selection.createRange();
+        tb.focus();
+        r.moveStart(&#39;character&#39;, -tb.value.length); 
+        index = r.text.length;    
+    &#125;else&#123;
+        index = tb.selectionStart
+    &#125;
+    return index
+&#125;
+</code></pre>
+<p><a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/ie/ms535869(v=vs.85).aspx">selection的官方文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">getSelection的官方文档</a></p>
+</div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tag"></i><a href="/tags/javascript/">javascript</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#document-selection"><span class="toc-number">1.</span> <span class="toc-text">document.selection</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#nbsp-nbsp-method"><span class="toc-number">1.1.</span> <span class="toc-text">&amp;nbsp;&amp;nbsp;method</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nbsp-nbsp-properties"><span class="toc-number">1.2.</span> <span class="toc-text">&amp;nbsp;&amp;nbsp;properties</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#document-getSelection"><span class="toc-number">2.</span> <span class="toc-text">document.getSelection</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#nbsp-nbsp-method-1"><span class="toc-number">2.1.</span> <span class="toc-text">&amp;nbsp;&amp;nbsp;method</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#nbsp-nbsp-properties-1"><span class="toc-number">2.2.</span> <span class="toc-text">&amp;nbsp;&amp;nbsp;properties</span></a></li></ol></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/2014/10/11/vps-shadowsocks-build/">&lt; VPS搭建ShadowSocks</a><a class="next" href="/2013/12/19/javascript-fireEvent/">javascript事件触发器 &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//cdn.bootcdn.net/ajax/libs/valine/1.4.14/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'W7Hk1588B0nU5zlAoRi9s83s-gzGzoHsz',
+  appKey:'NxzHBerlj6YvzVUuploWGylH',
+  lang: 'zh-cn',
+  placeholder:'',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2021 <a href="/." rel="nofollow">Acs1899</a><br>Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.1" async></script></body></html>

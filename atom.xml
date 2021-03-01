@@ -1,954 +1,428 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.2">Jekyll</generator><link href="/atom.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-28T12:47:00+08:00</updated><id>/</id><title type="html">Acs1899</title><subtitle>To be or not to be, that is the question...</subtitle><author><name>番茄拌糖</name></author><entry><title type="html">《活着》</title><link href="/bigbang/2016/02/25/alive/" rel="alternate" type="text/html" title="《活着》" /><published>2016-02-25T00:00:00+08:00</published><updated>2016-02-25T00:00:00+08:00</updated><id>/bigbang/2016/02/25/alive</id><content type="html" xml:base="/bigbang/2016/02/25/alive/">&lt;p&gt;lusir总是说着&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote-center&quot;&gt;
-  活着就有希望
-&lt;/blockquote&gt;
-
-&lt;p&gt;一开始我并不理解，为何一个18岁的少年会一边写着代码一边语重心长地说出这样的话。&lt;/p&gt;
-
-&lt;p&gt;在我有限的记忆里，每当他说出这句话，我总能从他小得快看不见的眼睛中察觉到一丝睿智，但微扬的嘴角又让我觉得这一切只是他对生活的嘲讽。&lt;/p&gt;
-
-&lt;p&gt;正如《活着》中福贵说过&lt;/p&gt;
-
-&lt;blockquote class=&quot;blockquote-center&quot;&gt;
-  做人不能忘记四条，话不要说错，床不要睡错，门槛不要踏错，口袋不要摸错。
-&lt;/blockquote&gt;
-
-&lt;p&gt;书中的福贵，年轻时便睡错了床、踏错了门槛、说错了话、摸错了口袋。祖辈的基业被他从牛输成了羊，羊输成了鹅，鹅输成了鸡，到最后连鸡也没有了。&lt;/p&gt;
-
-&lt;p&gt;就是这样一个“败家子”，经历了上个世纪中华大地最动荡的几十年，身边的亲人一个个离他而去，而他依然活着。&lt;/p&gt;
-
-&lt;p&gt;人们常说上过真正战场的人，才能真正理解生命的意义。&lt;/p&gt;
-
-&lt;p&gt;春生，和福贵一起从死人堆里爬出来的战友，解放后当上了县长，文革中被批斗成“走资派”。那天春生来和福贵告别，福贵不停开导春生要他活下去，春生也答应了福贵。&lt;/p&gt;
-
-&lt;p&gt;最后春生还是自杀了。我想不通春生为什么会自杀，早已经历过生死的人为什么不能忍受一时之辱。后来我突然明白了，在战场上只要你活着就有希望，但是在那个时代，活着看不到希望。&lt;/p&gt;
-
-&lt;p&gt;是什么让福贵一直坚持下去的？找了很久，好像并没有什么是福贵身上特有的。唯一特有的是他悲惨的一生。每当悲剧来临，福贵就这样默默承受着，作为一个普通人，他除了接受命运的安排和自我安慰之外，还能干什么。这不就是一个真实的普通人吗？真实的有点可怕，你明知这一切只是小说虚构出来的，但你却真实地感受到他的存在。真实到你会认为这一切有一天会发生在你的头上。&lt;/p&gt;
-
-&lt;p&gt;书中最后，福贵和他的老牛（也叫福贵）伴着夕阳的余晖远去，两个福贵在生命最后的里程中找到了依靠。夕阳落下，大地和黑夜融为一体，两个垂暮的生命走向他们的归宿。&lt;/p&gt;
-
-&lt;p&gt;写这篇文章的时候已是深夜，此时此刻我在希望着什么？&lt;/p&gt;
-
-&lt;p&gt;需求不再改？代码不再出bug？线上不再报故障？&lt;/p&gt;
-
-&lt;p&gt;漆黑的夜中，能看见几颗星，这就是希望吧。&lt;/p&gt;</content><author><name>番茄拌糖</name></author><summary type="html">lusir总是说着</summary></entry><entry><title type="html">初试Docker</title><link href="/linux/mac/2016/02/15/hellow-docker/" rel="alternate" type="text/html" title="初试Docker" /><published>2016-02-15T00:00:00+08:00</published><updated>2016-02-15T00:00:00+08:00</updated><id>/linux/mac/2016/02/15/hellow-docker</id><content type="html" xml:base="/linux/mac/2016/02/15/hellow-docker/">&lt;p&gt;&lt;strong&gt;Docker&lt;/strong&gt;，2015最火的开源项目之一。&lt;/p&gt;
-
-&lt;p&gt;关于Docker-“快速部署”、“隔离”、“镜像”、“容器”这些关键词想必你一定听过。Docker可以将你的基础配置和应用服务隔离开来，打包你的环境配置并实现快速部署。通过“镜像”，我们可以快速的将一个应用部署到多个服务器上，而“容器”则是用来承载这些应用的。&lt;/p&gt;
-
-&lt;p&gt;使用Docker能给我们带来哪些好处：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;根据镜像快速部署&lt;/li&gt;
-  &lt;li&gt;可以通过DockerHub或搭建私有镜像库来查找、上传镜像&lt;/li&gt;
-  &lt;li&gt;Docker对资源占少，应用之间能做到很好的隔离同时也能保证相互间的通信&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;本篇文章主要介绍如何使用docker，创建自己的镜像，运行容器等。具体使用准则参考官方&lt;a href=&quot;https://docs.docker.com/&quot;&gt;文档&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;你需要知道的一些基本概念&quot;&gt;你需要知道的一些基本概念&lt;/h3&gt;
-
-&lt;h5 id=&quot;镜像-image&quot;&gt;镜像-Image&lt;/h5&gt;
-
-&lt;p&gt;镜像可以理解为应用的一个快照。里面保存着该应用运行所需要的各个配置、依赖、环境参数等。镜像还有一个非常关键的概念便是可以&lt;strong&gt;叠加&lt;/strong&gt;。镜像使用了一种叫&lt;a href=&quot;https://en.wikipedia.org/wiki/UnionFS&quot;&gt;union file system&lt;/a&gt;的技术，将不同镜像按照层级叠加起来（可以理解成一种依赖关系）。&lt;/p&gt;
-
-&lt;h5 id=&quot;容器-container&quot;&gt;容器-Container&lt;/h5&gt;
-
-&lt;p&gt;docker的容器则可理解为一个基础版的Linux系统。容器会根据镜像中的配置、资源在镜像的上层再添加一个应用运行的读写层。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/post/docker-filesystems.png&quot; alt=&quot;docker-filesystem&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt;
-
-&lt;p&gt;以下是&lt;strong&gt;mac os&lt;/strong&gt;系统安装流程，&lt;a href=&quot;https://docs.docker.com/linux/step_one/&quot;&gt;Linux&lt;/a&gt; &lt;a href=&quot;https://docs.docker.com/windows/step_one/&quot;&gt;Windows&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Docker本身并不支持直接在Mac OS上运行，不过Docker社区提供了一个工具boot2docker（实际是在Mac OS上创建一个虚拟机）。目前官方已将boot2docker整合到了官方工具&lt;strong&gt;Docker Toolbox&lt;/strong&gt;中。&lt;/p&gt;
-
-&lt;p&gt;下载&lt;a href=&quot;https://github.com/docker/toolbox/releases/download/v1.10.1/DockerToolbox-1.10.1.pkg&quot;&gt;Docker Toolbox&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;具体安装流程可参考&lt;a href=&quot;https://docs.docker.com/mac/step_one/&quot;&gt;Docker Mac OS 安装&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;运行&quot;&gt;运行&lt;/h3&gt;
-
-&lt;p&gt;注意：直接在终端是无法运行docker的，需要进入boot2docker中。&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;docker-machine start default // 让boot2docker启动一个虚拟机作为docker的运行环境 - default为虚拟机名
-docker-machine ssh default // 进入boot2docker生成的虚拟机&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。&lt;/p&gt;
-
-&lt;p&gt;我们下载一个 &lt;strong&gt;alexwhen/docker-2048&lt;/strong&gt; 镜像作为示例&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/post/docker-images.png&quot; alt=&quot;docker-images&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;docker images&lt;/strong&gt; 列出本地所有可用的Image，包括镜像名、TAG、创建时间和大小等信息。&lt;/p&gt;
-
-&lt;p&gt;现在我们可以用 &lt;strong&gt;alexwhen/docker-2048&lt;/strong&gt; 镜像运行一个容器。&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;-d&lt;/strong&gt; 让Container以后台进程运行，&lt;strong&gt;-p&lt;/strong&gt; 指定8080端口的请求转发到Container的80端口。&lt;/p&gt;
-
-&lt;p&gt;通过 &lt;strong&gt;docker ps&lt;/strong&gt; 检查我们容器是否运行正常。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/post/docker-ps.png&quot; alt=&quot;docker-ps&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;如何访问我们的应用呢？注意在Mac OS下，我们的docker是运行在boot2docker里的，所以需要链接虚拟机地址才能访问docker中的应用。&lt;/p&gt;
-
-&lt;p&gt;退出boot2docker 执行 &lt;strong&gt;docker-machine ls&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/post/docker-machine-ls.png&quot; alt=&quot;docker-machine-ls&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;显示boot2docker地址 &lt;strong&gt;192.168.99.100&lt;/strong&gt; 访问 &lt;strong&gt;http://192.168.99.100:8080&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/post/docker-2048.png&quot; alt=&quot;docker-2048&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;container内部&quot;&gt;Container内部&lt;/h3&gt;
-
-&lt;p&gt;下面我们可以进入Container，来看看Container内部是如何运作的。&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ti&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;应用代码 &lt;code class=&quot;highlighter-rouge&quot;&gt;cd /usr/share/nginx/html&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/post/code-2048.png&quot; alt=&quot;alexwhen/docker-2048&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;nginx配置 &lt;code class=&quot;highlighter-rouge&quot;&gt;vi /etc/nginx/nginx.conf&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;       &lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;server_name&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;localhost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;   &lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;  &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;htm&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;当容器以 &lt;strong&gt;alexwhen/docker-2048&lt;/strong&gt; 镜像启动时，会启动一个nginx并监听Container的80端口。&lt;/p&gt;
-
-&lt;p&gt;当我们访问 &lt;strong&gt;http://192.168.99.100:8080&lt;/strong&gt; 时，boot2docker会将8080端口的请求转发到Container的80端口，进而访问到应用。&lt;/p&gt;
-
-&lt;p&gt;其实上面的例子并不够典型，因为具体的应用代码是保存在镜像中的，但是应用的代码是经常更新的，所以不适合放在镜像中。&lt;/p&gt;
-
-&lt;p&gt;一种解决方案应该是将具体的应用代码放在宿主机，然后挂载到容器上运行。&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;这会把本地目录 &lt;strong&gt;/usr/data&lt;/strong&gt; 挂载到容器 &lt;strong&gt;/home/data&lt;/strong&gt; 目录。&lt;/p&gt;
-
-&lt;p&gt;另一种方案是在容器内生成 &lt;strong&gt;数据卷&lt;/strong&gt;，然后用它来做数据持久化。&lt;/p&gt;
-
-&lt;h5 id=&quot;数据卷&quot;&gt;数据卷&lt;/h5&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;数据卷可在容器之间共享或重用&lt;/li&gt;
-  &lt;li&gt;数据卷中的更改可以直接生效&lt;/li&gt;
-  &lt;li&gt;数据卷中的更改不会包含在镜像的更新中&lt;/li&gt;
-  &lt;li&gt;数据卷的生命周期一直持续到没有容器使用它为止&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;生成数据卷&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/usr/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mydata&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;在另外一个容器挂载刚才生成的数据卷&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mydata&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mydb&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alexwhen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2048&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;写在最后&quot;&gt;写在最后&lt;/h3&gt;
-
-&lt;p&gt;在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。&lt;/p&gt;
-
-&lt;p&gt;&lt;img style=&quot;display:block;width:200px;margin:0 auto;&quot; src=&quot;/assets/images/post/weiguan.png&quot; title=&quot;赶紧买个瓜围观&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img style=&quot;display:block;width:200px;margin:0 auto;&quot; src=&quot;/assets/images/post/weiguans.png&quot; title=&quot;不明真相的围观群众&quot; /&gt;&lt;/p&gt;</content><author><name>番茄拌糖</name></author><summary type="html">Docker，2015最火的开源项目之一。</summary></entry><entry><title type="html">Mac下卸载mysql</title><link href="/linux/mac/2016/02/12/mac-uninstall-mysql/" rel="alternate" type="text/html" title="Mac下卸载mysql" /><published>2016-02-12T00:00:00+08:00</published><updated>2016-02-12T00:00:00+08:00</updated><id>/linux/mac/2016/02/12/mac-uninstall-mysql</id><content type="html" xml:base="/linux/mac/2016/02/12/mac-uninstall-mysql/">&lt;p&gt;记录删除需要的操作，供以后查阅。&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo rm /usr/local/mysql
-sudo rm -rf /usr/local/mysql&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-sudo rm -rf /Library/StartupItems/MySQLCOM
-sudo rm -rf /Library/PreferencePanes/My&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-vim /etc/hostconfig and removed the line &lt;span class=&quot;nv&quot;&gt;MYSQLCOM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;-YES-
-rm -rf ~/Library/PreferencePanes/My&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-sudo rm -rf /Library/Receipts/mysql&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-sudo rm -rf /Library/Receipts/MySQL&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
-sudo rm -rf /var/db/receipts/com.mysql.&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>番茄拌糖</name></author><summary type="html">记录删除需要的操作，供以后查阅。</summary></entry><entry><title type="html">日志分割</title><link href="/linux/mac/2016/01/26/cronologo/" rel="alternate" type="text/html" title="日志分割" /><published>2016-01-26T00:00:00+08:00</published><updated>2016-01-26T00:00:00+08:00</updated><id>/linux/mac/2016/01/26/cronologo</id><content type="html" xml:base="/linux/mac/2016/01/26/cronologo/">&lt;h2 id=&quot;日志分割&quot;&gt;日志分割&lt;/h2&gt;
-&lt;p&gt;bizfe平台的nginx日志由于一直写在一个文件里，长年累月后导致该日志文件过于臃肿，对日志数据的查找和分析带来很多不便。&lt;/p&gt;
-
-&lt;h4 id=&quot;工具&quot;&gt;工具&lt;/h4&gt;
-&lt;p&gt;cronolog日志分割工具&lt;/p&gt;
-
-&lt;h4 id=&quot;安装&quot;&gt;安装&lt;/h4&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vps/cronolog-1.6.2.tar.gz
-tar zxvf cronolog-1.6.2.tar.gz
-cd cronolog-1.6.2
-./configure
-make
-make install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;创建日志管道&quot;&gt;创建日志管道&lt;/h4&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /home/service/nginx/logs
-mkfifo /home/service/nginx/logs/bizfe.access.pipe.log
-mkdir pipe /*用来存放分割后的日志*/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;修改nginx配置重启&quot;&gt;修改nginx配置&amp;amp;重启&lt;/h4&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;access_log logs/bizfe.access.pipe.log;
-./nginx -s reload
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h4 id=&quot;启动cronolog&quot;&gt;启动cronolog&lt;/h4&gt;
-&lt;p&gt;以下命令将日志以天为单位分割&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nohup cat /home/service/nginx/logs/bizfe.access.pipe.log | nohup /usr/sbin/cronolog /home/service/nginx/logs/pipe/bizfe.access.%Y%m%d.log &amp;amp;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><author><name>番茄拌糖</name></author><summary type="html">日志分割 bizfe平台的nginx日志由于一直写在一个文件里，长年累月后导致该日志文件过于臃肿，对日志数据的查找和分析带来很多不便。</summary></entry><entry><title type="html">在mac中使用cron</title><link href="/linux/mac/2015/08/26/mac-crontab/" rel="alternate" type="text/html" title="在mac中使用cron" /><published>2015-08-26T00:00:00+08:00</published><updated>2015-08-26T00:00:00+08:00</updated><id>/linux/mac/2015/08/26/mac-crontab</id><content type="html" xml:base="/linux/mac/2015/08/26/mac-crontab/">&lt;p&gt;常用的cron命令:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  crontab -e //编辑任务
-  -l //显示已有任务
-  -r //删除所有任务&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;在mac下可能会遇见无法添加任务的情况&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;  crontab: &lt;span class=&quot;s2&quot;&gt;&quot;/usr/bin/vi&quot;&lt;/span&gt; exited with status 1&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;这是因为环境变量&lt;span class=&quot;impo&quot;&gt;$EDITOR&lt;/span&gt; 是 &lt;span class=&quot;impo&quot;&gt;vi&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;重新设置成 &lt;span class=&quot;impo&quot;&gt;vim&lt;/span&gt; 就行了&lt;/p&gt;</content><author><name>番茄拌糖</name></author><summary type="html">常用的cron命令:</summary></entry><entry><title type="html">promise中的错误捕获</title><link href="/javascript/2015/03/11/why-mocha-can-not-catch-promise-err/" rel="alternate" type="text/html" title="promise中的错误捕获" /><published>2015-03-11T00:00:00+08:00</published><updated>2015-03-11T00:00:00+08:00</updated><id>/javascript/2015/03/11/why-mocha-can-not-catch-promise-err</id><content type="html" xml:base="/javascript/2015/03/11/why-mocha-can-not-catch-promise-err/">&lt;p&gt;接&lt;a href=&quot;http://acs1899.info/javascript/2015/03/09/node-test-promise.html&quot;&gt;上篇&lt;/a&gt;文章留下的一个没有解决的问题：&lt;strong&gt;在promise中的错误为什么在外层函数捕获不到？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;来看下面一个栗子：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;你看不见我&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//输出结果：&quot;你看不见我&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;上面的栗子说明 &lt;span class=&quot;impo&quot;&gt;try/catch&lt;/span&gt; 在捕获到错误后阻止了错误向上传递。你只能手动抛出错误让上层函数捕获。&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;o&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;你看不见我&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//输出结果：&quot;[TypeError: Object #&amp;lt;Object&amp;gt; has no method 'show']&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;再看看文章开头提到的问题 &lt;strong&gt;在promise中的错误为什么在外层函数捕获不到？&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;###真相只有一个&lt;/p&gt;
-
-&lt;p&gt;promise模块核心代码&lt;a href=&quot;https://github.com/then/promise/blob/master/lib/core.js&quot;&gt;core.js&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-    &lt;span class=&quot;cm&quot;&gt;/*直接跳至关键处*/&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;deferred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onFulfilled&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;deferred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onRejected&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;deferred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;deferred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt;
-      &lt;span class=&quot;cm&quot;&gt;/* #A */&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;deferred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;
-      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;cm&quot;&gt;/* #B */&lt;/span&gt;
-      &lt;span class=&quot;nx&quot;&gt;deferred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;注意 &lt;span class=&quot;impo&quot;&gt;#A&lt;/span&gt; 与 &lt;span class=&quot;impo&quot;&gt;#B&lt;/span&gt; 之间的代码。没错就是它！！！这里 &lt;span class=&quot;impo&quot;&gt;catch&lt;/span&gt; 错误后并没有将其抛出，而是传递给了下级 &lt;span class=&quot;impo&quot;&gt;reject&lt;/span&gt; 并结束当前函数。&lt;/p&gt;
-
-&lt;p&gt;好了，现在菊势基本明了了。问题根源便是 &lt;span class=&quot;impo&quot;&gt;Promise&lt;/span&gt; 始终劫持着错误对象没有抛出，导致外层函数捕获不到错误。&lt;/p&gt;
-
-&lt;p&gt;那么再往下看 &lt;span class=&quot;impo&quot;&gt;Promise.catch&lt;/span&gt; 方法又是如何捕获错误的？&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/then/promise/blob/master/lib/es6-extensions.js&quot;&gt;es6-extensions.js&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'catch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onRejected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onRejected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;原来 &lt;span class=&quot;impo&quot;&gt;Promise.catch&lt;/span&gt; 不过是 &lt;span class=&quot;impo&quot;&gt;Promise.then(null,reject)&lt;/span&gt; 的缩写版。&lt;/p&gt;
-
-&lt;p&gt;其实 &lt;span class=&quot;impo&quot;&gt;Promise&lt;/span&gt; 作者是建议在所有 &lt;span class=&quot;impo&quot;&gt;Promise&lt;/span&gt; 对象后加上 &lt;span class=&quot;impo&quot;&gt;Promise.done&lt;/span&gt; 方法。&lt;span class=&quot;impo&quot;&gt;Promise.catch&lt;/span&gt; 方法只是为了与ES6标准规范保持一致而添加的。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/then/promise/blob/master/lib/done.js&quot;&gt;done.js&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;s1&quot;&gt;'use strict'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./core.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;asap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'asap'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onFulfilled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onRejected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;self&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;asap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;Promise.done&lt;/span&gt; 的作用与 &lt;span class=&quot;impo&quot;&gt;Promise.then&lt;/span&gt; 基本一致（注意done并没有 &lt;span class=&quot;impo&quot;&gt;return&lt;/span&gt; Promise对象，所以 &lt;span class=&quot;impo&quot;&gt;done&lt;/span&gt; 只能放在最后），只是在后面加了一层抛出捕获到的错误。&lt;/p&gt;</content><author><name>番茄拌糖</name></author><summary type="html">接上篇文章留下的一个没有解决的问题：在promise中的错误为什么在外层函数捕获不到？</summary></entry><entry><title type="html">如何为使用Promise规范的接口写测试用例</title><link href="/javascript/2015/03/09/node-test-promise/" rel="alternate" type="text/html" title="如何为使用Promise规范的接口写测试用例" /><published>2015-03-09T00:00:00+08:00</published><updated>2015-03-09T00:00:00+08:00</updated><id>/javascript/2015/03/09/node-test-promise</id><content type="html" xml:base="/javascript/2015/03/09/node-test-promise/">&lt;p&gt;nodeJs为Javascript引入了单元测试的概念。单元测试能够帮助我们更好的提高代码质量，让BUG在代码编写的时候即被消灭掉。&lt;/p&gt;
-
-&lt;p&gt;同步单元测试：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'should'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/*断言库*/&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'function A test'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'when x = 1,return true'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'when x = 0,return false'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;异步单元测试：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'should'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fs.readFile is ok'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/test.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;同步与异步测试区别就在于 &lt;span class=&quot;impo&quot;&gt;describe&lt;/span&gt; 的回调函数是否有形参 &lt;span class=&quot;impo&quot;&gt;done&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;Promise&lt;/span&gt; 规范的目的是为了让程序员能以同步代码的形式来写异步代码。直观的表现就是，本来无限嵌套的回调函数变成了链式调用。&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&quot;impo&quot;&gt;Promise&lt;/span&gt;规范来书写的接口：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'promise'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;cm&quot;&gt;/*Promise的实现方式有很多种，这里使用promise库*/&lt;/span&gt;
-
-    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filePath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Promise&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resole&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;fs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;readFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;filePath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-                    &lt;span class=&quot;nx&quot;&gt;reject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;nx&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-    &lt;span class=&quot;cm&quot;&gt;/*调用*/&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;fileRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/test.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;//do something with data&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;//log err&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-    &lt;span class=&quot;cm&quot;&gt;/*测试*/&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'should'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fileRead is ok'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;fileRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/test.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-                &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-                &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;跑一下测试。嗯，好像没问题。收拾东西下班！！！&lt;/p&gt;
-
-&lt;p&gt;###wait a minute&lt;/p&gt;
-
-&lt;p&gt;注意测试代码中这一行代码&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;这行代码的目的是检测 &lt;span class=&quot;impo&quot;&gt;result&lt;/span&gt; 是否是字符串。如果 &lt;span class=&quot;impo&quot;&gt;result&lt;/span&gt; 不是字符串，那应该会被测试框架捕获到。&lt;/p&gt;
-
-&lt;p&gt;稍微修改下&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;cm&quot;&gt;/*这里只是为了测试错误是否能被捕获到，所以用[1,2,3]替换了result*/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;###纳尼！！！&lt;/p&gt;
-
-&lt;p&gt;测试如我所料没有通过，但是报的错误是 &lt;span class=&quot;impo&quot;&gt;timeout&lt;/span&gt; 是什么鬼啊！！！&lt;/p&gt;
-
-&lt;p&gt;好像一不小心又发现了一个知识点啊。嗯，今天晚上一定要把它解决了。&lt;/p&gt;
-
-&lt;p&gt;兴奋的我带着电脑回到家中玩了一个晚上的魔兽。。。&lt;/p&gt;
-
-&lt;p&gt;明天周六，我花一天时间肯定能搞定！！！（这话估计也就我自己会信╮(╯▽╰)╭）&lt;/p&gt;
-
-&lt;p&gt;就这样，这个问题陪伴着我度过了一个愉快而又充实的3.8妇女节（什么鬼。。。摔）&lt;/p&gt;
-
-&lt;p&gt;周一上班的路上突然想到会不会跟 &lt;span class=&quot;impo&quot;&gt;promise&lt;/span&gt; 的实现有关。来到公司，遂看了 &lt;span class=&quot;impo&quot;&gt;promise&lt;/span&gt; 的core.js代码。&lt;/p&gt;
-
-&lt;p&gt;经过一番倒腾，大致理顺了 &lt;span class=&quot;impo&quot;&gt;promise&lt;/span&gt; 的核心思路。 &lt;span class=&quot;impo&quot;&gt;promise&lt;/span&gt; 是通过内部的一个handler构造函数来控制回调链的传递。并且你所传入的回调函数并非直接由handler控制，而是由两个叫 &lt;span class=&quot;impo&quot;&gt;resolve&lt;/span&gt; 和 &lt;span class=&quot;impo&quot;&gt;reject&lt;/span&gt; 的方法控制。&lt;/p&gt;
-
-&lt;p&gt;所以我猜测错误可能是被 &lt;span class=&quot;impo&quot;&gt;promise&lt;/span&gt; 捕获了，但是没有被测试框架捕获。（不要问我为什么，我也不知道）&lt;/p&gt;
-
-&lt;p&gt;于是用尽了各种办法，最终还是没能证明上面的猜测（一股弱者的气息。。。）&lt;/p&gt;
-
-&lt;p&gt;###google大法好&lt;/p&gt;
-
-&lt;p&gt;这是&lt;a href=&quot;http://stackoverflow.com/questions/24071493/should-js-not-causing-mocha-test-to-fail&quot;&gt;stackoverflow&lt;/a&gt;上相同的问题，证实了我的猜测。&lt;/p&gt;
-
-&lt;p&gt;被采纳的答案其实也没能说清其中原由。&lt;/p&gt;
-
-&lt;p&gt;答案中引用的when.js的doc文档中也是一句话带过 &lt;span class=&quot;impo&quot;&gt;Errors in an asynchronous operation always occur in a different call stack than the the one that initiated the operation&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;修改测试代码：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'should'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fileRead is ok'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;fileRead&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/test.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-                &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;be&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-            &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;顺利捕获断言错误。至于为什么&lt;span class=&quot;impo&quot;&gt;promise&lt;/span&gt;阻断了测试框架捕获错误，还有待研究。&lt;/p&gt;</content><author><name>番茄拌糖</name></author><summary type="html">nodeJs为Javascript引入了单元测试的概念。单元测试能够帮助我们更好的提高代码质量，让BUG在代码编写的时候即被消灭掉。</summary></entry><entry><title type="html">VPS搭建ShadowSocks</title><link href="/linux/mac/2014/10/11/vps-shadowsocks-build/" rel="alternate" type="text/html" title="VPS搭建ShadowSocks" /><published>2014-10-11T00:00:00+08:00</published><updated>2014-10-11T00:00:00+08:00</updated><id>/linux/mac/2014/10/11/vps-shadowsocks-build</id><content type="html" xml:base="/linux/mac/2014/10/11/vps-shadowsocks-build/">&lt;p&gt;ShadowSocks是一个轻量级socks5代理，以Python2.x写成。之前用的是用pptp搭建的vpn。&lt;/p&gt;
-
-&lt;p&gt;我的手机是Nexus 4，几乎所有的Google服务都不能用(那还要亲儿子干嘛!!!)，所以自己搞个代理不能再等了。&lt;/p&gt;
-
-&lt;p&gt;ShadowSocks有很多中版本，&lt;span class=&quot;impo&quot;&gt;Python&lt;/span&gt;&lt;span class=&quot;impo&quot;&gt;Nodejs&lt;/span&gt;&lt;span class=&quot;impo&quot;&gt;Go&lt;/span&gt;&lt;span class=&quot;impo&quot;&gt;C&lt;/span&gt;，我用的是&lt;span class=&quot;impo&quot;&gt;Python&lt;/span&gt;版。&lt;/p&gt;
-
-&lt;h4 id=&quot;安装setuptools&quot;&gt;安装Setuptools&lt;/h4&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;wget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;certificate&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.egg&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;chmod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setuptools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;py2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;egg&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setuptools&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;0.6&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c11&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;py2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;egg&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;安装python-pip&quot;&gt;安装Python-pip&lt;/h4&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;wget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;no&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;check&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;certificate&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//pypi.python.org/packages/source/p/pip/pip-1.4.tar.gz&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;zxvf&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gz&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pip&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.4&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;python&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;py&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;安装python-gevent&quot;&gt;安装Python-Gevent&lt;/h4&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libevent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gevent&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;安装python-m2crypto&quot;&gt;安装Python-M2Crypto&lt;/h4&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;libssl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dev&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;apt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;swig&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;M2Crypto&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;安装shadowsocks-python&quot;&gt;安装ShadowSocks-Python&lt;/h4&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;shadowsocks&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;configjson&quot;&gt;config.json&lt;/h4&gt;
-
-&lt;p&gt;config.json是ShadowSocks Server端的配置文件&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;vim ~/ShadowSocks/config.json&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;config.json配置文件格式：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;server&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my_server_ip&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//服务器IP&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;server_port&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8388&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//服务器端口&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;local_port&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//本地端口(配置客户端时需要用到)&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;barfoo!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//密码&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;timeout&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//超市时间&lt;/span&gt;
-&lt;span class=&quot;s2&quot;&gt;&quot;method&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;aes-256-cfb&quot;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//加密方法，推荐&quot;aes-256-cfb&quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;运行shadowsocks程序&quot;&gt;运行ShadowSocks程序&lt;/h4&gt;
-
-&lt;p&gt;cd到config.json所在目录&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;nohup&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ssserver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;之所以选用ShadowSocks主要是看重其对客户端强大的支持，几乎所有你能想到的系统都用对应的客户端。&lt;/p&gt;
-
-&lt;h4 id=&quot;客户端设置&quot;&gt;客户端设置&lt;/h4&gt;
-
-&lt;p&gt;客户端的配置几乎于配置文件的内容一样，只需要将配置文件中配置项对应填入即可。&lt;/p&gt;
-
-&lt;p&gt;使用之后，感觉比同等环境下的VPN快了不少。用手机到Google play上更新App尤为明显。&lt;/p&gt;
-
-&lt;p&gt;PS:用aws的同学注意 &lt;span class=&quot;impo&quot;&gt;config.json&lt;/span&gt; 中的 &lt;span class=&quot;impo&quot;&gt;server&lt;/span&gt; 要填内网地址&lt;/p&gt;</content><author><name>番茄拌糖</name></author><summary type="html">ShadowSocks是一个轻量级socks5代理，以Python2.x写成。之前用的是用pptp搭建的vpn。</summary></entry><entry><title type="html">textarea光标位置定位、插入、获取选择文字</title><link href="/javascript/2014/05/29/textarea-input-cursor/" rel="alternate" type="text/html" title="textarea光标位置定位、插入、获取选择文字" /><published>2014-05-29T00:00:00+08:00</published><updated>2014-05-29T00:00:00+08:00</updated><id>/javascript/2014/05/29/textarea-input-cursor</id><content type="html" xml:base="/javascript/2014/05/29/textarea-input-cursor/">&lt;p&gt;微博”@”功能相信每一个玩过微博的人都用过，当你输入”@”字符串时，在光标位置旁边就会生成一个提示框，你可以快速的选取你最近”@”过的人。&lt;/p&gt;
-
-&lt;p&gt;不过想要操作textarea可是一件麻烦事。由于获取选中区域的接口属于BOM，不同浏览器下的接口差别很大。&lt;/p&gt;
-
-&lt;p&gt;先来看看IE下的接口 &lt;span class=&quot;impo&quot;&gt;document.selection&lt;/span&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;documentselection&quot;&gt;document.selection&lt;/h3&gt;
-&lt;h4 id=&quot;method&quot;&gt;  method&lt;/h4&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;clear&lt;/span&gt; : Clears the contents of the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;createRange&lt;/span&gt; : Creates a TextRange object from the current text selection, or a controlRange collection from a control selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;createRangeCollection&lt;/span&gt; : Creates a TextRange object collection from the current selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;empty&lt;/span&gt; : Cancels the current selection, sets the selection type to none, and sets the item property to null.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;properties&quot;&gt;  properties&lt;/h4&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;type&lt;/span&gt; : Retrieves the type of selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;typeDetail&lt;/span&gt; : Retrieves the name of the selection type.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;值得注意的是，从IE11开始不再支持&lt;span class=&quot;impo&quot;&gt;selection&lt;/span&gt;对象.请使用&lt;span class=&quot;impo&quot;&gt;getSelection&lt;/span&gt;对象.&lt;/p&gt;
-
-&lt;p&gt;再来看看FF提供的&lt;span class=&quot;impo&quot;&gt;document.getSelection&lt;/span&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;documentgetselection&quot;&gt;document.getSelection&lt;/h3&gt;
-&lt;h4 id=&quot;method-1&quot;&gt;  method&lt;/h4&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;getRangeAt&lt;/span&gt; : Returns a range object representing one of the ranges currently selected.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;注意,用户用鼠标在同一页面永远都只有一个选择区域,所以一般情况getRangeAt只能接收&lt;span class=&quot;impo&quot;&gt;0&lt;/span&gt;这一个参数.但用脚本可以创建多个选择区域(Chrome下通过脚本也只能创建一个选择区域)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;collapse(parentNode,offset)&lt;/span&gt; : Collapses the current selection to a single point.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;压缩选择区域至单个光标(在输入框中)位置&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;parentNode&lt;/span&gt;:光标将要移动到的目标元素&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;offset&lt;/span&gt;:光标在目标元素中所在偏移量.这里的偏移量会有两个值”0”和”1”,分别表示parentNode文本的起始位置和结束位置.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;extend(parentNode,offset)&lt;/span&gt;:Moves the focus of the selection to a specified point.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;parentNode&lt;/span&gt;:光标将要移动到的目标元素&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;offset&lt;/span&gt;:光标在目标元素中所在偏移量.这里的偏移量会有两种情况:&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;    1.目标元素只有textNode.这时&lt;span class=&quot;para&quot;&gt;offset&lt;/span&gt;的值表示光标在字符串中的位置&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;    2.目标元素含有非textNode子元素.这时&lt;span class=&quot;para&quot;&gt;offset&lt;/span&gt;的值表示光标定位到第&lt;span class=&quot;para&quot;&gt;offset&lt;/span&gt;个元素的末尾.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;modify(alert,direction,granularity)&lt;/span&gt; : Changes the current selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;改变选择区域&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;table&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td&gt;  &lt;span class=&quot;para&quot;&gt;alert&lt;/span&gt;:声明修改类型(move&lt;/td&gt;
-        &lt;td&gt; &lt;/td&gt;
-        &lt;td&gt;extend)&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;direction&lt;/span&gt;:移动(合并)的方向.可能的值&lt;span class=&quot;para&quot;&gt;forward&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;backward&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;left&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;right&lt;/span&gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;granularity&lt;/span&gt;:移动(合并)的单位.可能的值&lt;span class=&quot;para&quot;&gt;charracter&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;word&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;sentence&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;line&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;paragraph&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;lineboundary&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;sentenceboundary&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;paragraphboundary&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;documentboundary&lt;/span&gt;.(注意,FF不支持&lt;span class=&quot;para&quot;&gt;sentence&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;paragraph&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;sentenceboundary&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;paragraphboundary&lt;/span&gt;,&lt;span class=&quot;para&quot;&gt;documentboundary&lt;/span&gt;.值得一提的是在被选择内容为中文时,FF不支持”granularity=&lt;span class=&quot;para&quot;&gt;word&lt;/span&gt;“,但在Chrome上能正常使用.)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;collapseToStart&lt;/span&gt; : Collapses the selection to the start of the first range in the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;将选择区域压缩至区域开始的位置&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;collapseToEnd&lt;/span&gt; : Collapses the selection to the end of the last range in the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;将选择区域压缩至区域结束的位置&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;selectAllChildren(parentNode)&lt;/span&gt; : Adds all the children of the specified node to the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;选择&lt;span class=&quot;para&quot;&gt;parentNode&lt;/span&gt;的所有子节点内容&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;addRange(range)&lt;/span&gt; : A Range object that will be added to the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;将指定的区域添加到已选择区域&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;range&lt;/span&gt;:指定区域&lt;span class=&quot;para&quot;&gt;range&lt;/span&gt;可以通过&lt;span class=&quot;impo&quot;&gt;document.createRange&lt;/span&gt;创建,也可以通过&lt;span class=&quot;impo&quot;&gt;getRangeAt&lt;/span&gt;从已有区域选择&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;removeRange(range)&lt;/span&gt; : Removes a range from the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;从选择区域中删除指定的区域&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;removeAllRanges&lt;/span&gt; : Removes all ranges from the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;删除所有选择区域&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;deleteFromDocument&lt;/span&gt; : Deletes the selection’s content from the document.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;删除选择区域中的文字(只能删除文字,不会删除DOM元素)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;selectionLanguageChangae&lt;/span&gt; : Modifies the cursor Bidi level after a change in keyboard direction.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;在写这篇文章时,这个方法貌似已经不存在了,但官方文档还保留了这个方法.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;toString&lt;/span&gt; : Returns a string currently being represented by the selection object, i.e. the currently selected text.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;输出当前选择区域文本&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;containNode(aNode,aPartlyContained)&lt;/span&gt; : Indicates if a certain node is part of the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;检测某些节点,当它属于选择区域时返回true,否则返回false&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;aNode&lt;/span&gt;:待检测的节点&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;  &lt;span class=&quot;para&quot;&gt;aPartlyContained&lt;/span&gt;:检测类型&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;    1.&lt;span class=&quot;para&quot;&gt;aPartlyContained&lt;/span&gt;=true:当&lt;span class=&quot;para&quot;&gt;aNode&lt;/span&gt;的部分或全部属于选择区域的一部分时,则返回true&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;    1.&lt;span class=&quot;para&quot;&gt;aPartlyContained&lt;/span&gt;=false:当&lt;span class=&quot;para&quot;&gt;aNode&lt;/span&gt;整个节点属于选择区域的一部分时,则返回true(&lt;span class=&quot;para&quot;&gt;aNode&lt;/span&gt;等于选择区域时也返回false,也就是说&lt;span class=&quot;para&quot;&gt;aNode&lt;/span&gt;必须小于选择区域才会返回true)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;properties-1&quot;&gt;  properties&lt;/h4&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;anchorNode&lt;/span&gt; : Returns the Node in which the selection begins.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;返回选择区域开始位置所在的节点&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;anchorOffset&lt;/span&gt; : Returns a number representing the offset of the selection’s anchor within the anchorNode. If anchorNode is a text node, this is the number of characters within anchorNode preceding the anchor. If anchorNode is an element, this is the number of child nodes of the anchorNode preceding the anchor.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;返回选择区域开始的位置.如果选择区域是纯文本,返回选择区域中第一个字符的位置.如果选择区域是元素,返回那些在选择区域前面的同时也属于&lt;span class=&quot;para&quot;&gt;anchorNode&lt;/span&gt;的子节点的个数.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;focusNode&lt;/span&gt; : Returns the Node in which the selection ends.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;返回选择区域结束位置所在的节点&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;focusOffset&lt;/span&gt; : Returns a number representing the offset of the selection’s anchor within the focusNode. If focusNode is a text node, this is the number of characters within focusNode preceding the focus. If focusNode is an element, this is the number of child nodes of the focusNode preceding the focus.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;参照&lt;span class=&quot;impo&quot;&gt;anchorOffset&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;ifCollapsed&lt;/span&gt; : Returns a Boolean indicating whether the selection’s start and end points are at the same position.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;判断选择区域开始于结束位置是否相同&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;span class=&quot;impo&quot;&gt;rangeCount&lt;/span&gt; : Returns the number of ranges in the selection.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;返回&lt;span class=&quot;impo&quot;&gt;getSelection&lt;/span&gt;中的&lt;span class=&quot;impo&quot;&gt;range&lt;/span&gt;数&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;textarea id=&quot;test&quot; style=&quot;width:700px;height:200px;padding:4px 5px;margin:10px auto;resize:none;&quot;&gt;hellow world&lt;/textarea&gt;
-&lt;p&gt;&lt;button id=&quot;insertStr&quot;&gt;点我插入”_(:3」∠)_“内容&lt;/button&gt; &lt;button id=&quot;getStr&quot;&gt;点我获取选择内容&lt;/button&gt; &lt;button id=&quot;showOffset&quot;&gt;点我获取光标当前位置&lt;/button&gt;&lt;/p&gt;
-
-&lt;script type=&quot;text/javascript&quot;&gt;
-(function(){
-var $ = function(s){return document.getElementById(s)},
-	text = $('test'),
-	insert = $('insertStr'),
-	get = $('getStr'),
-	show = $('showOffset');
-
-insert.onclick=function(){insertString(text,'_(:3」∠)_');}
-get.onclick=function(){showSelection(text);}
-show.onclick=function(){alert(getAnchor(text));}
-
-function insertString(ele, str){
-    var r = null,newstart = 0,tb = ele.nodeType == 1 ? ele : docuemnt.body;
-    tb.focus();
-    if (document.all){
-        r = document.selection.createRange();
-        document.selection.empty();
-        r.text = str;
-        r.collapse();
-        r.select();
-    }else{
-        newstart = tb.selectionStart+str.length;
-        tb.value=tb.value.substr(0,tb.selectionStart)+str+tb.value.substring(tb.selectionEnd);
-        tb.selectionStart = newstart;
-        tb.selectionEnd = newstart;
-    }
-}
-function getSelection(ele){
-    var sel = '',r = null,tb = ele.nodeType == 1 ? ele : docuemnt.body;
-    if (document.all){
-        r = document.selection.createRange();
-        document.selection.empty();
-        sel = r.text;
-    }else{
-        sel = tb.value.substring(tb.selectionStart, tb.selectionEnd);
-    }
-    return sel;
-}
-function showSelection(ele){
-    var sel = getSelection(ele);
-    alert('选中的文本是：'+sel);
-}
-function getAnchor(ele){
-	var index = 0,r = null,tb = ele.nodeType == 1 ? ele : document.body;
-	if(document.all){
-		r = document.selection.createRange();
-		tb.focus();
-		r.moveStart('character', -tb.value.length); 
-		index = r.text.length;	
-	}else{
-		index = tb.selectionStart
-	}
-	return index
-}
-})();
-&lt;/script&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;cm&quot;&gt;/*向输入框当前位置插入字符*/&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;InsertString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;newstart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nodeType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;docuemnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;collapse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;newstart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectionStart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;substr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectionStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectionEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectionStart&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newstart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectionEnd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;newstart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;/*获取当前选择区域文字*/&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GetSelection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nodeType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;docuemnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;empty&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;sel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;sel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectionStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectionEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ShowSelection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;GetSelection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'选中的文本是：'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;/*获取光标位置*/&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getAnchor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nodeType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ele&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selection&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createRange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;moveStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'character'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
-		&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;	
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;tb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;selectionStart&lt;/span&gt;
-	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://msdn.microsoft.com/zh-cn/library/ie/ms535869\(v=vs.85\).aspx&quot;&gt;selection的官方文档&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Selection&quot;&gt;getSelection的官方文档&lt;/a&gt;&lt;/p&gt;</content><author><name>番茄拌糖</name></author><summary type="html">微博”@”功能相信每一个玩过微博的人都用过，当你输入”@”字符串时，在光标位置旁边就会生成一个提示框，你可以快速的选取你最近”@”过的人。</summary></entry><entry><title type="html">javascript事件触发器</title><link href="/javascript/2013/12/19/javascript-fireEvent/" rel="alternate" type="text/html" title="javascript事件触发器" /><published>2013-12-19T00:00:00+08:00</published><updated>2013-12-19T00:00:00+08:00</updated><id>/javascript/2013/12/19/javascript-fireEvent</id><content type="html" xml:base="/javascript/2013/12/19/javascript-fireEvent/">&lt;p&gt;转载此文方便以后查阅&lt;/p&gt;
-
-&lt;p&gt;事件触发器就是用来触发某个元素下的某个事件，IE下&lt;span class=&quot;impo&quot;&gt;fireEvent&lt;/span&gt;方法，高级浏览器（chrome,firefox等）有&lt;span class=&quot;impo&quot;&gt;dispatchEvent&lt;/span&gt;方法。&lt;/p&gt;
-
-&lt;p&gt;一般我们在元素上绑定事件后，是靠用户在这些元素上的鼠标行为来捕获或者触发事件的，或者自带的浏览器行为事件，比如click，mouseover，load等等，有些时候我们需要自定义事件或者在特定的情况下需要触发这些事件。这个时候我们可以使用IE下fireEvent方法，高级浏览器（chrome,firefox等）有dispatchEvent方法。&lt;/p&gt;
-
-&lt;p&gt;在IE下：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//document上绑定自定义事件ondataavailable&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attachEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ondataavailable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;obj&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//obj元素上绑定click事件&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attachEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'onclick'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//调用document对象的createEventObject方法得到一个event的对象实例。&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createEventObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//触发document上绑定的自定义事件ondataavailable&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fireEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ondataavailable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//触发obj元素上绑定click事件&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onclick&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fireEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'onclick'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ms536423\(v=vs.85\).aspx&quot;&gt;fireEvent的官方文档&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/ie/ms536390\(v=vs.85\).aspx&quot;&gt;createEventObject的官方文档&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;再看看高级浏览器（chrome,firefox等）：&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;c1&quot;&gt;//document上绑定自定义事件ondataavailable&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ondataavailable'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;obj&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//obj元素上绑定click事件&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'click'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//调用document对象的 createEvent 方法得到一个event的对象实例。&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'HTMLEvents'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// initEvent接受3个参数：&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// 事件类型，是否冒泡，是否阻止浏览器的默认行为&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ondataavailable&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//触发document上绑定的自定义事件ondataavailable&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatchEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;event1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'HTMLEvents'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;event1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;initEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;click&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;event1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;eventType&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'message'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//触发obj元素上绑定click事件&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onclick&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dispatchEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;原文地址：&lt;a href=&quot;http://www.css88.com/archives/4998&quot;&gt;javascript事件触发器fireEvent和dispatchEvent&lt;/a&gt;&lt;/p&gt;</content><author><name>番茄拌糖</name></author><summary type="html">转载此文方便以后查阅</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Acs1899</title>
+  
+  
+  <link href="https://blog.acs1899.com/atom.xml" rel="self"/>
+  
+  <link href="https://blog.acs1899.com/"/>
+  <updated>2021-02-28T07:42:10.237Z</updated>
+  <id>https://blog.acs1899.com/</id>
+  
+  <author>
+    <name>番茄拌糖</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>西藏行</title>
+    <link href="https://blog.acs1899.com/2018/07/30/Tibet/"/>
+    <id>https://blog.acs1899.com/2018/07/30/Tibet/</id>
+    <published>2018-07-29T16:00:00.000Z</published>
+    <updated>2021-02-28T07:42:10.237Z</updated>
+    
+    <content type="html"><![CDATA[<p>趁着在投入到新工作之前把西藏之行记个流水账。</p><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul><li>去西藏最需要注意的就是<code>高原反应</code>了。在出发前调整好身体状态、避免感冒，也可以适当的吃一些预防高反的药。</li><li>红顶天（预防高反，个人感觉没太大用）、葡萄糖冲剂（在高原上体力消耗非常大，冲一杯葡萄糖即补水又补能量）。</li><li>冲锋衣裤、帽子、墨镜、防晒霜（最高防晒等级）。高原上风大且紫外线强，一定要做好防晒措施。</li><li>在西藏旅行避免不了长时间坐汽车，多带一些巧克力。</li><li>如果你的线路上有靠近边界的景点，可能会需要边防证（跟旅行社确认清楚）。一般旅行社可以帮你在西藏代办。最好是在自己户口所在地的公安局办理（免费，两小时拿到）。<br><img src="/assets/images/tibet/IMG_2061.JPG" alt="边防证"></li></ul><h3 id="出发"><a href="#出发" class="headerlink" title="出发"></a>出发</h3><p>我是从成都出发坐火车走青藏线到拉萨，两天发一趟。</p><p><img src="/assets/images/tibet/IMG_2063.JPG"></p><p>第二天中午到达西宁站，换车。</p><p><img src="/assets/images/tibet/IMG_2065.JPG"></p><p>新车上的床头有氧气口。</p><p><img src="/assets/images/tibet/IMG_2068.JPG"></p><p>从西宁站出发没多久，就会经过青海湖。</p><p><img src="/assets/images/tibet/DSC_0238.JPG"></p><p><img src="/assets/images/tibet/DSC_0226.JPG"></p><p>天上的云一朵一朵的很矮，伸手就能摸到。</p><p><img src="/assets/images/tibet/DSC_0275.JPG"></p><p><img src="/assets/images/tibet/DSC_0251.JPG"></p><p>餐车上的川味盒饭，20一份。</p><p><img src="/assets/images/tibet/IMG_2087.JPG"></p><p>到达格尔木。</p><p><img src="/assets/images/tibet/IMG_2090.JPG"></p><p>过了格尔木再经过可可西里、唐古拉山口，就正式进入西藏地接。可惜我这趟车在过可可西里和唐古拉山的时候是晚上，啥也看不见了。听说从兰州出发的那趟列车是早上经过可可西里，运气好的话还能看见藏羚羊。</p><p>翻过唐古拉山就是另一番天地。</p><p><img src="/assets/images/tibet/DSC_0302.JPG"></p><p><img src="/assets/images/tibet/DSC_0314.JPG"></p><h3 id="拉萨"><a href="#拉萨" class="headerlink" title="拉萨"></a>拉萨</h3><p>第三天中午到达拉萨。拉萨城市的规模大致相当于四川的一个普通地级市。</p><p><img src="/assets/images/tibet/IMG_2105.JPG"></p><p>火车站的出租车要凑满了人才会走。我和另外三个藏人一车，一路上其他人全用藏语交流，剩下我一脸蒙蔽。</p><p>酒店楼下的煎饼果子，来一套！！！</p><blockquote><p>酒店的话建议找离市中心近的。因为从拉萨出发的周边线路，基本都是在布达拉宫集合。</p></blockquote><p><img src="/assets/images/tibet/IMG_2107.JPG"></p><p>到了酒店就开始有点<code>高反</code>了，喝了一杯葡萄糖，直接躺到下午6点。醒来之后感觉好了许多，然后收拾东西出门觅食。</p><p><img src="/assets/images/tibet/IMG_2111.JPG"></p><p>找了一家牛肉汤锅店，点了最小份，因为服务员说素菜可以免费加。可能是这里的人对“小份”这个词有什么误解，最后我连锅里的牛肉都没吃完<em>(:з」∠)</em></p><p>酒足饭饱后就原路往回溜达，期间路过一家火锅店，放着一首用藏语唱的《演员》，有一种腾格尔唱《菊花台》的感觉，可惜没有录下来。</p><p>来拉萨之前还有点担心这里的治安问题，来了之后发现这里绝对是中国最安全的地方之一。每一个路口都有民警执勤点，靠近市中心还有武警把守。特别是布达拉宫，安保级别跟天安门差不多了。</p><p>刚到高原最难熬的就是第一个晚上，伴随着气短和头晕基本一夜没睡。</p><blockquote><p>建议第一晚不要洗澡，西藏早晚温差大，容易感冒；同时不要饮酒。</p></blockquote><h3 id="大昭寺"><a href="#大昭寺" class="headerlink" title="大昭寺"></a>大昭寺</h3><p>第四天，因为晚上没睡好，直接睡到11点。起来收拾东西准备去大昭寺。</p><p>因为酒店里八廓街很近，出门直接步行1km就到了。</p><p>八廓街算是拉萨的一个特色步行街，里面有很多卖藏区特产的，其中<code>冬虫夏草</code>最多。</p><p><img src="/assets/images/tibet/IMG_2122.JPG"></p><p>大昭寺位于八廓街的中心，是拉萨仅此于布达拉宫的大寺庙，在这里能看到很多来朝圣的人群。</p><p><img src="/assets/images/tibet/DSC_0358.JPG"></p><p><img src="/assets/images/tibet/DSC_0363.JPG"></p><p><img src="/assets/images/tibet/DSC_0369.JPG"></p><p>大昭寺宫殿</p><p><img src="/assets/images/tibet/DSC_0414.JPG"></p><p><img src="/assets/images/tibet/DSC_0416.JPG"></p><p><img src="/assets/images/tibet/DSC_0421.JPG"></p><p><img src="/assets/images/tibet/DSC_0432.JPG"></p><p>中午在八廓街寻了一家小店，一个盖饭 + 一壶奶茶</p><p><img src="/assets/images/tibet/IMG_2132.JPG"></p><p><img src="/assets/images/tibet/IMG_2133.JPG"></p><p><img src="/assets/images/tibet/IMG_2134.JPG"></p><p>吃完饭出来瞎逛，走到了衙门口</p><p><img src="/assets/images/tibet/IMG_2137.JPG"></p><p>路过天桥来一张</p><p><img src="/assets/images/tibet/IMG_2140.JPG"></p><h3 id="羊卓雍戳"><a href="#羊卓雍戳" class="headerlink" title="羊卓雍戳"></a>羊卓雍戳</h3><p>第五天出发去羊卓雍戳，在网上报的一日游团。<br>一辆GL8一车10人左右，从布达拉宫出发，大部分时间都花在路上，一小段高速，后面全是盘山公路。</p><p><img src="/assets/images/tibet/DSC_0487.JPG"></p><p><img src="/assets/images/tibet/DSC_0627.JPG"></p><p>2元/人的厕所</p><p><img src="/assets/images/tibet/IMG_2163.JPG"></p><p>山顶远眺羊卓雍戳</p><p><img src="/assets/images/tibet/DSC_0531.JPG"></p><p><img src="/assets/images/tibet/IMG_2168.JPG"></p><p>从山顶下来天气变阴了</p><p><img src="/assets/images/tibet/DSC_0625.JPG"></p><p><img src="/assets/images/tibet/DSC_0588.JPG"></p><p><img src="/assets/images/tibet/DSC_0619.JPG"></p><p>返回布达拉宫已经快夕阳西下了，</p><p><img src="/assets/images/tibet/DSC_0638.JPG"></p><p><img src="/assets/images/tibet/DSC_0643.JPG"></p><h3 id="布达拉宫"><a href="#布达拉宫" class="headerlink" title="布达拉宫"></a>布达拉宫</h3><p>第六天出发布达拉宫，依旧是在网上报的一日游团包导游。布达拉宫内部不允许拍照，所以想看的只能自己去，不过里面基本也都是佛像与活佛金身</p><p><img src="/assets/images/tibet/IMG_2177.JPG"></p><p><img src="/assets/images/tibet/IMG_2176.JPG"></p><h3 id="珠峰大本营"><a href="#珠峰大本营" class="headerlink" title="珠峰大本营"></a>珠峰大本营</h3><p>去珠峰大本营有多种路线可以选择，大部分是环线包车。<br>我在网上报的珠峰大本营专线游：第一天早上坐火车到日喀则，再包车直达珠峰大本营，晚上到大本营。<br>珠峰大本营海拔5200米，有简易的帐篷旅馆和绒布寺招待所。<code>前往珠峰大本营需要边防证，需要提前办理。</code></p><p>坐火车出发前往日喀则</p><p><img src="/assets/images/tibet/IMG_2196.JPG"></p><p>中午到达日喀则，吃过午饭坐上包车出发，途中经过拉孜</p><p><img src="/assets/images/tibet/IMG_2198.JPG"></p><p>经过嘉措拉山口，正式进入保护区</p><p><img src="/assets/images/tibet/DSC_0729.JPG"></p><p>上面的字已经看不清了</p><p><img src="/assets/images/tibet/DSC_0722.JPG"></p><p>国家公园门口，进去需要单独购买门票</p><p><img src="/assets/images/tibet/IMG_2203.JPG"></p><p>进入国家公园后一路沿着山路向上行驶</p><p><img src="/assets/images/tibet/IMG_2206.JPG"></p><p><img src="/assets/images/tibet/DSC_0758.JPG"></p><p>来到加乌拉山口。这里是远眺珠峰的最佳位置，远处最高的山峰就是珠峰了</p><p><img src="/assets/images/tibet/IMG_2211.JPG"></p><p><img src="/assets/images/tibet/IMG_2212.JPG"></p><p>因为加乌拉山口耽误了一些时间，到达珠峰大本营已经晚上9点了，没能看到夕阳下珠峰的”日照金山”</p><p>大本营的帐篷旅馆</p><p><img src="/assets/images/tibet/DSC_0780.JPG"></p><p>围着一个火炉的大通铺，男女混住</p><p><img src="/assets/images/tibet/IMG_2217.JPG"></p><p>大本营上没啥能吃的，幸好带了一盒泡面</p><p><img src="/assets/images/tibet/IMG_2220.JPG"></p><p>晚上的大本营外面一片漆黑，是真的伸手不见五指的那种黑，所以大家都跑到外面拍星空。</p><p>由于第一次拍星空经验不足，导致前面拍了很多照片不是太暗就是噪点太多，最后拍到凌晨1点过实在刚不住了</p><p>![](/assets/images/tibet/2018-06-07 21_22_08.gif)</p><p>在5000米的地方睡觉基本睡不着，翻个身都要喘两口大气。<br>一晚上迷迷糊糊的熬到了天亮，赶紧起床又去拍照</p><p><img src="/assets/images/tibet/IMG_2222.JPG"></p><p><img src="/assets/images/tibet/IMG_2239.JPG"></p><p>![](/assets/images/tibet/2018-06-07 21_52_52.gif)</p><h3 id="返程"><a href="#返程" class="headerlink" title="返程"></a>返程</h3><p>一早吃过早饭就开始返程了，返回日喀则再坐火车回到拉萨，第二天坐飞机回成都。</p><p>下次再来打算自驾了，从成都一路开到拉萨。只是可能没有那么长的假期了，看看退休之后能不能再来一次吧。</p>]]></content>
+    
+    
+    <summary type="html">趁着离职的空闲时间，说走就走</summary>
+    
+    
+    
+    <category term="旅游" scheme="https://blog.acs1899.com/categories/%E6%97%85%E6%B8%B8/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>《活着》</title>
+    <link href="https://blog.acs1899.com/2016/02/25/alive/"/>
+    <id>https://blog.acs1899.com/2016/02/25/alive/</id>
+    <published>2016-02-24T16:00:00.000Z</published>
+    <updated>2021-02-28T07:42:05.608Z</updated>
+    
+    <content type="html"><![CDATA[<p>lusir总是说着</p><blockquote class="blockquote-center">  活着就有希望</blockquote><p>一开始我并不理解，为何一个18岁的少年会一边写着代码一边语重心长地说出这样的话。</p><p>在我有限的记忆里，每当他说出这句话，我总能从他小得快看不见的眼睛中察觉到一丝睿智，但微扬的嘴角又让我觉得这一切只是他对生活的嘲讽。</p><p>正如《活着》中福贵说过</p><blockquote class="blockquote-center">  做人不能忘记四条，话不要说错，床不要睡错，门槛不要踏错，口袋不要摸错。</blockquote><p>书中的福贵，年轻时便睡错了床、踏错了门槛、说错了话、摸错了口袋。祖辈的基业被他从牛输成了羊，羊输成了鹅，鹅输成了鸡，到最后连鸡也没有了。</p><p>就是这样一个“败家子”，经历了上个世纪中华大地最动荡的几十年，身边的亲人一个个离他而去，而他依然活着。</p><p>人们常说上过真正战场的人，才能真正理解生命的意义。</p><p>春生，和福贵一起从死人堆里爬出来的战友，解放后当上了县长，文革中被批斗成“走资派”。那天春生来和福贵告别，福贵不停开导春生要他活下去，春生也答应了福贵。</p><p>最后春生还是自杀了。我想不通春生为什么会自杀，早已经历过生死的人为什么不能忍受一时之辱。后来我突然明白了，在战场上只要你活着就有希望，但是在那个时代，活着看不到希望。</p><p>是什么让福贵一直坚持下去的？找了很久，好像并没有什么是福贵身上特有的。唯一特有的是他悲惨的一生。每当悲剧来临，福贵就这样默默承受着，作为一个普通人，他除了接受命运的安排和自我安慰之外，还能干什么。这不就是一个真实的普通人吗？真实的有点可怕，你明知这一切只是小说虚构出来的，但你却真实地感受到他的存在。真实到你会认为这一切有一天会发生在你的头上。</p><p>书中最后，福贵和他的老牛（也叫福贵）伴着夕阳的余晖远去，两个福贵在生命最后的里程中找到了依靠。夕阳落下，大地和黑夜融为一体，两个垂暮的生命走向他们的归宿。</p><p>写这篇文章的时候已是深夜，此时此刻我在希望着什么？</p><p>需求不再改？代码不再出bug？线上不再报故障？</p><p>漆黑的夜中，能看见几颗星，这就是希望吧。</p>]]></content>
+    
+    
+    <summary type="html">活着就有希望</summary>
+    
+    
+    
+    <category term="笔记" scheme="https://blog.acs1899.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>初试Docker</title>
+    <link href="https://blog.acs1899.com/2016/02/15/hellow-docker/"/>
+    <id>https://blog.acs1899.com/2016/02/15/hellow-docker/</id>
+    <published>2016-02-14T16:00:00.000Z</published>
+    <updated>2021-02-28T07:41:32.281Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>Docker</strong>，2015最火的开源项目之一。</p><p>关于Docker-“快速部署”、“隔离”、“镜像”、“容器”这些关键词想必你一定听过。Docker可以将你的基础配置和应用服务隔离开来，打包你的环境配置并实现快速部署。通过“镜像”，我们可以快速的将一个应用部署到多个服务器上，而“容器”则是用来承载这些应用的。</p><p>使用Docker能给我们带来哪些好处：</p><ul><li>   根据镜像快速部署</li><li>   可以通过DockerHub或搭建私有镜像库来查找、上传镜像</li><li>   Docker对资源占少，应用之间能做到很好的隔离同时也能保证相互间的通信</li></ul><p>本篇文章主要介绍如何使用docker，创建自己的镜像，运行容器等。具体使用准则参考官方<a href="https://docs.docker.com/">文档</a>。</p><h3 id="你需要知道的一些基本概念"><a href="#你需要知道的一些基本概念" class="headerlink" title="你需要知道的一些基本概念"></a>你需要知道的一些基本概念</h3><h5 id="镜像-Image"><a href="#镜像-Image" class="headerlink" title="镜像-Image"></a>镜像-Image</h5><p>镜像可以理解为应用的一个快照。里面保存着该应用运行所需要的各个配置、依赖、环境参数等。镜像还有一个非常关键的概念便是可以<strong>叠加</strong>。镜像使用了一种叫<a href="https://en.wikipedia.org/wiki/UnionFS">union file system</a>的技术，将不同镜像按照层级叠加起来（可以理解成一种依赖关系）。</p><h5 id="容器-Container"><a href="#容器-Container" class="headerlink" title="容器-Container"></a>容器-Container</h5><p>docker的容器则可理解为一个基础版的Linux系统。容器会根据镜像中的配置、资源在镜像的上层再添加一个应用运行的读写层。</p><p><img src="/assets/images/post/docker-filesystems.png" alt="docker-filesystem"></p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>以下是<strong>mac os</strong>系统安装流程，<a href="https://docs.docker.com/linux/step_one/">Linux</a> <a href="https://docs.docker.com/windows/step_one/">Windows</a></p><p>Docker本身并不支持直接在Mac OS上运行，不过Docker社区提供了一个工具boot2docker（实际是在Mac OS上创建一个虚拟机）。目前官方已将boot2docker整合到了官方工具<strong>Docker Toolbox</strong>中。</p><p>下载<a href="https://github.com/docker/toolbox/releases/download/v1.10.1/DockerToolbox-1.10.1.pkg">Docker Toolbox</a></p><p>具体安装流程可参考<a href="https://docs.docker.com/mac/step_one/">Docker Mac OS 安装</a></p><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>注意：直接在终端是无法运行docker的，需要进入boot2docker中。</p><pre><code class="[bash]">docker-machine start default // 让boot2docker启动一个虚拟机作为docker的运行环境 - default为虚拟机名docker-machine ssh default // 进入boot2docker生成的虚拟机</code></pre><p>Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。</p><p>我们下载一个 <strong>alexwhen/docker-2048</strong> 镜像作为示例</p><pre><code class="[bash]">docker pull alexwhen/docker-2048</code></pre><p><img src="/assets/images/post/docker-images.png" alt="docker-images"></p><p><strong>docker images</strong> 列出本地所有可用的Image，包括镜像名、TAG、创建时间和大小等信息。</p><p>现在我们可以用 <strong>alexwhen/docker-2048</strong> 镜像运行一个容器。</p><pre><code class="[bash]">docker run -d -p 8080:80 alexwhen/docker-2048</code></pre><p><strong>-d</strong> 让Container以后台进程运行，**-p** 指定8080端口的请求转发到Container的80端口。</p><p>通过 <strong>docker ps</strong> 检查我们容器是否运行正常。</p><p><img src="/assets/images/post/docker-ps.png" alt="docker-ps"></p><p>如何访问我们的应用呢？注意在Mac OS下，我们的docker是运行在boot2docker里的，所以需要链接虚拟机地址才能访问docker中的应用。</p><p>退出boot2docker 执行 <strong>docker-machine ls</strong></p><p><img src="/assets/images/post/docker-machine-ls.png" alt="docker-machine-ls"></p><p>显示boot2docker地址 <strong>192.168.99.100</strong> 访问 <strong><a href="http://192.168.99.100:8080/">http://192.168.99.100:8080</a></strong></p><p><img src="/assets/images/post/docker-2048.png" alt="docker-2048"></p><h3 id="Container内部"><a href="#Container内部" class="headerlink" title="Container内部"></a>Container内部</h3><p>下面我们可以进入Container，来看看Container内部是如何运作的。</p><pre><code class="[bash]">docker run -ti -p 8080:80 alexwhen/docker-2048 /bin/sh</code></pre><p>应用代码 <code>cd /usr/share/nginx/html</code></p><p><img src="/assets/images/post/code-2048.png" alt="alexwhen/docker-2048"></p><p>nginx配置 <code>vi /etc/nginx/nginx.conf</code></p><pre><code class="[json]">server &#123;        listen       80;        server_name  localhost;        location / &#123;            root   html;            index  index.html index.htm;        &#125;&#125;</code></pre><p>当容器以 <strong>alexwhen/docker-2048</strong> 镜像启动时，会启动一个nginx并监听Container的80端口。</p><p>当我们访问 <strong><a href="http://192.168.99.100:8080/">http://192.168.99.100:8080</a></strong> 时，boot2docker会将8080端口的请求转发到Container的80端口，进而访问到应用。</p><p>其实上面的例子并不够典型，因为具体的应用代码是保存在镜像中的，但是应用的代码是经常更新的，所以不适合放在镜像中。</p><p>一种解决方案应该是将具体的应用代码放在宿主机，然后挂载到容器上运行。</p><pre><code class="[bash]">docker run -d -v /usr/data:/home/data -p 8080:80 alexwhen/docker-2048</code></pre><p>这会把本地目录 <strong>/usr/data</strong> 挂载到容器 <strong>/home/data</strong> 目录。</p><p>另一种方案是在容器内生成 <strong>数据卷</strong>，然后用它来做数据持久化。</p><h5 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h5><ul><li>   数据卷可在容器之间共享或重用</li><li>   数据卷中的更改可以直接生效</li><li>   数据卷中的更改不会包含在镜像的更新中</li><li>   数据卷的生命周期一直持续到没有容器使用它为止</li></ul><p>生成数据卷</p><pre><code class="[bash]">docker run -d -v /usr/data --name mydata -p 8080:80 alexwhen/docker-2048</code></pre><p>在另外一个容器挂载刚才生成的数据卷</p><pre><code class="[bash]">docker run -d -v --volumes-from mydata --name mydb alexwhen/docker-2048</code></pre><h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。</p><img style="display:block;width:200px;margin:0 auto;" src="/assets/images/post/weiguan.png" title="赶紧买个瓜围观" /><img style="display:block;width:200px;margin:0 auto;" src="/assets/images/post/weiguans.png" title="不明真相的围观群众" />]]></content>
+    
+    
+    <summary type="html">初步了解docker及使用</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Linux" scheme="https://blog.acs1899.com/tags/Linux/"/>
+    
+    <category term="Mac" scheme="https://blog.acs1899.com/tags/Mac/"/>
+    
+    <category term="Docker" scheme="https://blog.acs1899.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac下卸载mysql</title>
+    <link href="https://blog.acs1899.com/2016/02/12/mac-uninstall-mysql/"/>
+    <id>https://blog.acs1899.com/2016/02/12/mac-uninstall-mysql/</id>
+    <published>2016-02-11T16:00:00.000Z</published>
+    <updated>2021-02-28T07:41:14.238Z</updated>
+    
+    <content type="html"><![CDATA[<p>记录删除需要的操作，供以后查阅。</p><pre><code class="[bash]">sudo rm /usr/local/mysqlsudo rm -rf /usr/local/mysql*sudo rm -rf /Library/StartupItems/MySQLCOMsudo rm -rf /Library/PreferencePanes/My*vim /etc/hostconfig and removed the line MYSQLCOM=-YES-rm -rf ~/Library/PreferencePanes/My*sudo rm -rf /Library/Receipts/mysql*sudo rm -rf /Library/Receipts/MySQL*sudo rm -rf /var/db/receipts/com.mysql.*</code></pre>]]></content>
+    
+    
+    <summary type="html">mac下卸载DMG包安装的mysql</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Linux" scheme="https://blog.acs1899.com/tags/Linux/"/>
+    
+    <category term="Mac" scheme="https://blog.acs1899.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日志分割</title>
+    <link href="https://blog.acs1899.com/2016/01/26/cronologo/"/>
+    <id>https://blog.acs1899.com/2016/01/26/cronologo/</id>
+    <published>2016-01-25T16:00:00.000Z</published>
+    <updated>2021-02-28T07:41:11.786Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="日志分割"><a href="#日志分割" class="headerlink" title="日志分割"></a>日志分割</h2><p>bizfe平台的nginx日志由于一直写在一个文件里，长年累月后导致该日志文件过于臃肿，对日志数据的查找和分析带来很多不便。</p><h4 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h4><p>cronolog日志分割工具</p><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code>wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/vps/cronolog-1.6.2.tar.gztar zxvf cronolog-1.6.2.tar.gzcd cronolog-1.6.2./configuremakemake install</code></pre><h4 id="创建日志管道"><a href="#创建日志管道" class="headerlink" title="创建日志管道"></a>创建日志管道</h4><pre><code>cd /home/service/nginx/logsmkfifo /home/service/nginx/logs/bizfe.access.pipe.logmkdir pipe /*用来存放分割后的日志*/</code></pre><h4 id="修改nginx配置-amp-重启"><a href="#修改nginx配置-amp-重启" class="headerlink" title="修改nginx配置&amp;重启"></a>修改nginx配置&amp;重启</h4><pre><code>access_log logs/bizfe.access.pipe.log;./nginx -s reload</code></pre><h4 id="启动cronolog"><a href="#启动cronolog" class="headerlink" title="启动cronolog"></a>启动cronolog</h4><p>以下命令将日志以天为单位分割</p><pre><code>nohup cat /home/service/nginx/logs/bizfe.access.pipe.log | nohup /usr/sbin/cronolog /home/service/nginx/logs/pipe/bizfe.access.%Y%m%d.log &amp;</code></pre>]]></content>
+    
+    
+    <summary type="html">用cronolog分割Nginx日志</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Linux" scheme="https://blog.acs1899.com/tags/Linux/"/>
+    
+    <category term="Mac" scheme="https://blog.acs1899.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在mac中使用cron</title>
+    <link href="https://blog.acs1899.com/2015/08/26/mac-crontab/"/>
+    <id>https://blog.acs1899.com/2015/08/26/mac-crontab/</id>
+    <published>2015-08-25T16:00:00.000Z</published>
+    <updated>2021-02-28T07:41:09.030Z</updated>
+    
+    <content type="html"><![CDATA[<p>常用的cron命令:</p><pre><code class="[bash]">  crontab -e //编辑任务  -l //显示已有任务  -r //删除所有任务</code></pre><p>在mac下可能会遇见无法添加任务的情况</p><pre><code class="[bash]">  crontab: &quot;/usr/bin/vi&quot; exited with status 1</code></pre><p>这是因为环境变量<span class="impo">$EDITOR</span> 是 <span class="impo">vi</span></p><p>重新设置成 <span class="impo">vim</span> 就行了</p>]]></content>
+    
+    
+    <summary type="html">在mac osx 中使用 crontab 注意事项</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Linux" scheme="https://blog.acs1899.com/tags/Linux/"/>
+    
+    <category term="Mac" scheme="https://blog.acs1899.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>promise中的错误捕获</title>
+    <link href="https://blog.acs1899.com/2015/03/11/why-mocha-can-not-catch-promise-err/"/>
+    <id>https://blog.acs1899.com/2015/03/11/why-mocha-can-not-catch-promise-err/</id>
+    <published>2015-03-10T16:00:00.000Z</published>
+    <updated>2021-02-28T07:41:06.286Z</updated>
+    
+    <content type="html"><![CDATA[<p>接<a href="http://acs1899.info/javascript/2015/03/09/node-test-promise.html">上篇</a>文章留下的一个没有解决的问题：<strong>在promise中的错误为什么在外层函数捕获不到？</strong></p><p>来看下面一个栗子：</p><pre><code class="[javascript]">    var o = &#123;&#125;;    function A()&#123;        try&#123;            o.show();        &#125;catch(err)&#123;        &#125;    &#125;    function B()&#123;        try&#123;            A();            console.log(&quot;你看不见我&quot;)        &#125;catch(err)&#123;            console.log(err)        &#125;    &#125;    B();//输出结果：&quot;你看不见我&quot;</code></pre><p>上面的栗子说明 <span class="impo">try/catch</span> 在捕获到错误后阻止了错误向上传递。你只能手动抛出错误让上层函数捕获。</p><pre><code class="[javascript]">    var o = &#123;&#125;;    function A()&#123;        try&#123;            o.show();        &#125;catch(err)&#123;            throw err        &#125;    &#125;    function B()&#123;        try&#123;            A();            console.log(&quot;你看不见我&quot;)        &#125;catch(err)&#123;            console.log(err)        &#125;    &#125;    B();//输出结果：&quot;[TypeError: Object #&lt;Object&gt; has no method &#39;show&#39;]&quot;</code></pre><p>再看看文章开头提到的问题 <strong>在promise中的错误为什么在外层函数捕获不到？</strong></p><p>###真相只有一个</p><p>promise模块核心代码<a href="https://github.com/then/promise/blob/master/lib/core.js">core.js</a>:</p><pre><code class="[javascript]">    ...    /*直接跳至关键处*/    var cb = state ? deferred.onFulfilled : deferred.onRejected      if (cb === null) &#123;        (state ? deferred.resolve : deferred.reject)(value)        return      &#125;      var ret      /* #A */      try &#123;        ret = cb(value)      &#125;      catch (e) &#123;        deferred.reject(e)        return      &#125;      /* #B */      deferred.resolve(ret)    ...</code></pre><p>注意 <span class="impo">#A</span> 与 <span class="impo">#B</span> 之间的代码。没错就是它！！！这里 <span class="impo">catch</span> 错误后并没有将其抛出，而是传递给了下级 <span class="impo">reject</span> 并结束当前函数。</p><p>好了，现在菊势基本明了了。问题根源便是 <span class="impo">Promise</span> 始终劫持着错误对象没有抛出，导致外层函数捕获不到错误。</p><p>那么再往下看 <span class="impo">Promise.catch</span> 方法又是如何捕获错误的？</p><p><a href="https://github.com/then/promise/blob/master/lib/es6-extensions.js">es6-extensions.js</a>:</p><pre><code class="[javascript]">    Promise.prototype[&#39;catch&#39;] = function (onRejected) &#123;        return this.then(null, onRejected);    &#125;</code></pre><p>原来 <span class="impo">Promise.catch</span> 不过是 <span class="impo">Promise.then(null,reject)</span> 的缩写版。</p><p>其实 <span class="impo">Promise</span> 作者是建议在所有 <span class="impo">Promise</span> 对象后加上 <span class="impo">Promise.done</span> 方法。<span class="impo">Promise.catch</span> 方法只是为了与ES6标准规范保持一致而添加的。</p><p><a href="https://github.com/then/promise/blob/master/lib/done.js">done.js</a>:</p><pre><code class="[javascript]">    &#39;use strict&#39;;    var Promise = require(&#39;./core.js&#39;)    var asap = require(&#39;asap&#39;)    module.exports = Promise    Promise.prototype.done = function (onFulfilled, onRejected) &#123;        var self = arguments.length ? this.then.apply(this, arguments) : this        self.then(null, function (err) &#123;            asap(function () &#123;                throw err            &#125;)        &#125;)    &#125;</code></pre><p><span class="impo">Promise.done</span> 的作用与 <span class="impo">Promise.then</span> 基本一致（注意done并没有 <span class="impo">return</span> Promise对象，所以 <span class="impo">done</span> 只能放在最后），只是在后面加了一层抛出捕获到的错误。</p>]]></content>
+    
+    
+    <summary type="html">promise捕获错误后不会直接抛出错误，而是传递给后续回调链</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何为使用Promise规范的接口写测试用例</title>
+    <link href="https://blog.acs1899.com/2015/03/09/node-test-promise/"/>
+    <id>https://blog.acs1899.com/2015/03/09/node-test-promise/</id>
+    <published>2015-03-08T16:00:00.000Z</published>
+    <updated>2021-02-28T07:41:03.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>nodeJs为Javascript引入了单元测试的概念。单元测试能够帮助我们更好的提高代码质量，让BUG在代码编写的时候即被消灭掉。</p><p>同步单元测试：</p><pre><code class="[javascript]">    var should = require(&#39;should&#39;);/*断言库*/    function A(x)&#123;        return x ? true : false    &#125;    describe(&#39;function A test&#39;,function()&#123;        it(&#39;when x = 1,return true&#39;,function()&#123;            A(1).should.be.true;        &#125;);        it(&#39;when x = 0,return false&#39;,function()&#123;            A(0).should.be.false;        &#125;);    &#125;);</code></pre><p>异步单元测试：</p><pre><code class="[javascript]">    var should = require(&#39;should&#39;);    var fs = require(&#39;fs&#39;);    describe(&#39;fs.readFile is ok&#39;,function(done)&#123;        fs.readFile(&#39;/test.txt&#39;,&#39;utf-8&#39;,function(err,data)&#123;            should.not.exist(err);            done();        &#125;);    &#125;);</code></pre><p>同步与异步测试区别就在于 <span class="impo">describe</span> 的回调函数是否有形参 <span class="impo">done</span></p><p><span class="impo">Promise</span> 规范的目的是为了让程序员能以同步代码的形式来写异步代码。直观的表现就是，本来无限嵌套的回调函数变成了链式调用。</p><p><span class="impo">Promise</span>规范来书写的接口：</p><pre><code class="[javascript]">    var Promise = require(&#39;promise&#39;);    var fs = require(&#39;fs&#39;);    /*Promise的实现方式有很多种，这里使用promise库*/    function fileRead(filePath,encode)&#123;        return new Promise(function(resole,reject)&#123;            fs.readFile(filePath,encode?encode:&#39;utf-8&#39;,function(err,data)&#123;                if(err)&#123;                    reject(err);                &#125;else&#123;                    resolve(data);                &#125;            &#125;);        &#125;);    &#125;    /*调用*/    fileRead(&#39;/test.txt&#39;)        .then(function(data)&#123;            //do something with data            ...        &#125;,function(err)&#123;            //log err            ...        &#125;);    /*测试*/    var should = require(&#39;should&#39;);    describe(&#39;fileRead is ok&#39;,function(done)&#123;        fileRead(&#39;/test.txt&#39;)            .then(function(result)&#123;                result.should.be.String;                done();            &#125;,function(err)&#123;                done(err);            &#125;)    &#125;);</code></pre><p>跑一下测试。嗯，好像没问题。收拾东西下班！！！</p><p>###wait a minute</p><p>注意测试代码中这一行代码</p><pre><code class="[javascript]">    result.should.be.String;</code></pre><p>这行代码的目的是检测 <span class="impo">result</span> 是否是字符串。如果 <span class="impo">result</span> 不是字符串，那应该会被测试框架捕获到。</p><p>稍微修改下</p><pre><code class="[javascript]">    [1,2,3].should.be.String;    /*这里只是为了测试错误是否能被捕获到，所以用[1,2,3]替换了result*/</code></pre><p>###纳尼！！！</p><p>测试如我所料没有通过，但是报的错误是 <span class="impo">timeout</span> 是什么鬼啊！！！</p><p>好像一不小心又发现了一个知识点啊。嗯，今天晚上一定要把它解决了。</p><p>兴奋的我带着电脑回到家中玩了一个晚上的魔兽。。。</p><p>明天周六，我花一天时间肯定能搞定！！！（这话估计也就我自己会信╮(╯▽╰)╭）</p><p>就这样，这个问题陪伴着我度过了一个愉快而又充实的3.8妇女节（什么鬼。。。摔）</p><p>周一上班的路上突然想到会不会跟 <span class="impo">promise</span> 的实现有关。来到公司，遂看了 <span class="impo">promise</span> 的core.js代码。</p><p>经过一番倒腾，大致理顺了 <span class="impo">promise</span> 的核心思路。 <span class="impo">promise</span> 是通过内部的一个handler构造函数来控制回调链的传递。并且你所传入的回调函数并非直接由handler控制，而是由两个叫 <span class="impo">resolve</span> 和 <span class="impo">reject</span> 的方法控制。</p><p>所以我猜测错误可能是被 <span class="impo">promise</span> 捕获了，但是没有被测试框架捕获。（不要问我为什么，我也不知道）</p><p>于是用尽了各种办法，最终还是没能证明上面的猜测（一股弱者的气息。。。）</p><p>###google大法好</p><p>这是<a href="http://stackoverflow.com/questions/24071493/should-js-not-causing-mocha-test-to-fail">stackoverflow</a>上相同的问题，证实了我的猜测。</p><p>被采纳的答案其实也没能说清其中原由。</p><p>答案中引用的when.js的doc文档中也是一句话带过 <span class="impo">Errors in an asynchronous operation always occur in a different call stack than the the one that initiated the operation</span></p><p>修改测试代码：</p><pre><code class="[javascript]">    var should = require(&#39;should&#39;);    describe(&#39;fileRead is ok&#39;,function(done)&#123;        fileRead(&#39;/test.txt&#39;)            .then(function(result)&#123;                [1,2,3].should.be.String;                done();            &#125;,done).catch(done);    &#125;);</code></pre><p>顺利捕获断言错误。至于为什么<span class="impo">promise</span>阻断了测试框架捕获错误，还有待研究。</p>]]></content>
+    
+    
+    <summary type="html">当接口使用Promise规范时，常规的异步测试写法不能正常捕获错误</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VPS搭建ShadowSocks</title>
+    <link href="https://blog.acs1899.com/2014/10/11/vps-shadowsocks-build/"/>
+    <id>https://blog.acs1899.com/2014/10/11/vps-shadowsocks-build/</id>
+    <published>2014-10-10T16:00:00.000Z</published>
+    <updated>2021-02-28T07:41:01.404Z</updated>
+    
+    <content type="html"><![CDATA[<p>ShadowSocks是一个轻量级socks5代理，以Python2.x写成。之前用的是用pptp搭建的vpn。</p><p>我的手机是Nexus 4，几乎所有的Google服务都不能用(那还要亲儿子干嘛!!!)，所以自己搞个代理不能再等了。</p><p>ShadowSocks有很多中版本，<span class="impo">Python</span><span class="impo">Nodejs</span><span class="impo">Go</span><span class="impo">C</span>，我用的是<span class="impo">Python</span>版。</p><h4 id="安装Setuptools"><a href="#安装Setuptools" class="headerlink" title="安装Setuptools"></a>安装Setuptools</h4><pre><code class="[bash]">wget --no-check-certificate https://pypi.python.org/packages/2.7/s/setuptools/setuptools-0.6c11-py2.7.eggchmod +x setuptools-0.6c11-py2.7.egg ./setuptools-0.6c11-py2.6.egg</code></pre><h4 id="安装Python-pip"><a href="#安装Python-pip" class="headerlink" title="安装Python-pip"></a>安装Python-pip</h4><pre><code class="[bash]">wget --no-check-certificate https://pypi.python.org/packages/source/p/pip/pip-1.4.tar.gztar -zxvf ./pip-1.4.tar.gzcd pip-1.4sudo python setup.py install</code></pre><h4 id="安装Python-Gevent"><a href="#安装Python-Gevent" class="headerlink" title="安装Python-Gevent"></a>安装Python-Gevent</h4><pre><code class="[bash]">sudo apt-get install libevent-devsudo apt-get install python-devpip install gevent</code></pre><h4 id="安装Python-M2Crypto"><a href="#安装Python-M2Crypto" class="headerlink" title="安装Python-M2Crypto"></a>安装Python-M2Crypto</h4><pre><code class="[bash]">sudo apt-get install libssl-devsudo apt-get install swigpip install M2Crypto</code></pre><h4 id="安装ShadowSocks-Python"><a href="#安装ShadowSocks-Python" class="headerlink" title="安装ShadowSocks-Python"></a>安装ShadowSocks-Python</h4><pre><code class="[bash]">pip install shadowsocks</code></pre><h4 id="config-json"><a href="#config-json" class="headerlink" title="config.json"></a>config.json</h4><p>config.json是ShadowSocks Server端的配置文件</p><pre><code class="[bash]">vim ~/ShadowSocks/config.json</code></pre><p>config.json配置文件格式：</p><pre><code class="[json]">&#123;&quot;server&quot;:&quot;my_server_ip&quot;,//服务器IP&quot;server_port&quot;:8388,//服务器端口&quot;local_port&quot;:1080,//本地端口(配置客户端时需要用到)&quot;password&quot;:&quot;barfoo!&quot;,//密码&quot;timeout&quot;:600,//超市时间&quot;method&quot;:&quot;aes-256-cfb&quot;//加密方法，推荐&quot;aes-256-cfb&quot;&#125;</code></pre><h4 id="运行ShadowSocks程序"><a href="#运行ShadowSocks程序" class="headerlink" title="运行ShadowSocks程序"></a>运行ShadowSocks程序</h4><p>cd到config.json所在目录</p><pre><code class="[bash]">nohup ssserver &gt; log &amp;</code></pre><p>之所以选用ShadowSocks主要是看重其对客户端强大的支持，几乎所有你能想到的系统都用对应的客户端。</p><h4 id="客户端设置"><a href="#客户端设置" class="headerlink" title="客户端设置"></a>客户端设置</h4><p>客户端的配置几乎于配置文件的内容一样，只需要将配置文件中配置项对应填入即可。</p><p>使用之后，感觉比同等环境下的VPN快了不少。用手机到Google play上更新App尤为明显。</p><p>PS:用aws的同学注意 <span class="impo">config.json</span> 中的 <span class="impo">server</span> 要填内网地址</p>]]></content>
+    
+    
+    <summary type="html">VPS搭建ShadowSocks，翻墙手记</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Linux" scheme="https://blog.acs1899.com/tags/Linux/"/>
+    
+    <category term="Mac" scheme="https://blog.acs1899.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>textarea光标位置定位、插入、获取选择文字</title>
+    <link href="https://blog.acs1899.com/2014/05/29/textarea-input-cursor/"/>
+    <id>https://blog.acs1899.com/2014/05/29/textarea-input-cursor/</id>
+    <published>2014-05-28T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:58.146Z</updated>
+    
+    <content type="html"><![CDATA[<p>微博”@”功能相信每一个玩过微博的人都用过，当你输入”@”字符串时，在光标位置旁边就会生成一个提示框，你可以快速的选取你最近”@”过的人。</p><p>不过想要操作textarea可是一件麻烦事。由于获取选中区域的接口属于BOM，不同浏览器下的接口差别很大。</p><p>先来看看IE下的接口 <span class="impo">document.selection</span></p><h3 id="document-selection"><a href="#document-selection" class="headerlink" title="document.selection"></a>document.selection</h3><h4 id="nbsp-nbsp-method"><a href="#nbsp-nbsp-method" class="headerlink" title="&nbsp;&nbsp;method"></a>&nbsp;&nbsp;method</h4><blockquote><p><span class="impo">clear</span> : Clears the contents of the selection.</p></blockquote><blockquote><p><span class="impo">createRange</span> : Creates a TextRange object from the current text selection, or a controlRange collection from a control selection.</p></blockquote><blockquote><p><span class="impo">createRangeCollection</span> : Creates a TextRange object collection from the current selection.</p></blockquote><blockquote><p><span class="impo">empty</span> : Cancels the current selection, sets the selection type to none, and sets the item property to null.</p></blockquote><h4 id="nbsp-nbsp-properties"><a href="#nbsp-nbsp-properties" class="headerlink" title="&nbsp;&nbsp;properties"></a>&nbsp;&nbsp;properties</h4><blockquote><p><span class="impo">type</span> : Retrieves the type of selection.</p></blockquote><blockquote><p><span class="impo">typeDetail</span> : Retrieves the name of the selection type.</p></blockquote><p>值得注意的是，从IE11开始不再支持<span class="impo">selection</span>对象.请使用<span class="impo">getSelection</span>对象.</p><p>再来看看FF提供的<span class="impo">document.getSelection</span></p><h3 id="document-getSelection"><a href="#document-getSelection" class="headerlink" title="document.getSelection"></a>document.getSelection</h3><h4 id="nbsp-nbsp-method-1"><a href="#nbsp-nbsp-method-1" class="headerlink" title="&nbsp;&nbsp;method"></a>&nbsp;&nbsp;method</h4><blockquote><p><span class="impo">getRangeAt</span> : Returns a range object representing one of the ranges currently selected.</p></blockquote><blockquote><p>注意,用户用鼠标在同一页面永远都只有一个选择区域,所以一般情况getRangeAt只能接收<span class="impo">0</span>这一个参数.但用脚本可以创建多个选择区域(Chrome下通过脚本也只能创建一个选择区域)</p></blockquote><blockquote><p><span class="impo">collapse(parentNode,offset)</span> : Collapses the current selection to a single point.</p></blockquote><blockquote><p>压缩选择区域至单个光标(在输入框中)位置</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">parentNode</span>:光标将要移动到的目标元素</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">offset</span>:光标在目标元素中所在偏移量.这里的偏移量会有两个值”0”和”1”,分别表示parentNode文本的起始位置和结束位置.</p></blockquote><blockquote><p><span class="impo">extend(parentNode,offset)</span>:Moves the focus of the selection to a specified point.</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">parentNode</span>:光标将要移动到的目标元素</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">offset</span>:光标在目标元素中所在偏移量.这里的偏移量会有两种情况:</p></blockquote><blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;1.目标元素只有textNode.这时<span class="para">offset</span>的值表示光标在字符串中的位置</p></blockquote><blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;2.目标元素含有非textNode子元素.这时<span class="para">offset</span>的值表示光标定位到第<span class="para">offset</span>个元素的末尾.</p></blockquote><blockquote><p><span class="impo">modify(alert,direction,granularity)</span> : Changes the current selection.</p></blockquote><blockquote><p>改变选择区域</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">alert</span>:声明修改类型(move || extend)</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">direction</span>:移动(合并)的方向.可能的值<span class="para">forward</span>,<span class="para">backward</span>,<span class="para">left</span>,<span class="para">right</span>.</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">granularity</span>:移动(合并)的单位.可能的值<span class="para">charracter</span>,<span class="para">word</span>,<span class="para">sentence</span>,<span class="para">line</span>,<span class="para">paragraph</span>,<span class="para">lineboundary</span>,<span class="para">sentenceboundary</span>,<span class="para">paragraphboundary</span>,<span class="para">documentboundary</span>.(注意,FF不支持<span class="para">sentence</span>,<span class="para">paragraph</span>,<span class="para">sentenceboundary</span>,<span class="para">paragraphboundary</span>,<span class="para">documentboundary</span>.值得一提的是在被选择内容为中文时,FF不支持”granularity=<span class='para'>word</span>“,但在Chrome上能正常使用.)</p></blockquote><blockquote><p><span class="impo">collapseToStart</span> : Collapses the selection to the start of the first range in the selection.</p></blockquote><blockquote><p>将选择区域压缩至区域开始的位置</p></blockquote><blockquote><p><span class="impo">collapseToEnd</span> : Collapses the selection to the end of the last range in the selection.</p></blockquote><blockquote><p>将选择区域压缩至区域结束的位置</p></blockquote><blockquote><p><span class="impo">selectAllChildren(parentNode)</span> : Adds all the children of the specified node to the selection.</p></blockquote><blockquote><p>选择<span class="para">parentNode</span>的所有子节点内容</p></blockquote><blockquote><p><span class="impo">addRange(range)</span> : A Range object that will be added to the selection.</p></blockquote><blockquote><p>将指定的区域添加到已选择区域</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">range</span>:指定区域<span class="para">range</span>可以通过<span class="impo">document.createRange</span>创建,也可以通过<span class="impo">getRangeAt</span>从已有区域选择</p></blockquote><blockquote><p><span class="impo">removeRange(range)</span> : Removes a range from the selection.</p></blockquote><blockquote><p>从选择区域中删除指定的区域</p></blockquote><blockquote><p><span class="impo">removeAllRanges</span> : Removes all ranges from the selection.</p></blockquote><blockquote><p>删除所有选择区域</p></blockquote><blockquote><p><span class="impo">deleteFromDocument</span> : Deletes the selection’s content from the document.</p></blockquote><blockquote><p>删除选择区域中的文字(只能删除文字,不会删除DOM元素)</p></blockquote><blockquote><p><span class="impo">selectionLanguageChangae</span> : Modifies the cursor Bidi level after a change in keyboard direction.</p></blockquote><blockquote><p>在写这篇文章时,这个方法貌似已经不存在了,但官方文档还保留了这个方法.</p></blockquote><blockquote><p><span class="impo">toString</span> : Returns a string currently being represented by the selection object, i.e. the currently selected text.</p></blockquote><blockquote><p>输出当前选择区域文本</p></blockquote><blockquote><p><span class="impo">containNode(aNode,aPartlyContained)</span> : Indicates if a certain node is part of the selection.</p></blockquote><blockquote><p>检测某些节点,当它属于选择区域时返回true,否则返回false</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">aNode</span>:待检测的节点</p></blockquote><blockquote><p>&nbsp;&nbsp;<span class="para">aPartlyContained</span>:检测类型</p></blockquote><blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;1.<span class="para">aPartlyContained</span>=true:当<span class="para">aNode</span>的部分或全部属于选择区域的一部分时,则返回true</p></blockquote><blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;1.<span class="para">aPartlyContained</span>=false:当<span class="para">aNode</span>整个节点属于选择区域的一部分时,则返回true(<span class="para">aNode</span>等于选择区域时也返回false,也就是说<span class="para">aNode</span>必须小于选择区域才会返回true)</p></blockquote><h4 id="nbsp-nbsp-properties-1"><a href="#nbsp-nbsp-properties-1" class="headerlink" title="&nbsp;&nbsp;properties"></a>&nbsp;&nbsp;properties</h4><blockquote><p><span class="impo">anchorNode</span> : Returns the Node in which the selection begins.</p></blockquote><blockquote><p>返回选择区域开始位置所在的节点</p></blockquote><blockquote><p><span class="impo">anchorOffset</span> : Returns a number representing the offset of the selection’s anchor within the anchorNode. If anchorNode is a text node, this is the number of characters within anchorNode preceding the anchor. If anchorNode is an element, this is the number of child nodes of the anchorNode preceding the anchor.</p></blockquote><blockquote><p>返回选择区域开始的位置.如果选择区域是纯文本,返回选择区域中第一个字符的位置.如果选择区域是元素,返回那些在选择区域前面的同时也属于<span class="para">anchorNode</span>的子节点的个数.</p></blockquote><blockquote><p><span class="impo">focusNode</span> : Returns the Node in which the selection ends.</p></blockquote><blockquote><p>返回选择区域结束位置所在的节点</p></blockquote><blockquote><p><span class="impo">focusOffset</span> : Returns a number representing the offset of the selection’s anchor within the focusNode. If focusNode is a text node, this is the number of characters within focusNode preceding the focus. If focusNode is an element, this is the number of child nodes of the focusNode preceding the focus.</p></blockquote><blockquote><p>参照<span class="impo">anchorOffset</span></p></blockquote><blockquote><p><span class="impo">ifCollapsed</span> : Returns a Boolean indicating whether the selection’s start and end points are at the same position.</p></blockquote><blockquote><p>判断选择区域开始于结束位置是否相同</p></blockquote><blockquote><p><span class="impo">rangeCount</span> : Returns the number of ranges in the selection.</p></blockquote><blockquote><p>返回<span class="impo">getSelection</span>中的<span class="impo">range</span>数</p></blockquote><p><textarea id="test" style="width:700px;height:200px;padding:4px 5px;margin:10px auto;resize:none;">hellow world</textarea><br><button id="insertStr">点我插入”_(:3」∠)_“内容</button> <button id="getStr">点我获取选择内容</button> <button id="showOffset">点我获取光标当前位置</button></p><script type="text/javascript">(function(){var $ = function(s){return document.getElementById(s)},    text = $('test'),    insert = $('insertStr'),    get = $('getStr'),    show = $('showOffset');insert.onclick=function(){insertString(text,'_(:3」∠)_');}get.onclick=function(){showSelection(text);}show.onclick=function(){alert(getAnchor(text));}function insertString(ele, str){    var r = null,newstart = 0,tb = ele.nodeType == 1 ? ele : docuemnt.body;    tb.focus();    if (document.all){        r = document.selection.createRange();        document.selection.empty();        r.text = str;        r.collapse();        r.select();    }else{        newstart = tb.selectionStart+str.length;        tb.value=tb.value.substr(0,tb.selectionStart)+str+tb.value.substring(tb.selectionEnd);        tb.selectionStart = newstart;        tb.selectionEnd = newstart;    }}function getSelection(ele){    var sel = '',r = null,tb = ele.nodeType == 1 ? ele : docuemnt.body;    if (document.all){        r = document.selection.createRange();        document.selection.empty();        sel = r.text;    }else{        sel = tb.value.substring(tb.selectionStart, tb.selectionEnd);    }    return sel;}function showSelection(ele){    var sel = getSelection(ele);    alert('选中的文本是：'+sel);}function getAnchor(ele){    var index = 0,r = null,tb = ele.nodeType == 1 ? ele : document.body;    if(document.all){        r = document.selection.createRange();        tb.focus();        r.moveStart('character', -tb.value.length);         index = r.text.length;        }else{        index = tb.selectionStart    }    return index}})();</script><pre><code class="[javascript]">/*向输入框当前位置插入字符*/function InsertString(ele, str)&#123;    var r = null,newstart = 0,tb = ele.nodeType == 1 ? ele : docuemnt.body;    tb.focus();    if (document.all)&#123;        r = document.selection.createRange();        document.selection.empty();        r.text = str;        r.collapse();        r.select();    &#125;else&#123;        newstart = tb.selectionStart+str.length;        tb.value=tb.value.substr(0,tb.selectionStart)+str+tb.value.substring(tb.selectionEnd);        tb.selectionStart = newstart;        tb.selectionEnd = newstart;    &#125;&#125;/*获取当前选择区域文字*/function GetSelection(ele)&#123;    var sel = &#39;&#39;,r = null,tb = ele.nodeType == 1 ? ele : docuemnt.body;    if (document.all)&#123;        r = document.selection.createRange();        document.selection.empty();        sel = r.text;    &#125;else&#123;        sel = tb.value.substring(tb.selectionStart, tb.selectionEnd);    &#125;    return sel;&#125;function ShowSelection(ele)&#123;    var sel = GetSelection(ele);    alert(&#39;选中的文本是：&#39;+sel);&#125;/*获取光标位置*/function getAnchor(ele)&#123;    var index = 0,r = null,tb = ele.nodeType == 1 ? ele : document.body;    if(document.all)&#123;        r = document.selection.createRange();        tb.focus();        r.moveStart(&#39;character&#39;, -tb.value.length);         index = r.text.length;        &#125;else&#123;        index = tb.selectionStart    &#125;    return index&#125;</code></pre><p><a href="http://msdn.microsoft.com/zh-cn/library/ie/ms535869(v=vs.85).aspx">selection的官方文档</a></p><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Selection">getSelection的官方文档</a></p>]]></content>
+    
+    
+    <summary type="html">textarea光标位置定位、获取选择文字、向光标位置插入指定字符串</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>javascript事件触发器</title>
+    <link href="https://blog.acs1899.com/2013/12/19/javascript-fireEvent/"/>
+    <id>https://blog.acs1899.com/2013/12/19/javascript-fireEvent/</id>
+    <published>2013-12-18T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:55.721Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载此文方便以后查阅</p><p>事件触发器就是用来触发某个元素下的某个事件，IE下<span class="impo">fireEvent</span>方法，高级浏览器（chrome,firefox等）有<span class="impo">dispatchEvent</span>方法。</p><p>一般我们在元素上绑定事件后，是靠用户在这些元素上的鼠标行为来捕获或者触发事件的，或者自带的浏览器行为事件，比如click，mouseover，load等等，有些时候我们需要自定义事件或者在特定的情况下需要触发这些事件。这个时候我们可以使用IE下fireEvent方法，高级浏览器（chrome,firefox等）有dispatchEvent方法。</p><p>在IE下：</p><pre><code class="[javascript]">//document上绑定自定义事件ondataavailabledocument.attachEvent(&#39;ondataavailable&#39;, function (event) &#123;    alert(event.eventType);&#125;);var obj=document.getElementById(&quot;obj&quot;);//obj元素上绑定click事件obj.attachEvent(&#39;onclick&#39;, function (event) &#123;    alert(event.eventType);&#125;);//调用document对象的createEventObject方法得到一个event的对象实例。var event = document.createEventObject();event.eventType = &#39;message&#39;;//触发document上绑定的自定义事件ondataavailabledocument.fireEvent(&#39;ondataavailable&#39;, event);//触发obj元素上绑定click事件document.getElementById(&quot;test&quot;).onclick = function () &#123;    obj.fireEvent(&#39;onclick&#39;, event);&#125;;</code></pre><p><a href="http://msdn.microsoft.com/en-us/library/ms536423(v=vs.85).aspx">fireEvent的官方文档</a></p><p><a href="http://msdn.microsoft.com/en-us/library/ie/ms536390(v=vs.85).aspx">createEventObject的官方文档</a></p><p>再看看高级浏览器（chrome,firefox等）：</p><pre><code class="[javascript]">//document上绑定自定义事件ondataavailabledocument.addEventListener(&#39;ondataavailable&#39;, function (event) &#123;    alert(event.eventType);&#125;, false);var obj = document.getElementById(&quot;obj&quot;);//obj元素上绑定click事件obj.addEventListener(&#39;click&#39;, function (event) &#123;    alert(event.eventType);&#125;, false);//调用document对象的 createEvent 方法得到一个event的对象实例。var event = document.createEvent(&#39;HTMLEvents&#39;);// initEvent接受3个参数：// 事件类型，是否冒泡，是否阻止浏览器的默认行为event.initEvent(&quot;ondataavailable&quot;, true, true);event.eventType = &#39;message&#39;;//触发document上绑定的自定义事件ondataavailabledocument.dispatchEvent(event);var event1 = document.createEvent(&#39;HTMLEvents&#39;);event1.initEvent(&quot;click&quot;, true, true);event1.eventType = &#39;message&#39;;//触发obj元素上绑定click事件document.getElementById(&quot;test&quot;).onclick = function () &#123;    obj.dispatchEvent(event1);&#125;;</code></pre><p>原文地址：<a href="http://www.css88.com/archives/4998">javascript事件触发器fireEvent和dispatchEvent</a></p>]]></content>
+    
+    
+    <summary type="html">事件触发器就是用来触发某个元素下的某个事件，IE下fireEvent方法，高级浏览器（chrome,firefox等）有dispatchEvent方法</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用cloneNode时需要注意的问题</title>
+    <link href="https://blog.acs1899.com/2013/08/26/use-cloneNode-notice/"/>
+    <id>https://blog.acs1899.com/2013/08/26/use-cloneNode-notice/</id>
+    <published>2013-08-25T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:53.202Z</updated>
+    
+    <content type="html"><![CDATA[<p>oneNode()是DOM中Node对象的方法，使用cloneNode可以方便的复制DOM节点。cloneNode()接收一个参数<span class="impo">include_all</span>。<span class="impo">include_all</span>为一个布尔值，true表示被clone的节点的所有子节点也会被clone（既深度clone），false(默认)只会clone原节点。</p><p>1、当被clone的节点包含script标签时，clone后script标签是否会再次被执行</p><p style="color:#ff8c00">内嵌script标签：</p>```[html]<div id="box">    <script type="text/javascript" >alert(1)</script>  </div>  <script type="text/javascript">      document.body.appendChild(document.getElementById('box').cloneNode(true));  </script>```<p>在所有浏览器中<span class="impo">alert</span>都只执行一次</p><p style="color:#ff8c00">外链script标签：</p>```[html]<div id="box">    <script type="text/javascript" src='clone.js'></script>  </div>  <script type="text/javascript">      document.body.appendChild(document.getElementById('box').cloneNode(true));  </script>```<p>在非IE浏览器中<span class="impo">alert</span>只执行一次</p><p>在IE中，只有IE6会执行两次</p><p style="#00bfff">解决方法：在将clone后的节点加入DOM前，手动删除掉里面的script标签</p><p>2.当被clone节点被绑定了事件处理函数时，事件处理函数是否会被一同clone</p><p style="color:#ff8c00">HTML事件处理绑定：</p>```[html]<div id="box" onclick='alert(1)'>点我</div>  <script type="text/javascript">      document.body.appendChild(document.getElementById('box').cloneNode(true));  </script> ```<p>在所有浏览器中，click事件均被复制</p><p style="color:#ff8c00">DOM0级事件处理绑定：</p>```[html]<div id="box">点我</div>  <script type="text/javascript">      var box=document.getElementById('box');    box.onclick=function(){alert(1)}      document.body.appendChild(box.cloneNode(true));  </script>```<p>在所有浏览器中，点击第一个div会有<span class="impo">alert</span>，点击第二个div无反应</p><p style="color:#ff8c00">DOM2级事件处理绑定：</p>```[html]<div id="box">点我</div>  <script type="text/javascript">      var box=document.getElementById('box');    if(box.attachEvent){          box.attachEvent('onclick',function(){alert(1)},false)      }else{          box.addEventListener('click',function(){alert(1)})      }      document.body.appendChild(box.cloneNode(true));</script>```<p>在非IE浏览器下 点击第二个div不会执行<span class="impo">alert</span></p><p>但是在IE6、7、8中 点击第二个div则会执行<span class="impo">alert</span></p><p>在《精通javascript》一书中，作者推荐一种Dean Edwards提出的跨浏览器事件绑定/删除事件解决方案</p><pre><code class="[javascript]">function addEvent(element, type, handler) &#123;      // 为每一个事件处理函数赋予一个独立ID    if (!handler.$$guid) handler.$$guid = addEvent.guid++;    // 为元素建立一个事件类型的散列表（元素的所有事件类型都保存在该对象中）    if (!element.events) element.events = &#123;&#125;;    // 为每一个元素/事件建立一个事件函数处理的散列表(同一事件类型的不同处理函数保存在该对象中)    var handlers = element.events[type];    if (!handlers) &#123;        handlers = element.events[type] = &#123;&#125;;        // 存储已有事件处理函数（如果存在一个）        if (element[&quot;on&quot; + type]) &#123;            handlers[0] = element[&quot;on&quot; + type];         &#125;    &#125;    // 在散列表中存储该事件类型的处理函数    handlers[handler.$$guid] = handler;    // 注册一个全局处理函数来处理所有函数    element[&quot;on&quot; + type] = handleEvent;&#125;// 创建独立ID计数器addEvent.guid = 1;                                                function removeEvent(element, type, handler) &#123;    // 从散列表中删除事件处理函数    if (element.events &amp;&amp; element.events[type]) &#123;        delete element.events[type][handler.$$guid];    &#125;&#125;;                                                            function handleEvent(event) &#123;    // 获取event对象 (IE 中使用全局event对象)    event = event || window.event;    // 获取对应事件的处理函数散列表    var handlers = this.events[event.type];    // 依次执行处理函数散列表中的函数    for (var i in handlers) &#123;        this.$$handleEvent = handlers;        handlers[i].apply(this,[event]);    &#125;&#125;;</code></pre><p style="color:#00bfff">为了弥补element['on'+type]无法绑定多个处理函数的缺点，addEvent将所有事件类型存储在element的events对象中，events中的每一个事件类型以同样的形式存储着该类型下所有的处理函数</p>```[javascript]element.events={    click:{        0:function(){...},        1:function(){...},        ...    },    mousedown:{...},    ...}```<p>总结：</p><p>1.在使用cloneNode()时，最好在插入前将clone出来的节点中的script手动清除掉，以避免脚本可能被重复执行。</p><p>2.使用cloneNode()会将通过attachEvent绑定的事件复制到clone出来的节点上，可以通过使用跨浏览器的事件绑定解决方案来统一让绑定的事件不被复制。</p>]]></content>
+    
+    
+    <summary type="html">当被clone的元素包涵script子元素时，script中的脚本是否会被执行多次。当被clone的元素被绑定了事件时，clone后的元素是否还能触发绑定的事件</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>getElementById方法的作用域</title>
+    <link href="https://blog.acs1899.com/2012/08/22/getElementById-scopes/"/>
+    <id>https://blog.acs1899.com/2012/08/22/getElementById-scopes/</id>
+    <published>2012-08-21T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:50.503Z</updated>
+    
+    <content type="html"><![CDATA[<p>在看jQuery内核详解一书时，为了比较jQuery与原生javascript效率，举到一个例子。</p><p>里面有这样一段：</p><pre><code class="[javascript]">var $=document.getElementById;var b=$(&#39;header&#39;);</code></pre><p>秉着’实践出真理’的原则，自己敲一敲代码跑了一下。</p><p>在chrome、firefox、IE9下运行时，会抛出错误：</p><p><span class="impo">Illegal invocation</span> chrome</p><p><span class="impo">‘getElementById’ called on an object that does not implement interface Document.</span> firefox</p><p>再到IE6~8下，却能够顺畅运行。</p><p><span class="impo">Illegal invocation</span>意为非法调用</p><p><span class="impo">‘getElementById’ called on an object that does not implement interface Document.</span>意为’”getElementById”被一个不能实现document接口的对象调用’（乱翻译的，不过大致意思应该是这样。。。）</p><p>说明肯能是作用域的问题</p><pre><code class="[javascript]">var $=document.getElementById;var b=$.call(document,&#39;header&#39;);alert(b);</code></pre><p>这次在非IE6~8下成功运行</p><p>总结：</p><p>在IE6~8下document.getElementById与作用域无关，也就是说在何处调用不会影响函数本身。</p><p>在其他浏览器（包括IE9及以上）document.getElementById与作用域有关，也就是说getElementById函数内部this必须指向<span class="impo">document<br></span>。<span class="impo">getElementsByTagName</span>也有同样的情况。</p>]]></content>
+    
+    
+    <summary type="html">IE6~8下document.getElementById方法内部实现与其他浏览器（包括IE9及以上）不同</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中escape,encodeURI,encodeURIComponent三个函数的区别</title>
+    <link href="https://blog.acs1899.com/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent/"/>
+    <id>https://blog.acs1899.com/2012/07/25/js-escape,encodeURI,encodeURIComponent-diffrent/</id>
+    <published>2012-07-24T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:47.936Z</updated>
+    
+    <content type="html"><![CDATA[<p>js对文字进行编码涉及3个函数：escape,encodeURI,encodeURIComponent，相应3个解码函数：unescape,decodeURI,decodeURIComponent</p><p>1、 传递参数时需要使用encodeURIComponent，这样组合的url才不会被#等特殊字符截断。                            </p><p>例如：</p><pre><code class="[javascript]">  document.write(&#39;&lt;a href=&quot;http://www.cpuele.com?aid=7&amp;u=&#39;+encodeURIComponent(http://www.cpuele.com/index.htm)+&#39;&quot;&gt;退出&lt;/a&gt;&#39;)</code></pre><p>2、 进行url跳转时可以整体使用encodeURI</p><p>例如：</p><pre><code class="[javascript]">  Location.href=encodeURI(http://www.cpuele.com/do/s?word=恒特电器&amp;ct=21);</code></pre><p>3、 js使用数据时可以使用escape</p><p>例如：搜藏中history纪录。</p><p>4、 escape对0-255以外的unicode值进行编码时输出%u****格式，其它情况下escape，encodeURI，encodeURIComponent编码结果相同。</p><p><span class="impo">注意：</span></p><p>   最多使用的应为encodeURIComponent，它是将中文、韩文等特殊字符转换成utf-8格式的url编码，所以如果给后台传递参数需要使用encodeURIComponent时需要后台解码对utf-8支持（form中的编码方式和当前页面编码方式相同）</p><pre><code>escape不编码字符有69个：*，+，-，.，/，@，_，0-9，a-z，A-ZencodeURI不编码字符有82个：!，#，$，&amp;，&#39;，(，)，*，+，,，-，.，/，:，;，=，?，@，_，~，0-9，a-z，A-ZencodeURIComponent不编码字符有71个：!， &#39;，(，)，*，-，.，_，~，0-9，a-z，A-Z</code></pre>]]></content>
+    
+    
+    <summary type="html">escape,encodeURI,encodeURComponent三者不同处及使用时需要注意的地方</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>跨域iframe数据传递</title>
+    <link href="https://blog.acs1899.com/2012/07/05/cc-iframe-transmission-data/"/>
+    <id>https://blog.acs1899.com/2012/07/05/cc-iframe-transmission-data/</id>
+    <published>2012-07-04T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:40.455Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载此文，方便以后查阅</p><h3 id="先看一下我们遇到了什么问题？"><a href="#先看一下我们遇到了什么问题？" class="headerlink" title="先看一下我们遇到了什么问题？"></a>先看一下我们遇到了什么问题？</h3><p>在我们的白社会里，需要嵌入第三方应用，而嵌入的方式是使用 iframe，为了页面美观，这里就有一个最简单的需求：iframe 的高度需要跟随其本身内容的变化而实时变化，这就要求主页面根据 iframe 的内容实时的去设置其样式 height 值，但是因为第三方应用和白社会不属于同一个域，所以给实现带来了一点小小的麻烦，所以才有以下的一些讨论…</p><h3 id="仔细分析一下问题的实质是什么呢？"><a href="#仔细分析一下问题的实质是什么呢？" class="headerlink" title="仔细分析一下问题的实质是什么呢？"></a>仔细分析一下问题的实质是什么呢？</h3><p>其实这里需要解决的是，在一个页面 A 中嵌入一个iframe B，A 和 B 不属于同一个域，但是 A 和 B 需要进行一些必要的通信，传递少量的数据信息，所以问题的实质就是主页面与跨域 iframe 之间怎么通信，也就是怎么传递数据信息</p><p>下面就针对两种不同的需求，总结一些比较简单，常用和稳定的解决方案。</p><ul><li>主页面A 怎么向 iframe B 传递数据</li><li>iframe B 怎么向 主页面A 传递数据</li></ul><h3 id="需求一：主页面A-怎么向-iframe-B-传递数据呢？"><a href="#需求一：主页面A-怎么向-iframe-B-传递数据呢？" class="headerlink" title="需求一：主页面A 怎么向 iframe B 传递数据呢？"></a>需求一：主页面A 怎么向 iframe B 传递数据呢？</h3><p>这种方式，是主页面需要给 iframe B 传递数据，然后 iframe B 获得到数据后进行特定的处理</p><p>实现的技巧就是利用 <span class="impo">location 对象的 hash 值，通过它传递通信数据，我们只需要在主页面A中设置 iframe B 的 src 后面多加个 #data 字符串</span>（data就是你要传递的数据）</p><p>然后在 iframe B 中通过某种方式能即时的获取到这儿 data 就可以了，其实常用的一种方式就是：</p><ul><li>在 iframe B 中通过 setInterval 方法设置定时器， 监听 location.href 的变化即可获得上面的 data 信息</li><li>然后 iframe B 就能根据这个 data 信息进行相应的逻辑处理</li></ul><h3 id="需求二：iframe-B-怎么向-主页面A-传递数据呢？"><a href="#需求二：iframe-B-怎么向-主页面A-传递数据呢？" class="headerlink" title="需求二：iframe B 怎么向 主页面A 传递数据呢？"></a>需求二：iframe B 怎么向 主页面A 传递数据呢？</h3><p>这种方式，是 iframe B 需要给主页面传递数据，然后主页面根据获得到数据后进行特定的处理</p><p>实现的技巧就是利用一个代理 iframeC，它嵌入到 iframe B 中，并且和主页面A必须保持是同域，然后我们通过它充分利用上面第一种通信方式的实现原理就能把 iframe B 的数据传递给 iframeC，接下来的问题就是怎么让iframeC把数据传递给主页面A</p><p>因为，iframeC 和主页面是同域的，所以它们之间传递数据就变得简单多了，我们这里的方式就是使用一个经常使用的属性 window.top (也可以使用window.parent.parent)，它返回对载入浏览器得最顶层 window 对象的引用，这样我们就能直接条用主页面A中方法啦，</p><h3 id="到此，我们做个简单分析总结"><a href="#到此，我们做个简单分析总结" class="headerlink" title="到此，我们做个简单分析总结"></a>到此，我们做个简单分析总结</h3><p>当然还有其他一些方式，也都测试过，不是浏览器兼容性不好，就是实现起来复杂，通过以上方式就能很方便的在跨域的 iframe 和主页面之间传递数据了，当然也就能解决上面提到的设置 iframe 高度的问题了，但是这种实现方式的前提也是最大的缺点就是 iframe 中的内容必须是我们可控的，但是至少我们这种实现方式是建立在浏览器的安全规则之上的，没有破坏应用本身的安全性。</p><h3 id="实现时需要考虑的一些细节"><a href="#实现时需要考虑的一些细节" class="headerlink" title="实现时需要考虑的一些细节"></a>实现时需要考虑的一些细节</h3><p>上面的分析，其实只是一个简单的原理，在白社会里，虽然我们目前的需求还仅仅是实现第三方 iframe 形式的 App 的高度自适应，但是我们在实现的时候尽量考虑到了易用，可扩展性和可维护性，比如：</p><ul><li>让第三方 App 只需加载一个我们提供的JS种子文件就能很方便的使用我们为其提供的各种工具</li><li>上面的各种工具，我们采用包的形式进行组织，最大化的实现按需加载</li><li>第一条中的JS种子文件只提供基础的方法实现，并且把最常用的工具包放在里面，比如高度自适应</li><li>通过种子文件，我们还提供给第三方 App 一些常用的JS工具包，而且直接使用的类似YUI3模块的动态加载机制就可使用指定的工具包</li><li>对第三方 App 和 主页面传递的数据进行分类（自我调用，登录验证，传递数据等等）</li><li>传递的数据使用满足特定规范的JSON格式，并通过统一的服务出口发出去，主页面提供一个统一服务接口解析数据，并根据规范调用相应的方法</li><li>还有，就是版本控制的问题，为了尽量减少给第三方App带来影响，以上所有这些JS文件的版本都是采用向后兼容的策略，小版本使用服务器设置SQUID缓存特定频率的失效时间实现，大版本更新根据用户自己的需求手动更改</li><li>当然，以上可能不是最优的解决方案，只是希望能给你一些帮助和引导，我们也在逐步的改进我们的一些实现方式，比如版本控制这块儿，我们也有一些问题需要解决</li></ul><h3 id="主页面A的源码"><a href="#主页面A的源码" class="headerlink" title="主页面A的源码"></a>主页面A的源码</h3><pre><code class="[html]">&lt;script type=&quot;text/javascript&quot;&gt;function init()&#123;    document.domain = &#39;bai.sohu.com&#39;;    alert(&#39;我是主框架，嵌入了第三方应用IframeB,下面开始加载应用&#39;);    var iframeTag = document.getElementById(&#39;frameB&#39;),        iframeSrc = &#39;http://test.com/iframePage.html&#39;;    iframeTag.src = iframeSrc;    iframeTag.style.display = &#39;block&#39;;&#125;function callback(h)&#123;    var iframeB = document.getElementById(&#39;frameB&#39;);    alert(&#39;IframeC调用我（主框架）接口，把IframeB的高度传给我，具体值是：&#39; + h);    iframeB.style.height= h + 10 + &#39;px&#39;;    iframeB.src += &#39;#&#39;+ h;&#125;&lt;/script&gt;&lt;body onload=&quot;init();&quot;&gt;    &lt;p&gt;我是主页框架，我的域是：bai.sohu.com&lt;/p&gt;    &lt;iframe id=&quot;frameB&quot; style=&quot;display:none;&quot;&gt;&lt;/iframe&gt;&lt;/body&gt;</code></pre><h3 id="iframeB的源码"><a href="#iframeB的源码" class="headerlink" title="iframeB的源码"></a>iframeB的源码</h3><pre><code class="[html]">&lt;script type=&quot;text/javascript&quot;&gt;function init()&#123;    alert(&#39;我是第三方App，下面开始创建和主框架同域的通信通道IframeC,并设置它的src，用#号传递高度值&#39;);    var iframeTag = document.getElementById(&#39;frameC&#39;),    iframeSrc = &#39;http://bai.sohu.com/iframePageC.html#&#39;,    pageHeight = document.documentElement.scrollHeight || document.body.scrollHeight;    iframeTag.src = iframeSrc + pageHeight;    iframeTag.style.display = &#39;block&#39;;    window.setTimeout(function()&#123;        alert(&#39;主页面设置我（IframeB）的src，通过Hash（#）给我传递它收到的高度：&#39; + location.hash);    &#125;,2000);&#125;&lt;/script&gt;</code></pre><h3 id="iframeC的源码"><a href="#iframeC的源码" class="headerlink" title="iframeC的源码"></a>iframeC的源码</h3><pre><code class="[html]">&lt;script type=&quot;text/javascript&quot;&gt;document.domain = &#39;bai.sohu.com&#39;;alert(&#39;我（IframeC）收到iframeB通过参数（#）给我传递高度值，我现在调用主页面方法去设置IframeB的高度&#39;);top.callback(window.location.href.split(&#39;#&#39;)[1]);&lt;/script&gt;</code></pre>]]></content>
+    
+    
+    <summary type="html">解决与第三方应用通信的问题</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wow宏教程</title>
+    <link href="https://blog.acs1899.com/2012/07/05/wow-macro/"/>
+    <id>https://blog.acs1899.com/2012/07/05/wow-macro/</id>
+    <published>2012-07-04T16:00:00.000Z</published>
+    <updated>2021-02-28T07:42:34.498Z</updated>
+    
+    <content type="html"><![CDATA[<p>在WoW 2.0中出现了一个新的命令，<span class="impo">/castsequence</span>。它允许你在一次次点击某个宏时，将其中定义的一系列法术逐个施放，格式如下： </p><p><span class="impo">/castsequence</span> [&lt;条件选项&gt;] reset=&lt;#&gt;/target/combat &lt;法术1&gt;, &lt;法术2&gt;, &lt;法术3&gt; </p><p>“啥？你在说啥？” </p><p>它设定了一个法术列表，当你第一次点击这个宏时，它施放列表中的第一个法术，第二次点击的时候，施放第二个法术，以此类推。 当它施放完最后一个时，又回到起始点开始循环。 </p><p>“我还是不太明白耶。” </p><p>OK，假设你是一个法师，有时候你需要冰霜新星后立刻闪现开，你没法同时做到这些事情，现在你可以设定一个序列去做！ </p><p><span class="impo">/castsequence</span> 冰霜新星, 闪现 </p><p>就这么简单，第一次你按这个宏，你施放冰霜新星，再按一次，闪现。 </p><p>“那如果冰霜新星在冷却中怎么办？它会直接施放闪现么？还是不施放冰霜新星，等第二次按这个宏的时候，再施放闪现？” </p><p>都不是。如果法术无法施放（冷却，超出距离，法力不足等等情况下），序列就不会走到下一个法术，下一次你再点这个宏的时候，它会再度尝试施放冰霜新星。（抵抗，躲闪，招架等并不会算作无法施放，这些情况下法术/技能确实施放了，只不过没有命中。） </p><p>如果我没有处于战斗中怎么办？我不想在非战斗情况下浪费一个冰霜新星。” </p><p>你可以把之前所有的宏条件选项应用于此（可惜的是，只能应用于整个序列，而不能为每个法术单独设定）。 </p><p>“呃，其实刚才我只是随便说说，OK，那如果我在冰霜新星后不想闪现了怎么办？下一次我想施放冰霜新星时，它会不会还是停滞在施放闪现的设定上？” </p><p>这完全没问题，我们会用到重置这个设定。因为冰霜新星一般的冷却时间为24秒，我们可以设定序列在24秒内不被使用就重置它。 </p><p><span class="impo">/castsequence</span> reset=24 冰霜新星, 闪现 </p><p>当你第一次点击这个宏时，它会施放冰霜新星，如果你决定不闪现了，等过了24秒后，它会重置到冰霜新星的状态，因为冰霜新星的冷却时间为24秒，那时候它就可以被重新使用了，真棒！ </p><p>“好吧，这真的很厉害，不过我实际上是个术士啊。” </p><p>当然，作为一个术士，我相信你会一直重复上三种DoT，现在你可以为它们设置一个序列以节省按钮空间啦。 </p><p><span class="impo">/castsequence</span> 腐蚀, 献祭, 痛苦诅咒 </p><p>就这么简单，你可以连续点击三次这个宏来上这三种DoT。 </p><p>“但如果在我施放完这些前目标就死了呢？我又卡在这个序列里了，我可不想设什么定时器！” </p><p>那也没关系，我们可以用其他的条件选项。如果你设定“reset=target”，那序列将在你改变目标时就重置到起始位置。你也可以设置“reset=combat”，每当你脱离战斗，这个序列就会被重置了。如果你使用“/”控制符（你还记得吧，之前提到过），你也可以将这些重置条件选项组合起来！ </p><p><span class="impo">/castsequence</span> reset=combat/target 腐蚀, 献祭, 痛苦诅咒 </p><p>就这全了，这下子每当你改变目标（比如原来的目标快死了，你选中的新的目标）或脱离了战斗（可能目标在你施放完所有DoT前就死了），它将会把整个序列重置，让你可以从头开始。 </p><p>“OK，真棒，我想我现在弄明白了！给我点时间设置新的宏….搞定！” </p><p>好极了，我很高兴能帮上忙。 </p><p>“那…来决斗一盘吧？” </p><p>呃，不了，我从不和术士决斗。 </p><p>“切，胆小鬼。” </p><p>另外本人是巨魔暗M,暗道理说MS不用写什么宏,不过本人觉得<span class="impo">/castsequence</span>有必要<br><span class="impo">/castsequence</span> reset=3 心灵之火,暗影守卫<br>大概这个宏是在PVP中使用,特别是战场,死了之后一般都加这2个技能,一键搞定</p><p><span class="impo">/castsequence</span> reset=3 真言术·痛,吸血鬼拥抱<br>实现PK中一键上完暗M的DOT<br>另外可根据自己设置恐吓后心爆宏之类`</p>]]></content>
+    
+    
+    <summary type="html">wow宏基本语法介绍</summary>
+    
+    
+    
+    <category term="笔记" scheme="https://blog.acs1899.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="WoW" scheme="https://blog.acs1899.com/tags/WoW/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2012.06.01近期项目总结</title>
+    <link href="https://blog.acs1899.com/2012/06/01/2012.06.01-Summary/"/>
+    <id>https://blog.acs1899.com/2012/06/01/2012.06.01-Summary/</id>
+    <published>2012-05-31T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:36.968Z</updated>
+    
+    <content type="html"><![CDATA[<p>表单控件在IE6下始终处于Z-INDEX最高，需要用一个空白<span class="impo">iframe</span>将其覆盖。</p><p>IE的盒模型宽（高）度 = width(height)</p><p>w3c标准盒模型宽（高）度 = width(height) + padding</p><p>IE中AJAX 如果用get方式发送请求 URL后跟的值必须经过<span class="impo">encodeURIComponent</span>转码，否则在IE下可能导致AJAX无效(理论上只要是通过GET方式传送的数据都应该使用<span class="impo">encodeURIComponent</span>)。</p><p>要取<span class="impo">textarea</span>中的值 若使用<span class="impo">innerHTML</span>只能取到初始值。当textarea中的值改变之后用<span class="impo">innerHTML</span>就取不到现在的值，需要用value。</p><p>当文件使用 utf-8+BOM 编码时，文件开头会自带一个空白符。这会导致<span class="impo">DOCTYPE</span>申明无法被解析，需要将文件保存为 utf-8 无BOM编码。</p><p>在IE6下 a 标签设置 href="javascript:void(0)" <span class="impo">onclick</span> 事件将不能触发。有两种解决方法：</p>    <p>  &lt;a style="cursor:pointer" onclick="alert('d')">&lt;/a> 直接不设置href</p>    <p>  &lt;a href="javascript:void(0)" onclick="alert('d');return false">&lt;/a> 通过return false阻止触发a标签的默认事件</p><p>IE下操作粘贴板：</p>    <p>  获取粘贴板内容 window.clipboardData.getData("Text")</p>    <p>  设置粘贴板内容 window.clipboardData.setData("Text",要复制的内容)</p><p>判断IE6最简短的代码</p>    <p>  !-[1,]&&!window.XMLHttpRequest</p>    <p>  !-[1,]利用了IE与标准浏览器在处理数组的toString方法的差异来判断是否为IE浏览器（PS：只能判断IE6，7，8），!window.XMLHttpRequest则排出掉IE7及以上版本。</p><p>水平<span class="impo">margin</span>不重叠，浮动元素上下<span class="impo">margin</span>不重叠，常规折行上下<span class="impo">margin</span>重叠。</p>]]></content>
+    
+    
+    <summary type="html">总结最近项目中所遇到的问题</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="javascript" scheme="https://blog.acs1899.com/tags/javascript/"/>
+    
+    <category term="Html&amp;Css" scheme="https://blog.acs1899.com/tags/Html-Css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IE6、7下 body标签overflow:hidden失效的问题</title>
+    <link href="https://blog.acs1899.com/2012/05/03/IE67-body-overflow-hidden/"/>
+    <id>https://blog.acs1899.com/2012/05/03/IE67-body-overflow-hidden/</id>
+    <published>2012-05-02T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:28.015Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code class="[html]">&lt;p&gt;There are no scrollbars on this page in sane browsers&lt;/p&gt;</code></pre><pre><code class="[css]">html, body, p &#123;margin: 0; padding: 0;&#125;body &#123;overflow: hidden;&#125;p &#123;width: 5000px; height: 5000px;&#125;</code></pre><p><span class="impo">IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)</span></p><p>原因：</p><p>明智的浏览器(ex. chrome and firefox)会初始付值给html<span class="inpo">{overflow:visible;}</span></p><p>IE6 初始付值html<span class="impo">{overflow-x:auto;overflow-y:scroll;}</span></p><p>IE7 初始付值html<span class="impo">{overflow-x:visible;overflow-y:scroll;}</span></p><p>只有dom根结点（也就是html根节点）设置html<span class="impo">{overflow:visible;}</span>的时候，浏览器才会将body元素中的overflow值应用到视图区。</p><p>举个例子说：</p><p>设置了body<span class="impo">{overflow:hidden}<span>还会出现滚动条，不过这个滚动条不是body的，是html的</p><p>只有你设置html<span class="impo">{overflow:visible;}</span> body<span class="impo">{overflow的值}</span>才能传递到html中去</p><p>这样html的值就变成了<span class="impo">{overflow:hidden}</span>ok没有滚动条了</p><p>这样就很明了啦，并不是bug，而是浏览器初始值不同产生的问题。</p>]]></content>
+    
+    
+    <summary type="html">IE6 IE7下不生效(IE6下横向纵向滚动条都在 IE7下纵向滚动条还在)</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Html&amp;Css" scheme="https://blog.acs1899.com/tags/Html-Css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github搭建自己的blog</title>
+    <link href="https://blog.acs1899.com/2011/09/20/hello-world/"/>
+    <id>https://blog.acs1899.com/2011/09/20/hello-world/</id>
+    <published>2011-09-19T16:00:00.000Z</published>
+    <updated>2021-02-28T07:40:04.450Z</updated>
+    
+    <content type="html"><![CDATA[<p>Github Page 本是为git项目提供一个静态说明页，后来被开发成了一个bolg系统。</p><h3 id="Step-One"><a href="#Step-One" class="headerlink" title="Step One"></a>Step One</h3><h4 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h4><p>安装rvm（ruby管理工具）</p><pre><code class="[shell]">curl -L https://get.rvm.io | bash -s stablesource ~/.rvm/script/rvmrvm install requirement</code></pre><p>安装ruby</p><pre><code class="[shell]">rvm install rubyrvm use ruby --default</code></pre><p>安装rubygems</p><pre><code class="[shell]">rvm rubygems current</code></pre><p>安装rails</p><pre><code class="[shell]">gem install rails</code></pre><h4 id="安装jekyll"><a href="#安装jekyll" class="headerlink" title="安装jekyll"></a>安装jekyll</h4><pre><code class="[shell]">gem install jekyll</code></pre><p>OK~现在你已经成功安装jekyll了（如果不出什么意外的话）</p><p>那么来试试</p><pre><code class="[shell]">jekyll new myBlogcd myBlogjekyll server</code></pre><p>然后你就能通过 <span class="impo"><a href="http://localhost:4000/">http://localhost:4000</a><span> 访问jekyll为你生成的blog了。</p><h3 id="Step-Two"><a href="#Step-Two" class="headerlink" title="Step Two"></a>Step Two</h3><p>在github上创建一个项目。进入项目setting</p><p><img src="/assets/images/post/s1.png" alt="setting"></p><p><img src="/assets/images/post/s2.png" alt="setting"></p><p><span class="impo">Automatic page generator</span> 能帮你自动生成一些固定模板样式页面</p><p>在本地搞个blog项目，代码写得飞起~~~</p><p>当你觉得自己的blog已经完美之后，你可以通过<span class="impo">jekyll build</span>来让jekyll帮你生成最后的静态代码。这些代码会保存在./_site下。最后你也只需要将./_site下的文件pull到github上</p><pre><code class="[shell]">jekyll build</code></pre><p>当然在你调试的过程中需要不停地预览你的blog，这时你应该会用到</p><pre><code class="[shell]">jekyll server</code></pre><p><span class="impo">jekyll server</span>包含了上面的<span class="impo">jekyll build</span>，之后会起一个本地服务通过<span class="impo"><a href="http://localhost:4000/">http://localhost:4000</a></span>来预览./_site中的页面</p>]]></content>
+    
+    
+    <summary type="html">在Github上创建Gitpage与安装jekyll</summary>
+    
+    
+    
+    <category term="编程" scheme="https://blog.acs1899.com/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="Linux" scheme="https://blog.acs1899.com/tags/Linux/"/>
+    
+  </entry>
+  
+</feed>

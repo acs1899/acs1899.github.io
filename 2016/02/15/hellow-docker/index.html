@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="To be or not to be, that is the question..."><meta name="theme-color" content="#2d4356"><meta name="baidu-site-verification"><title>初试Docker | Acs1899</title><link rel="stylesheet" type="text/css" href="/css/style.css"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="stylesheet" href="/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Acs1899" type="application/atom+xml">
+</head><link rel="stylesheet" type="text/css" href="/css/customize.css"><link rel="stylesheet" type="text/css" href="/plugins/highlight/atom-one-dark.min.css"><script type="text/javascript" src="/plugins/highlight/highlight.min.js"></script><script>hljs.initHighlightingOnLoad();
+</script><script type="text/javascript" src="/js/ready.js" async></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"><body class="night"><div class="mobile-head" id="mobile-head"><div class="navbar-icon"><span></span><span></span><span></span></div><div class="navbar-title"><a href="/">LITREILY</a></div><div class="navbar-search"><!--= show a circle here--></div></div><div class="h-wrapper" id="menu"><nav class="h-head box"><div class="m-hdimg"><a class="hdimg img" href="/"><img class="nofancybox" src="/img/profile.jpg" width="128" height="128"></a><h1 class="ttl"><a href="/">Acs1899</a></h1></div><p class="m-desc">To be or not to be, that is the question...</p><div class="m-nav"><ul><li><span class="dot">●</span><a href="/archives/">归档</a></li><li><span class="dot">●</span><a href="/categories/">分类</a></li><li><span class="dot">●</span><a href="/tags/">标签</a></li><li><span class="dot">●</span><a href="/about/">关于</a></li><li><span class="dot">●</span><a href="/lab/">实验室</a></li><li><span class="dot">●</span><a href="/atom.xml">RSS</a></li><li class="m-sch"><form class="form" id="j-formsch" method="get"><input class="txt" type="text" id="local-search-input" name="q" value="搜索" onfocus="if(this.value=='搜索'){this.value='';}" onblur="if(this.value==''){this.value='搜索';}"><input type="text" style="display:none;"></form></li></ul><div id="local-search-result"></div></div></nav></div><div id="back2Top"><a class="fa fa-arrow-up" title="Back to top" href="#"></a></div><div class="box" id="container"><div class="l-wrapper"><div class="l-content box"><div class="l-post l-post-art"><article class="p-art"><div class="p-header box"><h1 class="p-title">初试Docker</h1><div class="p-info"><span class="p-date"><i class="fa fa-calendar"></i><a href="/2016/02/15/hellow-docker/">2016-02-15</a></span><span class="p-category"><i class="fa fa-folder"></i><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div></div><div class="p-content"><p><strong>Docker</strong>，2015最火的开源项目之一。</p>
+<p>关于Docker-“快速部署”、“隔离”、“镜像”、“容器”这些关键词想必你一定听过。Docker可以将你的基础配置和应用服务隔离开来，打包你的环境配置并实现快速部署。通过“镜像”，我们可以快速的将一个应用部署到多个服务器上，而“容器”则是用来承载这些应用的。</p>
+<p>使用Docker能给我们带来哪些好处：</p>
+<ul>
+<li>   根据镜像快速部署</li>
+<li>   可以通过DockerHub或搭建私有镜像库来查找、上传镜像</li>
+<li>   Docker对资源占少，应用之间能做到很好的隔离同时也能保证相互间的通信</li>
+</ul>
+<p>本篇文章主要介绍如何使用docker，创建自己的镜像，运行容器等。具体使用准则参考官方<a target="_blank" rel="noopener" href="https://docs.docker.com/">文档</a>。</p>
+<h3 id="你需要知道的一些基本概念"><a href="#你需要知道的一些基本概念" class="headerlink" title="你需要知道的一些基本概念"></a>你需要知道的一些基本概念</h3><h5 id="镜像-Image"><a href="#镜像-Image" class="headerlink" title="镜像-Image"></a>镜像-Image</h5><p>镜像可以理解为应用的一个快照。里面保存着该应用运行所需要的各个配置、依赖、环境参数等。镜像还有一个非常关键的概念便是可以<strong>叠加</strong>。镜像使用了一种叫<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/UnionFS">union file system</a>的技术，将不同镜像按照层级叠加起来（可以理解成一种依赖关系）。</p>
+<h5 id="容器-Container"><a href="#容器-Container" class="headerlink" title="容器-Container"></a>容器-Container</h5><p>docker的容器则可理解为一个基础版的Linux系统。容器会根据镜像中的配置、资源在镜像的上层再添加一个应用运行的读写层。</p>
+<p><img src="/assets/images/post/docker-filesystems.png" alt="docker-filesystem"></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>以下是<strong>mac os</strong>系统安装流程，<a target="_blank" rel="noopener" href="https://docs.docker.com/linux/step_one/">Linux</a> <a target="_blank" rel="noopener" href="https://docs.docker.com/windows/step_one/">Windows</a></p>
+<p>Docker本身并不支持直接在Mac OS上运行，不过Docker社区提供了一个工具boot2docker（实际是在Mac OS上创建一个虚拟机）。目前官方已将boot2docker整合到了官方工具<strong>Docker Toolbox</strong>中。</p>
+<p>下载<a target="_blank" rel="noopener" href="https://github.com/docker/toolbox/releases/download/v1.10.1/DockerToolbox-1.10.1.pkg">Docker Toolbox</a></p>
+<p>具体安装流程可参考<a target="_blank" rel="noopener" href="https://docs.docker.com/mac/step_one/">Docker Mac OS 安装</a></p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>注意：直接在终端是无法运行docker的，需要进入boot2docker中。</p>
+<pre><code class="[bash]">docker-machine start default // 让boot2docker启动一个虚拟机作为docker的运行环境 - default为虚拟机名
+docker-machine ssh default // 进入boot2docker生成的虚拟机
+</code></pre>
+<p>Docker官方提供了一个类似github的Image管理仓库，你可以像使用github一样下载一份别人的Image。</p>
+<p>我们下载一个 <strong>alexwhen/docker-2048</strong> 镜像作为示例</p>
+<pre><code class="[bash]">docker pull alexwhen/docker-2048
+</code></pre>
+<p><img src="/assets/images/post/docker-images.png" alt="docker-images"></p>
+<p><strong>docker images</strong> 列出本地所有可用的Image，包括镜像名、TAG、创建时间和大小等信息。</p>
+<p>现在我们可以用 <strong>alexwhen/docker-2048</strong> 镜像运行一个容器。</p>
+<pre><code class="[bash]">docker run -d -p 8080:80 alexwhen/docker-2048
+</code></pre>
+<p><strong>-d</strong> 让Container以后台进程运行，**-p** 指定8080端口的请求转发到Container的80端口。</p>
+<p>通过 <strong>docker ps</strong> 检查我们容器是否运行正常。</p>
+<p><img src="/assets/images/post/docker-ps.png" alt="docker-ps"></p>
+<p>如何访问我们的应用呢？注意在Mac OS下，我们的docker是运行在boot2docker里的，所以需要链接虚拟机地址才能访问docker中的应用。</p>
+<p>退出boot2docker 执行 <strong>docker-machine ls</strong></p>
+<p><img src="/assets/images/post/docker-machine-ls.png" alt="docker-machine-ls"></p>
+<p>显示boot2docker地址 <strong>192.168.99.100</strong> 访问 <strong><a target="_blank" rel="noopener" href="http://192.168.99.100:8080/">http://192.168.99.100:8080</a></strong></p>
+<p><img src="/assets/images/post/docker-2048.png" alt="docker-2048"></p>
+<h3 id="Container内部"><a href="#Container内部" class="headerlink" title="Container内部"></a>Container内部</h3><p>下面我们可以进入Container，来看看Container内部是如何运作的。</p>
+<pre><code class="[bash]">docker run -ti -p 8080:80 alexwhen/docker-2048 /bin/sh
+</code></pre>
+<p>应用代码 <code>cd /usr/share/nginx/html</code></p>
+<p><img src="/assets/images/post/code-2048.png" alt="alexwhen/docker-2048"></p>
+<p>nginx配置 <code>vi /etc/nginx/nginx.conf</code></p>
+<pre><code class="[json]">server &#123;
+        listen       80;
+        server_name  localhost;
+
+        location / &#123;
+            root   html;
+            index  index.html index.htm;
+        &#125;
+&#125;
+</code></pre>
+<p>当容器以 <strong>alexwhen/docker-2048</strong> 镜像启动时，会启动一个nginx并监听Container的80端口。</p>
+<p>当我们访问 <strong><a target="_blank" rel="noopener" href="http://192.168.99.100:8080/">http://192.168.99.100:8080</a></strong> 时，boot2docker会将8080端口的请求转发到Container的80端口，进而访问到应用。</p>
+<p>其实上面的例子并不够典型，因为具体的应用代码是保存在镜像中的，但是应用的代码是经常更新的，所以不适合放在镜像中。</p>
+<p>一种解决方案应该是将具体的应用代码放在宿主机，然后挂载到容器上运行。</p>
+<pre><code class="[bash]">docker run -d -v /usr/data:/home/data -p 8080:80 alexwhen/docker-2048
+</code></pre>
+<p>这会把本地目录 <strong>/usr/data</strong> 挂载到容器 <strong>/home/data</strong> 目录。</p>
+<p>另一种方案是在容器内生成 <strong>数据卷</strong>，然后用它来做数据持久化。</p>
+<h5 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h5><ul>
+<li>   数据卷可在容器之间共享或重用</li>
+<li>   数据卷中的更改可以直接生效</li>
+<li>   数据卷中的更改不会包含在镜像的更新中</li>
+<li>   数据卷的生命周期一直持续到没有容器使用它为止</li>
+</ul>
+<p>生成数据卷</p>
+<pre><code class="[bash]">docker run -d -v /usr/data --name mydata -p 8080:80 alexwhen/docker-2048
+</code></pre>
+<p>在另外一个容器挂载刚才生成的数据卷</p>
+<pre><code class="[bash]">docker run -d -v --volumes-from mydata --name mydb alexwhen/docker-2048
+</code></pre>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><p>在云计算和分布式越来越主流的今天，快速、安全、稳定的实现大规模部署成为一个共同关注的问题。各家的解决方案层出不穷，而Docker似乎在各方需求间找到了平衡点，以一种“倚天不出，谁与争锋”的王霸之气大有一统江湖之势，拭目以待吧。</p>
+<img style="display:block;width:200px;margin:0 auto;" src="/assets/images/post/weiguan.png" title="赶紧买个瓜围观" />
+
+<img style="display:block;width:200px;margin:0 auto;" src="/assets/images/post/weiguans.png" title="不明真相的围观群众" />
+</div></article><div class="p-info box"><span class="p-tags"><i class="fa fa-tags"></i><a href="/tags/Linux/">Linux</a><a href="/tags/Mac/">Mac</a><a href="/tags/Docker/">Docker</a></span></div><aside id="toc"><div class="toc-title">目录</div><nav><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%A0%E9%9C%80%E8%A6%81%E7%9F%A5%E9%81%93%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">你需要知道的一些基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%95%9C%E5%83%8F-Image"><span class="toc-number">1.0.1.</span> <span class="toc-text">镜像-Image</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8-Container"><span class="toc-number">1.0.2.</span> <span class="toc-text">容器-Container</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C"><span class="toc-number">3.</span> <span class="toc-text">运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Container%E5%86%85%E9%83%A8"><span class="toc-number">4.</span> <span class="toc-text">Container内部</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%8D%B7"><span class="toc-number">4.0.1.</span> <span class="toc-text">数据卷</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">5.</span> <span class="toc-text">写在最后</span></a></li></ol></nav></aside></div><section class="p-ext"><div class="l-pager l-pager-dtl box"><a class="prev" href="/2016/02/25/alive/">&lt; 《活着》</a><a class="next" href="/2016/02/12/mac-uninstall-mysql/">Mac下卸载mysql &gt;</a></div><div id="valine-comment"><style type="text/css">.night .v[data-class=v] a { color: #0F9FB4 !important; }
+.night .v[data-class=v] a:hover { color: #216C73 !important; }
+.night .v[data-class=v] li { list-style: inherit; }
+.night .v[data-class=v] .vwrap { border: 1px solid #223441; border-radius: 0; }
+.night .v[data-class=v] .vwrap:hover { box-shadow: 0 0 6px 1px #223441; }
+.night .v[data-class=v] .vbtn { border-radius: 0; background: none; }
+.night .v[data-class=v] .vlist .vcard .vh { border-bottom-color: #293D4E; }
+.night .v[data-class=v] .vwrap .vheader .vinput { border-bottom-color: #223441; }
+.night .v[data-class=v] .vwrap .vheader .vinput:focus { border-bottom-color: #339EB4; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre,.night .v[data-class=v] .vlist .vcard .vhead .vsys { background: #203240 !important; }
+.night .v[data-class=v] code, .night .v[data-class=v] pre { color: #F0F0F0; font-size: 95%; }
+.v[data-class=v] .vcards .vcard .vh {border-bottom-color: #223441; }
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:before {background: linear-gradient(180deg,rgba(38,57,73,.4),rgba(38,57,73,.9));}
+.night .v[data-class=v] .vcards .vcard .vcontent.expand:after {background: rgba(38,57,73,.9)}
+</style><div id="vcomment"></div><script src="//cdn.bootcdn.net/ajax/libs/valine/1.4.14/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'W7Hk1588B0nU5zlAoRi9s83s-gzGzoHsz',
+  appKey:'NxzHBerlj6YvzVUuploWGylH',
+  lang: 'zh-cn',
+  placeholder:'',
+  avatar:'identicon',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></section><footer><p>Copyright © 2016 - 2021 <a href="/." rel="nofollow">Acs1899</a><br>Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a>Theme with<a rel="nofollow" target="_blank" href="https://github.com/litreily/snark-hexo"> snark.</a></p></footer></div></div></div><script type="text/javascript" src="/js/search.js"></script><script type="text/javascript" src="/js/top.js"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+    search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.1" async></script></body></html>
